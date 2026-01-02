@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リピたん - 科学的に英単語を覚えるアプリ</title>
+    <meta name="description" content="中学生・高校生のための英単語学習アプリ。科学的な間隔反復で効率的に暗記。定期テストも受験も怖くない！">
+    <meta name="keywords" content="英単語,暗記,中学生,高校生,受験,定期テスト,間隔反復,学習アプリ">
+    <meta property="og:title" content="リピたん - 科学的に英単語を覚えるアプリ">
+    <meta property="og:description" content="忘れる前に復習！科学的な間隔反復で英単語を効率的にマスター">
+    <meta property="og:image" content="https://mojosoftjp.github.io/repitan/images/og_image.png">
+    <meta property="og:url" content="https://mojosoftjp.github.io/repitan/">
+    <link rel="icon" type="image/png" href="images/app_icon.png">
+    <link rel="apple-touch-icon" href="images/app_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-light: #FF8B5E;
+            --primary-dark: #E55A27;
+            --secondary: #4ECDC4;
+            --secondary-light: #7EE8E1;
+            --accent: #FFE66D;
+            --success: #2ECC71;
+            --dark: #1A1A2E;
+            --darker: #0F0F1A;
+            --light: #FFFFFF;
+            --gray: #94A3B8;
+            --gray-light: #E2E8F0;
+            --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #FF8B5E 50%, #FFE66D 100%);
+            --gradient-secondary: linear-gradient(135deg, #4ECDC4 0%, #44A3AA 100%);
+            --gradient-bg: linear-gradient(180deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gradient-bg);
+            color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--darker);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 2rem 4rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(circle at 30% 20%, rgba(255, 107, 53, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 70% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 230, 109, 0.05) 0%, transparent 50%);
+            animation: float-bg 20s ease-in-out infinite;
+        }
+
+        @keyframes float-bg {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-word {
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            opacity: 0.15;
+            animation: float-word 8s ease-in-out infinite;
+        }
+
+        @keyframes float-word {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .mascot-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .mascot-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 40px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 100px rgba(255, 107, 53, 0.3);
+            animation: mascot-bounce 3s ease-in-out infinite;
+        }
+
+        @keyframes mascot-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .speech-bubble {
+            position: absolute;
+            top: -20px;
+            right: -100px;
+            background: var(--light);
+            color: var(--dark);
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: bubble-pop 2s ease-in-out infinite;
+        }
+
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid var(--light);
+        }
+
+        @keyframes bubble-pop {
+            0%, 100% { transform: scale(1) rotate(-3deg); }
+            50% { transform: scale(1.05) rotate(0deg); }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge span {
+            font-size: 1.1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: var(--gray);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .hero-subtitle strong {
+            color: var(--secondary);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--light);
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(255, 107, 53, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--glass);
+            color: var(--light);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.05) 50%, transparent 100%);
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .problem-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .problem-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .problem-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .solution-arrow {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .solution-arrow svg {
+            width: 60px;
+            height: 60px;
+            fill: var(--primary);
+            animation: arrow-bounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes arrow-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        .solution-card {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+            animation: rotate-slow 20s linear infinite;
+        }
+
+        @keyframes rotate-slow {
+            100% { transform: rotate(360deg); }
+        }
+
+        .solution-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution-mascot {
+            width: 120px;
+            height: 120px;
+            border-radius: 30px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .solution-title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .solution-title .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .solution-desc {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(78, 205, 196, 0.05) 50%, transparent 100%);
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            border-color: var(--secondary);
+            transform: translateX(10px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Target Audience */
+        .target {
+            padding: 6rem 2rem;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .target-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .target-card:hover {
+            border-color: var(--accent);
+            transform: scale(1.03);
+        }
+
+        .target-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .target-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .target-desc {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 230, 109, 0.05) 50%, transparent 100%);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.5;
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            font-size: 2.5rem;
+        }
+
+        .testimonial-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .testimonial-info p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Download Section */
+        .download {
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .download-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(78, 205, 196, 0.15) 100%);
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            padding: 4rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 40%);
+            animation: rotate-slow 15s linear infinite;
+        }
+
+        .download-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 30px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .download-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .download-subtitle {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .download-free {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--success);
+            color: var(--light);
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .app-store-badge {
+            height: 55px;
+            transition: transform 0.3s ease;
+        }
+
+        .app-store-badge:hover {
+            transform: scale(1.08);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem 2rem;
+            background: var(--darker);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-column h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--light);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 3rem;
+            }
+
+            .mascot-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .speech-bubble {
+                right: -60px;
+                font-size: 0.8rem;
+                padding: 0.5rem 0.8rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/app_icon.png" alt="リピたん">
+                <span class="logo-text">リピたん</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">機能</a></li>
+                <li><a href="#how-it-works">使い方</a></li>
+                <li><a href="#download">ダウンロード</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="support.html">サポート</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Floating Background Words -->
+    <div class="floating-elements">
+        <span class="floating-word" style="top: 15%; left: 5%; font-size: 2rem; color: var(--primary); animation-delay: 0s;">study</span>
+        <span class="floating-word" style="top: 25%; right: 8%; font-size: 1.5rem; color: var(--secondary); animation-delay: 1s;">remember</span>
+        <span class="floating-word" style="top: 60%; left: 3%; font-size: 1.8rem; color: var(--accent); animation-delay: 2s;">learn</span>
+        <span class="floating-word" style="top: 70%; right: 5%; font-size: 1.6rem; color: var(--primary); animation-delay: 3s;">repeat</span>
+        <span class="floating-word" style="top: 40%; left: 8%; font-size: 1.4rem; color: var(--secondary); animation-delay: 4s;">vocab</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="mascot-container">
+                <img src="images/repitan_maru.png" alt="リピたん" class="mascot-img">
+                <div class="speech-bubble">一緒に頑張ろう！</div>
+            </div>
+
+            <span class="hero-badge">
+                <span>🔥</span> 中高生のための英単語アプリ
+            </span>
+
+            <h1 class="hero-title">
+                忘れる前に<span class="highlight">リピート</span>で<br>
+                英単語を<span class="highlight">完全マスター</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                科学的な<strong>間隔反復学習</strong>で、覚えた単語を絶対忘れない。<br>
+                定期テストも受験も、もう怖くない！
+            </p>
+
+            <div class="hero-cta">
+                <a href="#download" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                    </svg>
+                    無料ダウンロード
+                </a>
+                <a href="#features" class="btn btn-secondary">機能を見る</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">収録単語数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">93%</div>
+                    <div class="stat-label">記憶定着率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10分</div>
+                    <div class="stat-label">1日の学習時間</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">こんな悩み、ありませんか？</p>
+                <h2 class="section-title">英単語学習の「あるある」</h2>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-emoji">😫</div>
+                    <h3 class="problem-title">覚えてもすぐ忘れる</h3>
+                    <p class="problem-desc">一生懸命覚えたのに、次の日にはもう忘れてる...</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-emoji">📚</div>
+                    <h3 class="problem-title">どこから手をつけていいかわからない</h3>
+                    <p class="problem-desc">単語帳が多すぎて、何から始めればいいの？</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-emoji">⏰</div>
+                    <h3 class="problem-title">時間がない</h3>
+                    <p class="problem-desc">部活や塾で忙しくて、勉強時間が取れない</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-emoji">😴</div>
+                    <h3 class="problem-title">続かない</h3>
+                    <p class="problem-desc">3日坊主で、モチベーションが維持できない</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="section-container">
+            <div class="solution-arrow">
+                <svg viewBox="0 0 24 24">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </div>
+            <div class="solution-card">
+                <div class="solution-content">
+                    <img src="images/repitan_maru.png" alt="リピたん" class="solution-mascot">
+                    <h2 class="solution-title">そんな悩み、<span class="highlight">リピたん</span>が解決！</h2>
+                    <p class="solution-desc">
+                        脳科学に基づいた「間隔反復学習」で、最適なタイミングで復習を促します。
+                        だから、忘れる前にしっかり記憶が定着！
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">Features</p>
+                <h2 class="section-title">リピたんの特長</h2>
+                <p class="section-desc">
+                    科学的に設計された機能で、効率的に英単語をマスター
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">間隔反復アルゴリズム</h3>
+                    <p class="feature-desc">
+                        SM-2アルゴリズムを採用。覚えた単語は長い間隔で、苦手な単語は短い間隔で復習。最小の努力で最大の効果を。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3 class="feature-title">学年別単語帳</h3>
+                    <p class="feature-desc">
+                        中1〜高3まで、学年に合わせた単語帳を収録。定期テスト対策も受験対策もバッチリ。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3 class="feature-title">連続学習ストリーク</h3>
+                    <p class="feature-desc">
+                        毎日の学習を「連続記録」で見える化。ゲーム感覚で続けられるから、三日坊主とはサヨナラ！
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3 class="feature-title">復習リマインダー</h3>
+                    <p class="feature-desc">
+                        復習すべき単語があるとお知らせ。忘れる前に復習できるから、記憶がしっかり定着。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">発音機能</h3>
+                    <p class="feature-desc">
+                        ネイティブ発音で正しい発音を確認。リスニング力もアップ！
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">学習統計</h3>
+                    <p class="feature-desc">
+                        学習した単語数、復習回数、習得率がひと目でわかる。成長を実感しながら学習を続けられる。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">How It Works</p>
+                <h2 class="section-title">かんたん3ステップ</h2>
+                <p class="section-desc">
+                    たった3つのステップで、今日から英単語マスターへの道が始まる
+                </p>
+            </div>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>単語帳を選ぶ</h3>
+                        <p>学年別の単語帳から、自分に合ったものを選択。オリジナルの単語帳も作成できます。</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>毎日10分学習</h3>
+                        <p>新しい単語を覚えて、復習が必要な単語をおさらい。スキマ時間でOK！</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>通知に従って復習</h3>
+                        <p>リピたんが最適なタイミングで復習をお知らせ。忘れる前に復習できるから、記憶が定着！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="target">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">For You</p>
+                <h2 class="section-title">こんな人におすすめ</h2>
+            </div>
+            <div class="target-grid">
+                <div class="target-card">
+                    <div class="target-emoji">🎒</div>
+                    <h3 class="target-title">中学生</h3>
+                    <p class="target-desc">定期テストで高得点を取りたい！英語の基礎をしっかり固めたい</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-emoji">📝</div>
+                    <h3 class="target-title">高校生</h3>
+                    <p class="target-desc">大学受験に向けて、効率的に単語力をアップしたい</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-emoji">🏃</div>
+                    <h3 class="target-title">部活で忙しい人</h3>
+                    <p class="target-desc">スキマ時間を活用して、短時間で効果的に学習したい</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-emoji">🔄</div>
+                    <h3 class="target-title">挫折経験がある人</h3>
+                    <p class="target-desc">今度こそ続けたい！モチベーションを維持したい</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">Reviews</p>
+                <h2 class="section-title">ユーザーの声</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        定期テストの点数が20点アップ！忘れそうなタイミングで復習できるから、テスト前に焦らなくなった。
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-avatar">👧</span>
+                        <div class="testimonial-info">
+                            <h4>中学2年生</h4>
+                            <p>東京都・Mさん</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        部活後の電車で10分だけ。それだけで単語がどんどん覚えられる。ストリーク機能で毎日続けられてる！
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-avatar">👦</span>
+                        <div class="testimonial-info">
+                            <h4>高校1年生</h4>
+                            <p>神奈川県・Kさん</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        発音も一緒に覚えられるのが良い！リスニングの点数も上がって、英語が好きになった。
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-avatar">👧</span>
+                        <div class="testimonial-info">
+                            <h4>中学3年生</h4>
+                            <p>大阪府・Sさん</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="download-card">
+            <div class="download-content">
+                <img src="images/app_icon.png" alt="リピたん" class="download-icon">
+                <h2 class="download-title">今すぐ始めよう！</h2>
+                <p class="download-subtitle">英単語マスターへの第一歩を踏み出そう</p>
+                <div class="download-free">完全無料</div>
+                <br><br>
+                <a href="https://apps.apple.com/app/repitan" target="_blank">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Storeからダウンロード" class="app-store-badge">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/app_icon.png" alt="リピたん">
+                        <span class="logo-text">リピたん</span>
+                    </a>
+                    <p>科学的な間隔反復学習で、英単語を効率的にマスター。中高生のための英単語学習アプリ。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>アプリ</h4>
+                        <ul>
+                            <li><a href="#features">機能</a></li>
+                            <li><a href="#how-it-works">使い方</a></li>
+                            <li><a href="#download">ダウンロード</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>サポート</h4>
+                        <ul>
+                            <li><a href="help.html">ヘルプ</a></li>
+                            <li><a href="support.html">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>法的情報</h4>
+                        <ul>
+                            <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MojoSoft. All rights reserved.</p>
+                <p>Made with ❤️ for students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .problem-card, .step-card, .target-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
