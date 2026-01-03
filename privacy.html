@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - リピたん</title>
+    <meta name="description" content="リピたんのプライバシーポリシー。ユーザーのプライバシーを尊重し、データを安全に保護します。">
+    <link rel="icon" type="image/png" href="images/app_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-light: #FF8B5E;
+            --secondary: #4ECDC4;
+            --dark: #1A1A2E;
+            --darker: #0F0F1A;
+            --light: #FFFFFF;
+            --gray: #94A3B8;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #1A1A2E 0%, #16213E 100%);
+            color: var(--light);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Page Content */
+        .page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--light), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .last-updated {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .highlight-box {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--light);
+        }
+
+        .highlight-box strong {
+            color: var(--primary);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .info-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            background: var(--darker);
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-content {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .page-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/app_icon.png" alt="リピたん">
+                <span class="logo-text">リピたん</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">機能</a></li>
+                <li><a href="index.html#download">ダウンロード</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="support.html">サポート</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <h1>プライバシーポリシー</h1>
+        <p class="last-updated">最終更新日: 2026年1月</p>
+
+        <div class="highlight-box">
+            <p><strong>リピたんは、あなたのプライバシーを尊重します。</strong><br>
+            個人情報の収集、保存、共有は一切行いません。あなたのデータは、あなたのデバイスの中だけに存在します。</p>
+        </div>
+
+        <h2>概要</h2>
+        <p>
+            リピたん（以下「本アプリ」）は、英単語学習のための個人向けアプリケーションです。
+            私たちはユーザーのプライバシーを保護し、透明性のある運営を行うことをお約束します。
+        </p>
+
+        <h2>データ収集について</h2>
+        <p>
+            <strong>私たちはデータを収集しません。</strong> 本アプリは以下のことを行いません：
+        </p>
+        <ul>
+            <li>個人情報の収集</li>
+            <li>位置情報の追跡</li>
+            <li>連絡先へのアクセス</li>
+            <li>利用状況のモニタリング</li>
+            <li>アナリティクスやトラッキングサービスの使用</li>
+            <li>アカウント作成やログインの要求</li>
+        </ul>
+
+        <h2>データの保存</h2>
+        <p>
+            本アプリに入力されたすべてのデータ（学習進捗、単語帳、設定など）は、
+            <strong>お使いのデバイス上にのみローカルに保存</strong>されます。このデータは：
+        </p>
+        <ul>
+            <li>外部サーバーにアップロードされることはありません</li>
+            <li>第三者と共有されることはありません</li>
+            <li>私たちや他の誰かがアクセスすることはありません</li>
+            <li>完全にあなたの管理下にあります</li>
+        </ul>
+
+        <div class="info-card">
+            <h3>音声機能について</h3>
+            <p>
+                本アプリは、単語の発音再生機能を提供しています。この機能はデバイスに内蔵されたテキスト読み上げ（TTS）エンジンを使用しており、
+                外部サービスへのデータ送信は行いません。
+            </p>
+        </div>
+
+        <h2>通知機能</h2>
+        <p>
+            本アプリは、復習のリマインダーとして通知を送信する機能があります。
+            通知はすべてローカルで処理され、外部サーバーを経由しません。
+            通知の設定は、いつでもアプリ内またはデバイスの設定から変更できます。
+        </p>
+
+        <h2>子どものプライバシー</h2>
+        <p>
+            本アプリは、子どもを含むすべての年齢層を対象としています。
+            私たちはいかなる年齢のユーザーからも個人情報を収集しません。
+            本アプリは教育目的で設計されており、子どもにとって不適切なコンテンツは含まれていません。
+        </p>
+
+        <h2>データの削除</h2>
+        <p>
+            すべてのデータはデバイス上にローカルに保存されているため、
+            以下の方法でいつでもすべてのアプリデータを削除できます：
+        </p>
+        <ul>
+            <li>アプリ内で個別のアイテムを削除する</li>
+            <li>アプリをアンインストールする（これによりすべてのデータが削除されます）</li>
+        </ul>
+
+        <h2>本ポリシーの変更</h2>
+        <p>
+            本プライバシーポリシーは、必要に応じて更新される場合があります。
+            変更があった場合は、このページに更新日とともに掲載されます。
+            定期的に本ポリシーをご確認いただくことをお勧めします。
+        </p>
+
+        <h2>お問い合わせ</h2>
+        <p>
+            本プライバシーポリシーまたは本アプリについてご質問がある場合は、
+            以下の連絡先までお問い合わせください：
+        </p>
+        <p>
+            <a href="mailto:support@mojosoft.biz">support@mojosoft.biz</a>
+        </p>
+        <p>
+            または、<a href="support.html">サポートページ</a>をご覧ください。
+        </p>
+
+        <div class="highlight-box">
+            <p><strong>あなたの学習データは、あなただけのもの。</strong><br>
+            私たちは、データはユーザー自身のものであるという信念のもと、リピたんを設計しました。</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MojoSoft. All rights reserved.</p>
+    </footer>
+</body>
+</html>
