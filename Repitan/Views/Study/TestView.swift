@@ -460,10 +460,19 @@ struct TestView: View {
             return
         }
 
-        // まとめて1つの通知をスケジュール（最も早い復習時刻で）
-        let cardCount = learningCards.count
+        // その時刻に復習可能になるカード数を正確にカウント
+        // 1分の誤差を許容（同じタイミングとみなす）
+        let tolerance: TimeInterval = 60
+        let cardsReadyAtEarliestTime = learningCards.filter { card in
+            if let dueDate = card.learningDueDate {
+                return abs(dueDate.timeIntervalSince(earliestDueDate)) <= tolerance
+            }
+            return false
+        }.count
+
+        // まとめて1つの通知をスケジュール（最も早い復習時刻で、正確な件数）
         NotificationManager.shared.scheduleSessionLearningNotification(
-            cardCount: cardCount,
+            cardCount: cardsReadyAtEarliestTime,
             dueDate: earliestDueDate
         )
     }
