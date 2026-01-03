@@ -207,6 +207,39 @@ NotificationManager.shared.scheduleSessionLearningNotification(
 - ✅ 3分待ち5語 + 20分待ち5語 → 3分後に「5語の復習時間」と正確に通知
 - ✅ ユーザーの混乱を完全に解消
 
+#### 8. 起動時のフリーズ問題修正 🐛FIX
+**ファイル:** `Repitan/App/RepitanApp.swift`
+
+**問題点:**
+- アプリ起動時にフリーズして入力を受け付けない
+- UIが数秒間応答しない
+
+**根本原因:**
+- `setupInitialData()`がメインスレッドで重い処理を実行
+- `checkBuiltInDeckUpdates()`で4つのJSONファイル（約1,500語）を読み込み
+- `updateExistingCards()`で全カードを走査して更新チェック
+- Task内でも`@MainActor`のためメインスレッドで実行されていた
+
+**修正内容（180-195行目、213-219行目）:**
+```swift
+// 修正前：Task（メインスレッドで実行）
+Task {
+    await BuiltInDeckLoader.loadIrregularVerbsDeck(modelContext: context, isActive: false)
+}
+
+// 修正後：Task.detached（バックグラウンドスレッドで実行）
+Task.detached { [modelContainer] in
+    let backgroundContext = ModelContext(modelContainer)
+    await BuiltInDeckLoader.loadIrregularVerbsDeck(modelContext: backgroundContext, isActive: false)
+}
+```
+
+**効果:**
+- ✅ アプリ起動時のフリーズを完全解消
+- ✅ UIが即座に応答するようになる
+- ✅ デッキ更新処理がバックグラウンドで実行
+- ✅ ユーザー体験が大幅に改善
+
 ---
 
 ## 過去セッション（2026-01-01 セッション4）の作業内容

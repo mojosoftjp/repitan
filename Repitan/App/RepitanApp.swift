@@ -177,15 +177,17 @@ struct RepitanApp: App {
 
         if !missingCategories.isEmpty {
             print("Loading missing built-in decks: \(missingCategories)")
-            Task {
+            // バックグラウンドで実行してUIをブロックしない
+            Task.detached { [modelContainer] in
+                let backgroundContext = ModelContext(modelContainer)
                 for categoryId in missingCategories {
                     if categoryId == "irregular_verbs" {
                         // 不規則動詞単語帳
-                        await BuiltInDeckLoader.loadIrregularVerbsDeck(modelContext: context, isActive: false)
+                        await BuiltInDeckLoader.loadIrregularVerbsDeck(modelContext: backgroundContext, isActive: false)
                         print("Loaded missing deck: irregular_verbs")
                     } else if let grade = DeckCategoryManager.gradeFromCategory(categoryId) {
                         // 学年別単語帳は非アクティブで追加（ユーザーが選択できるように）
-                        await BuiltInDeckLoader.loadDeckForGrade(grade: grade, modelContext: context)
+                        await BuiltInDeckLoader.loadDeckForGrade(grade: grade, modelContext: backgroundContext)
                         print("Loaded missing deck for grade \(grade)")
                     }
                 }
@@ -207,10 +209,12 @@ struct RepitanApp: App {
         // 全組み込み単語帳のファイル名
         let builtInFiles = ["junior_high_1", "junior_high_2", "junior_high_3", "irregular_verbs"]
 
-        Task {
+        // バックグラウンドで実行してUIをブロックしない
+        Task.detached { [modelContainer] in
+            let backgroundContext = ModelContext(modelContainer)
             for fileName in builtInFiles {
                 // loadDeckFromFileはバージョン比較して必要な場合のみ更新する
-                await BuiltInDeckLoader.checkAndUpdateDeck(fileName: fileName, modelContext: context)
+                await BuiltInDeckLoader.checkAndUpdateDeck(fileName: fileName, modelContext: backgroundContext)
             }
         }
     }
