@@ -1,0 +1,3226 @@
+{
+  "deckId": "junior_high_3",
+  "name": "中3レベル",
+  "categoryId": "junior_high_3",
+  "version": "1.7.0",
+  "cards": [
+    {
+      "japanese": "ワイン",
+      "english": "wine",
+      "phonetic": "/waɪn/",
+      "partOfSpeech": "名詞",
+      "example": "Would you like some wine?",
+      "exampleJapanese": "ワインはいかがですか？"
+    },
+    {
+      "japanese": "矢",
+      "english": "arrow",
+      "phonetic": "/ˈæroʊ/",
+      "partOfSpeech": "名詞",
+      "example": "The arrow hit the target.",
+      "exampleJapanese": "矢が的に当たりました。"
+    },
+    {
+      "japanese": "枝",
+      "english": "branch",
+      "phonetic": "/bræntʃ/",
+      "partOfSpeech": "名詞",
+      "example": "A bird sat on the branch.",
+      "exampleJapanese": "鳥が枝に止まりました。"
+    },
+    {
+      "japanese": "タクシー",
+      "english": "taxi",
+      "phonetic": "/ˈtæksi/",
+      "partOfSpeech": "名詞",
+      "example": "Let's take a taxi.",
+      "exampleJapanese": "タクシーに乗りましょう。"
+    },
+    {
+      "japanese": "ブドウ",
+      "english": "grape",
+      "phonetic": "/ɡreɪp/",
+      "partOfSpeech": "名詞",
+      "example": "Grapes are sweet.",
+      "exampleJapanese": "ブドウは甘いです。"
+    },
+    {
+      "japanese": "蛇",
+      "english": "snake",
+      "phonetic": "/sneɪk/",
+      "partOfSpeech": "名詞",
+      "example": "I saw a snake in the garden.",
+      "exampleJapanese": "庭で蛇を見ました。"
+    },
+    {
+      "japanese": "像",
+      "english": "statue",
+      "phonetic": "/ˈstætʃuː/",
+      "partOfSpeech": "名詞",
+      "example": "There is a statue in the park.",
+      "exampleJapanese": "公園に像があります。"
+    },
+    {
+      "japanese": "筆",
+      "english": "brush",
+      "phonetic": "/brʌʃ/",
+      "partOfSpeech": "名詞",
+      "example": "I need a brush for painting.",
+      "exampleJapanese": "絵を描くのに筆が必要です。"
+    },
+    {
+      "japanese": "宮殿",
+      "english": "palace",
+      "phonetic": "/ˈpæləs/",
+      "partOfSpeech": "名詞",
+      "example": "The king lives in the palace.",
+      "exampleJapanese": "王様は宮殿に住んでいます。"
+    },
+    {
+      "japanese": "ロンドン",
+      "english": "London",
+      "phonetic": "/ˈlʌndən/",
+      "partOfSpeech": "名詞",
+      "example": "London is the capital of England.",
+      "exampleJapanese": "ロンドンはイングランドの首都です。"
+    },
+    {
+      "japanese": "動物園",
+      "english": "zoo",
+      "phonetic": "/zuː/",
+      "partOfSpeech": "名詞",
+      "example": "We went to the zoo yesterday.",
+      "exampleJapanese": "私たちは昨日動物園に行きました。"
+    },
+    {
+      "japanese": "入り口、入学",
+      "english": "entrance",
+      "phonetic": "/ˈentrəns/",
+      "partOfSpeech": "名詞",
+      "example": "The entrance is over there.",
+      "exampleJapanese": "入り口はあちらです。"
+    },
+    {
+      "japanese": "体育館",
+      "english": "gym",
+      "phonetic": "/dʒɪm/",
+      "partOfSpeech": "名詞",
+      "example": "We play basketball in the gym.",
+      "exampleJapanese": "私たちは体育館でバスケをします。"
+    },
+    {
+      "japanese": "塔",
+      "english": "tower",
+      "phonetic": "/ˈtaʊər/",
+      "partOfSpeech": "名詞",
+      "example": "The tower is very tall.",
+      "exampleJapanese": "その塔はとても高いです。"
+    },
+    {
+      "japanese": "ヨーロッパ",
+      "english": "Europe",
+      "phonetic": "/ˈjʊərəp/",
+      "partOfSpeech": "名詞",
+      "example": "I want to travel to Europe.",
+      "exampleJapanese": "私はヨーロッパに旅行したいです。"
+    },
+    {
+      "japanese": "主人",
+      "english": "host",
+      "phonetic": "/hoʊst/",
+      "partOfSpeech": "名詞",
+      "example": "The host welcomed the guests.",
+      "exampleJapanese": "主人がお客さんを歓迎しました。"
+    },
+    {
+      "japanese": "お父ちゃん",
+      "english": "dad",
+      "phonetic": "/dæd/",
+      "partOfSpeech": "名詞",
+      "example": "My dad is a teacher.",
+      "exampleJapanese": "私のお父ちゃんは先生です。"
+    },
+    {
+      "japanese": "象",
+      "english": "elephant",
+      "phonetic": "/ˈelɪfənt/",
+      "partOfSpeech": "名詞",
+      "example": "Elephants have long trunks.",
+      "exampleJapanese": "象は長い鼻を持っています。"
+    },
+    {
+      "japanese": "スープ",
+      "english": "soup",
+      "phonetic": "/suːp/",
+      "partOfSpeech": "名詞",
+      "example": "This soup is delicious.",
+      "exampleJapanese": "このスープは美味しいです。"
+    },
+    {
+      "japanese": "ネクタイ",
+      "english": "tie",
+      "phonetic": "/taɪ/",
+      "partOfSpeech": "名詞",
+      "example": "He is wearing a blue tie.",
+      "exampleJapanese": "彼は青いネクタイをしています。"
+    },
+    {
+      "japanese": "キツネ",
+      "english": "fox",
+      "phonetic": "/fɑːks/",
+      "partOfSpeech": "名詞",
+      "example": "A fox ran across the road.",
+      "exampleJapanese": "キツネが道を横切りました。"
+    },
+    {
+      "japanese": "ジーンズ",
+      "english": "jeans",
+      "phonetic": "/dʒiːnz/",
+      "partOfSpeech": "名詞",
+      "example": "I bought new jeans.",
+      "exampleJapanese": "私は新しいジーンズを買いました。"
+    },
+    {
+      "japanese": "ジャム、混雑",
+      "english": "jam",
+      "phonetic": "/dʒæm/",
+      "partOfSpeech": "名詞",
+      "example": "I like strawberry jam.",
+      "exampleJapanese": "私はいちごジャムが好きです。"
+    },
+    {
+      "japanese": "スーツ",
+      "english": "suit",
+      "phonetic": "/suːt/",
+      "partOfSpeech": "名詞",
+      "example": "He wore a black suit.",
+      "exampleJapanese": "彼は黒いスーツを着ていました。"
+    },
+    {
+      "japanese": "切符",
+      "english": "ticket",
+      "phonetic": "/ˈtɪkɪt/",
+      "partOfSpeech": "名詞",
+      "example": "I bought a train ticket.",
+      "exampleJapanese": "私は電車の切符を買いました。"
+    },
+    {
+      "japanese": "カナダ",
+      "english": "Canada",
+      "phonetic": "/ˈkænədə/",
+      "partOfSpeech": "名詞",
+      "example": "Canada is north of the USA.",
+      "exampleJapanese": "カナダはアメリカの北にあります。"
+    },
+    {
+      "japanese": "塀",
+      "english": "fence",
+      "phonetic": "/fens/",
+      "partOfSpeech": "名詞",
+      "example": "There is a fence around the house.",
+      "exampleJapanese": "家の周りに塀があります。"
+    },
+    {
+      "japanese": "イングランド",
+      "english": "England",
+      "phonetic": "/ˈɪŋɡlənd/",
+      "partOfSpeech": "名詞",
+      "example": "Shakespeare was born in England.",
+      "exampleJapanese": "シェイクスピアはイングランドで生まれました。"
+    },
+    {
+      "japanese": "アジア",
+      "english": "Asia",
+      "phonetic": "/ˈeɪʒə/",
+      "partOfSpeech": "名詞",
+      "example": "Japan is in Asia.",
+      "exampleJapanese": "日本はアジアにあります。"
+    },
+    {
+      "japanese": "玄関の広間、ろうか",
+      "english": "hall",
+      "phonetic": "/hɔːl/",
+      "partOfSpeech": "名詞",
+      "example": "Wait in the hall, please.",
+      "exampleJapanese": "廊下で待ってください。"
+    },
+    {
+      "japanese": "森林",
+      "english": "forest",
+      "phonetic": "/ˈfɔːrɪst/",
+      "partOfSpeech": "名詞",
+      "example": "Many animals live in the forest.",
+      "exampleJapanese": "多くの動物が森林に住んでいます。"
+    },
+    {
+      "japanese": "おかあちゃん",
+      "english": "mom",
+      "phonetic": "/mɑːm/",
+      "partOfSpeech": "名詞",
+      "example": "My mom cooks dinner every day.",
+      "exampleJapanese": "私のお母ちゃんは毎日夕食を作ります。"
+    },
+    {
+      "japanese": "エンジニア",
+      "english": "engineer",
+      "phonetic": "/ˌendʒɪˈnɪr/",
+      "partOfSpeech": "名詞",
+      "example": "He works as an engineer.",
+      "exampleJapanese": "彼はエンジニアとして働いています。"
+    },
+    {
+      "japanese": "警官",
+      "english": "policeman",
+      "phonetic": "/pəˈliːsmən/",
+      "partOfSpeech": "名詞",
+      "example": "The policeman helped us.",
+      "exampleJapanese": "警官が私たちを助けてくれました。"
+    },
+    {
+      "japanese": "おもちゃ",
+      "english": "toy",
+      "phonetic": "/tɔɪ/",
+      "partOfSpeech": "名詞",
+      "example": "Children like toys.",
+      "exampleJapanese": "子供たちはおもちゃが好きです。"
+    },
+    {
+      "japanese": "かさ",
+      "english": "umbrella",
+      "phonetic": "/ʌmˈbrelə/",
+      "partOfSpeech": "名詞",
+      "example": "Don't forget your umbrella.",
+      "exampleJapanese": "傘を忘れないでね。"
+    },
+    {
+      "japanese": "カエル",
+      "english": "frog",
+      "phonetic": "/frɔːɡ/",
+      "partOfSpeech": "名詞",
+      "example": "Frogs live near water.",
+      "exampleJapanese": "カエルは水辺に住んでいます。"
+    },
+    {
+      "japanese": "びん",
+      "english": "bottle",
+      "phonetic": "/ˈbɑːtl/",
+      "partOfSpeech": "名詞",
+      "example": "Please recycle the bottle.",
+      "exampleJapanese": "びんをリサイクルしてください。"
+    },
+    {
+      "japanese": "インク",
+      "english": "ink",
+      "phonetic": "/ɪŋk/",
+      "partOfSpeech": "名詞",
+      "example": "The pen is out of ink.",
+      "exampleJapanese": "ペンのインクがなくなりました。"
+    },
+    {
+      "japanese": "ソファー",
+      "english": "sofa",
+      "phonetic": "/ˈsoʊfə/",
+      "partOfSpeech": "名詞",
+      "example": "Sit on the sofa.",
+      "exampleJapanese": "ソファーに座ってください。"
+    },
+    {
+      "japanese": "爆弾",
+      "english": "bomb",
+      "phonetic": "/bɑːm/",
+      "partOfSpeech": "名詞",
+      "example": "The bomb was safely removed.",
+      "exampleJapanese": "爆弾は安全に撤去されました。"
+    },
+    {
+      "japanese": "中国",
+      "english": "China",
+      "phonetic": "/ˈtʃaɪnə/",
+      "partOfSpeech": "名詞",
+      "example": "China has a long history.",
+      "exampleJapanese": "中国には長い歴史があります。"
+    },
+    {
+      "japanese": "砂漠",
+      "english": "desert",
+      "phonetic": "/ˈdezərt/",
+      "partOfSpeech": "名詞",
+      "example": "The desert is very dry.",
+      "exampleJapanese": "砂漠はとても乾燥しています。"
+    },
+    {
+      "japanese": "オーストラリア",
+      "english": "Australia",
+      "phonetic": "/ɔːˈstreɪliə/",
+      "partOfSpeech": "名詞",
+      "example": "Kangaroos live in Australia.",
+      "exampleJapanese": "カンガルーはオーストラリアに住んでいます。"
+    },
+    {
+      "japanese": "砂浜",
+      "english": "beach",
+      "phonetic": "/biːtʃ/",
+      "partOfSpeech": "名詞",
+      "example": "We played on the beach.",
+      "exampleJapanese": "私たちは砂浜で遊びました。"
+    },
+    {
+      "japanese": "劇場",
+      "english": "theater",
+      "phonetic": "/ˈθiːətər/",
+      "partOfSpeech": "名詞",
+      "example": "We saw a play at the theater.",
+      "exampleJapanese": "私たちは劇場で劇を見ました。"
+    },
+    {
+      "japanese": "テント",
+      "english": "tent",
+      "phonetic": "/tent/",
+      "partOfSpeech": "名詞",
+      "example": "We set up a tent for camping.",
+      "exampleJapanese": "キャンプのためにテントを設営しました。"
+    },
+    {
+      "japanese": "レストラン",
+      "english": "restaurant",
+      "phonetic": "/ˈrestərɑːnt/",
+      "partOfSpeech": "名詞",
+      "example": "Let's eat at that restaurant.",
+      "exampleJapanese": "あのレストランで食べましょう。"
+    },
+    {
+      "japanese": "見知らぬ人",
+      "english": "stranger",
+      "phonetic": "/ˈstreɪndʒər/",
+      "partOfSpeech": "名詞",
+      "example": "Don't talk to strangers.",
+      "exampleJapanese": "知らない人と話してはいけません。"
+    },
+    {
+      "japanese": "運転手",
+      "english": "driver",
+      "phonetic": "/ˈdraɪvər/",
+      "partOfSpeech": "名詞",
+      "example": "The driver stopped the bus.",
+      "exampleJapanese": "運転手がバスを止めました。"
+    },
+    {
+      "japanese": "敵",
+      "english": "enemy",
+      "phonetic": "/ˈenəmi/",
+      "partOfSpeech": "名詞",
+      "example": "We must defeat our enemies.",
+      "exampleJapanese": "私たちは敵を倒さなければなりません。"
+    },
+    {
+      "japanese": "夫",
+      "english": "husband",
+      "phonetic": "/ˈhʌzbənd/",
+      "partOfSpeech": "名詞",
+      "example": "Her husband is a doctor.",
+      "exampleJapanese": "彼女の夫は医者です。"
+    },
+    {
+      "japanese": "科学者",
+      "english": "scientist",
+      "phonetic": "/ˈsaɪəntɪst/",
+      "partOfSpeech": "名詞",
+      "example": "The scientist made a discovery.",
+      "exampleJapanese": "科学者が発見をしました。"
+    },
+    {
+      "japanese": "浴室",
+      "english": "bathroom",
+      "phonetic": "/ˈbæθruːm/",
+      "partOfSpeech": "名詞",
+      "example": "The bathroom is upstairs.",
+      "exampleJapanese": "浴室は2階にあります。"
+    },
+    {
+      "japanese": "ランナー",
+      "english": "runner",
+      "phonetic": "/ˈrʌnər/",
+      "partOfSpeech": "名詞",
+      "example": "The runner won the race.",
+      "exampleJapanese": "ランナーがレースに勝ちました。"
+    },
+    {
+      "japanese": "芸術家",
+      "english": "artist",
+      "phonetic": "/ˈɑːrtɪst/",
+      "partOfSpeech": "名詞",
+      "example": "The artist painted a picture.",
+      "exampleJapanese": "芸術家が絵を描きました。"
+    },
+    {
+      "japanese": "訪問者",
+      "english": "visitor",
+      "phonetic": "/ˈvɪzɪtər/",
+      "partOfSpeech": "名詞",
+      "example": "We have a visitor today.",
+      "exampleJapanese": "今日は訪問者がいます。"
+    },
+    {
+      "japanese": "いとこ",
+      "english": "cousin",
+      "phonetic": "/ˈkʌzn/",
+      "partOfSpeech": "名詞",
+      "example": "My cousin lives in Tokyo.",
+      "exampleJapanese": "私のいとこは東京に住んでいます。"
+    },
+    {
+      "japanese": "日没",
+      "english": "sunset",
+      "phonetic": "/ˈsʌnset/",
+      "partOfSpeech": "名詞",
+      "example": "The sunset was beautiful.",
+      "exampleJapanese": "日没は美しかったです。"
+    },
+    {
+      "japanese": "貿易",
+      "english": "trade",
+      "phonetic": "/treɪd/",
+      "partOfSpeech": "名詞",
+      "example": "Trade between countries is important.",
+      "exampleJapanese": "国家間の貿易は重要です。"
+    },
+    {
+      "japanese": "試合、対戦",
+      "english": "match",
+      "phonetic": "/mætʃ/",
+      "partOfSpeech": "名詞",
+      "example": "We won the soccer match.",
+      "exampleJapanese": "私たちはサッカーの試合に勝ちました。"
+    },
+    {
+      "japanese": "死",
+      "english": "death",
+      "phonetic": "/deθ/",
+      "partOfSpeech": "名詞",
+      "example": "Life and death are part of nature.",
+      "exampleJapanese": "生と死は自然の一部です。"
+    },
+    {
+      "japanese": "習慣(個人的)",
+      "english": "habit",
+      "phonetic": "/ˈhæbɪt/",
+      "partOfSpeech": "名詞",
+      "example": "Reading is a good habit.",
+      "exampleJapanese": "読書は良い習慣です。"
+    },
+    {
+      "japanese": "喜び",
+      "english": "joy",
+      "phonetic": "/dʒɔɪ/",
+      "partOfSpeech": "名詞",
+      "example": "She felt great joy.",
+      "exampleJapanese": "彼女は大きな喜びを感じました。"
+    },
+    {
+      "japanese": "血",
+      "english": "blood",
+      "phonetic": "/blʌd/",
+      "partOfSpeech": "名詞",
+      "example": "Blood is red.",
+      "exampleJapanese": "血は赤いです。"
+    },
+    {
+      "japanese": "運",
+      "english": "luck",
+      "phonetic": "/lʌk/",
+      "partOfSpeech": "名詞",
+      "example": "Good luck on your test!",
+      "exampleJapanese": "テスト頑張って！"
+    },
+    {
+      "japanese": "魚釣り",
+      "english": "fishing",
+      "phonetic": "/ˈfɪʃɪŋ/",
+      "partOfSpeech": "名詞",
+      "example": "I enjoy fishing on weekends.",
+      "exampleJapanese": "私は週末に魚釣りを楽しみます。"
+    },
+    {
+      "japanese": "大統領",
+      "english": "president",
+      "phonetic": "/ˈprezɪdənt/",
+      "partOfSpeech": "名詞",
+      "example": "The president gave a speech.",
+      "exampleJapanese": "大統領がスピーチをしました。"
+    },
+    {
+      "japanese": "商人",
+      "english": "merchant",
+      "phonetic": "/ˈmɜːrtʃənt/",
+      "partOfSpeech": "名詞",
+      "example": "The merchant sold many goods.",
+      "exampleJapanese": "商人は多くの商品を売りました。"
+    },
+    {
+      "japanese": "床屋",
+      "english": "barber",
+      "phonetic": "/ˈbɑːrbər/",
+      "partOfSpeech": "名詞",
+      "example": "I went to the barber yesterday.",
+      "exampleJapanese": "昨日床屋に行きました。"
+    },
+    {
+      "japanese": "陸軍",
+      "english": "army",
+      "phonetic": "/ˈɑːrmi/",
+      "partOfSpeech": "名詞",
+      "example": "He joined the army.",
+      "exampleJapanese": "彼は陸軍に入隊しました。"
+    },
+    {
+      "japanese": "画家",
+      "english": "painter",
+      "phonetic": "/ˈpeɪntər/",
+      "partOfSpeech": "名詞",
+      "example": "The painter created a masterpiece.",
+      "exampleJapanese": "画家は傑作を創りました。"
+    },
+    {
+      "japanese": "レポーター",
+      "english": "reporter",
+      "phonetic": "/rɪˈpɔːrtər/",
+      "partOfSpeech": "名詞",
+      "example": "The reporter asked many questions.",
+      "exampleJapanese": "レポーターは多くの質問をしました。"
+    },
+    {
+      "japanese": "神(God)",
+      "english": "God",
+      "phonetic": "/ɡɑːd/",
+      "partOfSpeech": "名詞",
+      "example": "Many people believe in God.",
+      "exampleJapanese": "多くの人が神を信じています。"
+    },
+    {
+      "japanese": "世紀",
+      "english": "century",
+      "phonetic": "/ˈsentʃəri/",
+      "partOfSpeech": "名詞",
+      "example": "We live in the 21st century.",
+      "exampleJapanese": "私たちは21世紀に生きています。"
+    },
+    {
+      "japanese": "得点、ゴール",
+      "english": "goal",
+      "phonetic": "/ɡoʊl/",
+      "partOfSpeech": "名詞",
+      "example": "He scored a goal.",
+      "exampleJapanese": "彼はゴールを決めました。"
+    },
+    {
+      "japanese": "トレーニング",
+      "english": "training",
+      "phonetic": "/ˈtreɪnɪŋ/",
+      "partOfSpeech": "名詞",
+      "example": "Training is important for athletes.",
+      "exampleJapanese": "トレーニングは選手にとって重要です。"
+    },
+    {
+      "japanese": "病気",
+      "english": "disease",
+      "phonetic": "/dɪˈziːz/",
+      "partOfSpeech": "名詞",
+      "example": "Scientists study diseases.",
+      "exampleJapanese": "科学者は病気を研究します。"
+    },
+    {
+      "japanese": "小旅行",
+      "english": "tour",
+      "phonetic": "/tʊr/",
+      "partOfSpeech": "名詞",
+      "example": "We took a tour of the city.",
+      "exampleJapanese": "私たちは街の小旅行をしました。"
+    },
+    {
+      "japanese": "試験(重要)",
+      "english": "exam",
+      "phonetic": "/ɪɡˈzæm/",
+      "partOfSpeech": "名詞",
+      "example": "I passed the exam.",
+      "exampleJapanese": "私は試験に合格しました。"
+    },
+    {
+      "japanese": "飛行",
+      "english": "flight",
+      "phonetic": "/flaɪt/",
+      "partOfSpeech": "名詞",
+      "example": "The flight was delayed.",
+      "exampleJapanese": "フライトが遅れました。"
+    },
+    {
+      "japanese": "映画(作品)",
+      "english": "film",
+      "phonetic": "/fɪlm/",
+      "partOfSpeech": "名詞",
+      "example": "We watched a film last night.",
+      "exampleJapanese": "私たちは昨夜映画を見ました。"
+    },
+    {
+      "japanese": "精神",
+      "english": "mind",
+      "phonetic": "/maɪnd/",
+      "partOfSpeech": "名詞",
+      "example": "Keep an open mind.",
+      "exampleJapanese": "心を開いておきなさい。"
+    },
+    {
+      "japanese": "痛み",
+      "english": "pain",
+      "phonetic": "/peɪn/",
+      "partOfSpeech": "名詞",
+      "example": "I feel pain in my leg.",
+      "exampleJapanese": "足に痛みを感じます。"
+    },
+    {
+      "japanese": "群衆",
+      "english": "crowd",
+      "phonetic": "/kraʊd/",
+      "partOfSpeech": "名詞",
+      "example": "A large crowd gathered.",
+      "exampleJapanese": "大勢の群衆が集まりました。"
+    },
+    {
+      "japanese": "案内人",
+      "english": "guide",
+      "phonetic": "/ɡaɪd/",
+      "partOfSpeech": "名詞",
+      "example": "The guide showed us around.",
+      "exampleJapanese": "案内人が私たちを案内してくれました。"
+    },
+    {
+      "japanese": "女王",
+      "english": "queen",
+      "phonetic": "/kwiːn/",
+      "partOfSpeech": "名詞",
+      "example": "The queen waved to the crowd.",
+      "exampleJapanese": "女王が群衆に手を振りました。"
+    },
+    {
+      "japanese": "友だち",
+      "english": "pal",
+      "phonetic": "/pæl/",
+      "partOfSpeech": "名詞",
+      "example": "He is my best pal.",
+      "exampleJapanese": "彼は私の親友です。"
+    },
+    {
+      "japanese": "船長",
+      "english": "captain",
+      "phonetic": "/ˈkæptən/",
+      "partOfSpeech": "名詞",
+      "example": "The captain steered the ship.",
+      "exampleJapanese": "船長が船を操縦しました。"
+    },
+    {
+      "japanese": "隣人",
+      "english": "neighbor",
+      "phonetic": "/ˈneɪbər/",
+      "partOfSpeech": "名詞",
+      "example": "My neighbor is very kind.",
+      "exampleJapanese": "私の隣人はとても親切です。"
+    },
+    {
+      "japanese": "王子",
+      "english": "prince",
+      "phonetic": "/prɪns/",
+      "partOfSpeech": "名詞",
+      "example": "The prince lived in a castle.",
+      "exampleJapanese": "王子は城に住んでいました。"
+    },
+    {
+      "japanese": "真夜中",
+      "english": "midnight",
+      "phonetic": "/ˈmɪdnaɪt/",
+      "partOfSpeech": "名詞",
+      "example": "I stayed up until midnight.",
+      "exampleJapanese": "私は真夜中まで起きていました。"
+    },
+    {
+      "japanese": "劇",
+      "english": "play",
+      "phonetic": "/pleɪ/",
+      "partOfSpeech": "名詞",
+      "example": "We watched a play at school.",
+      "exampleJapanese": "私たちは学校で劇を見ました。"
+    },
+    {
+      "japanese": "涙",
+      "english": "tear",
+      "phonetic": "/tɪr/",
+      "partOfSpeech": "名詞",
+      "example": "A tear rolled down her cheek.",
+      "exampleJapanese": "涙が彼女の頬を伝いました。"
+    },
+    {
+      "japanese": "コンサート",
+      "english": "concert",
+      "phonetic": "/ˈkɑːnsərt/",
+      "partOfSpeech": "名詞",
+      "example": "We went to a concert.",
+      "exampleJapanese": "私たちはコンサートに行きました。"
+    },
+    {
+      "japanese": "行動",
+      "english": "action",
+      "phonetic": "/ˈækʃn/",
+      "partOfSpeech": "名詞",
+      "example": "Actions speak louder than words.",
+      "exampleJapanese": "行動は言葉より雄弁です。"
+    },
+    {
+      "japanese": "祭り",
+      "english": "festival",
+      "phonetic": "/ˈfestɪvl/",
+      "partOfSpeech": "名詞",
+      "example": "The festival was exciting.",
+      "exampleJapanese": "祭りは楽しかったです。"
+    },
+    {
+      "japanese": "ポピュラー音楽",
+      "english": "pop",
+      "phonetic": "/pɑːp/",
+      "partOfSpeech": "名詞",
+      "example": "She listens to pop music.",
+      "exampleJapanese": "彼女はポップ音楽を聴きます。"
+    },
+    {
+      "japanese": "考え(思考)",
+      "english": "thought",
+      "phonetic": "/θɔːt/",
+      "partOfSpeech": "名詞",
+      "example": "What are your thoughts?",
+      "exampleJapanese": "あなたの考えは何ですか？"
+    },
+    {
+      "japanese": "約束",
+      "english": "promise",
+      "phonetic": "/ˈprɑːmɪs/",
+      "partOfSpeech": "名詞",
+      "example": "Keep your promise.",
+      "exampleJapanese": "約束を守ってください。"
+    },
+    {
+      "japanese": "事故",
+      "english": "accident",
+      "phonetic": "/ˈæksɪdənt/",
+      "partOfSpeech": "名詞",
+      "example": "There was a traffic accident.",
+      "exampleJapanese": "交通事故がありました。"
+    },
+    {
+      "japanese": "習慣(社会的)、風習",
+      "english": "custom",
+      "phonetic": "/ˈkʌstəm/",
+      "partOfSpeech": "名詞",
+      "example": "It is a Japanese custom.",
+      "exampleJapanese": "それは日本の習慣です。"
+    },
+    {
+      "japanese": "浪費",
+      "english": "waste",
+      "phonetic": "/weɪst/",
+      "partOfSpeech": "名詞",
+      "example": "Don't waste water.",
+      "exampleJapanese": "水を無駄にしないでください。"
+    },
+    {
+      "japanese": "使用",
+      "english": "use",
+      "phonetic": "/juːs/",
+      "partOfSpeech": "名詞",
+      "example": "What is the use of this?",
+      "exampleJapanese": "これは何に使うのですか？"
+    },
+    {
+      "japanese": "返事",
+      "english": "reply",
+      "phonetic": "/rɪˈplaɪ/",
+      "partOfSpeech": "名詞",
+      "example": "I'm waiting for your reply.",
+      "exampleJapanese": "返事を待っています。"
+    },
+    {
+      "japanese": "競走、人種",
+      "english": "race",
+      "phonetic": "/reɪs/",
+      "partOfSpeech": "名詞",
+      "example": "He won the race.",
+      "exampleJapanese": "彼はレースに勝ちました。"
+    },
+    {
+      "japanese": "滞在",
+      "english": "stay",
+      "phonetic": "/steɪ/",
+      "partOfSpeech": "名詞",
+      "example": "Enjoy your stay.",
+      "exampleJapanese": "滞在を楽しんでください。"
+    },
+    {
+      "japanese": "谷",
+      "english": "valley",
+      "phonetic": "/ˈvæli/",
+      "partOfSpeech": "名詞",
+      "example": "A river flows through the valley.",
+      "exampleJapanese": "川が谷を流れています。"
+    },
+    {
+      "japanese": "銀",
+      "english": "silver",
+      "phonetic": "/ˈsɪlvər/",
+      "partOfSpeech": "名詞",
+      "example": "She has a silver ring.",
+      "exampleJapanese": "彼女は銀の指輪を持っています。"
+    },
+    {
+      "japanese": "天",
+      "english": "heaven",
+      "phonetic": "/ˈhevn/",
+      "partOfSpeech": "名詞",
+      "example": "The sky looks like heaven.",
+      "exampleJapanese": "空は天国のようです。"
+    },
+    {
+      "japanese": "大洋",
+      "english": "ocean",
+      "phonetic": "/ˈoʊʃn/",
+      "partOfSpeech": "名詞",
+      "example": "The ocean is very deep.",
+      "exampleJapanese": "海はとても深いです。"
+    },
+    {
+      "japanese": "土",
+      "english": "soil",
+      "phonetic": "/sɔɪl/",
+      "partOfSpeech": "名詞",
+      "example": "Plants grow in soil.",
+      "exampleJapanese": "植物は土で育ちます。"
+    },
+    {
+      "japanese": "10億",
+      "english": "billion",
+      "phonetic": "/ˈbɪljən/",
+      "partOfSpeech": "名詞",
+      "example": "There are billions of stars.",
+      "exampleJapanese": "何十億もの星があります。"
+    },
+    {
+      "japanese": "一対",
+      "english": "couple",
+      "phonetic": "/ˈkʌpl/",
+      "partOfSpeech": "名詞",
+      "example": "A couple of days ago.",
+      "exampleJapanese": "数日前に。"
+    },
+    {
+      "japanese": "地域",
+      "english": "area",
+      "phonetic": "/ˈeriə/",
+      "partOfSpeech": "名詞",
+      "example": "This area is very quiet.",
+      "exampleJapanese": "この地域はとても静かです。"
+    },
+    {
+      "japanese": "カレンダー",
+      "english": "calendar",
+      "phonetic": "/ˈkæləndər/",
+      "partOfSpeech": "名詞",
+      "example": "Check the calendar.",
+      "exampleJapanese": "カレンダーを確認してください。"
+    },
+    {
+      "japanese": "信号",
+      "english": "signal",
+      "phonetic": "/ˈsɪɡnəl/",
+      "partOfSpeech": "名詞",
+      "example": "Wait for the signal.",
+      "exampleJapanese": "信号を待ってください。"
+    },
+    {
+      "japanese": "討論",
+      "english": "discussion",
+      "phonetic": "/dɪˈskʌʃn/",
+      "partOfSpeech": "名詞",
+      "example": "We had a good discussion.",
+      "exampleJapanese": "良い討論ができました。"
+    },
+    {
+      "japanese": "合図、標識",
+      "english": "sign",
+      "phonetic": "/saɪn/",
+      "partOfSpeech": "名詞",
+      "example": "Follow the signs.",
+      "exampleJapanese": "標識に従ってください。"
+    },
+    {
+      "japanese": "バレーボール",
+      "english": "volleyball",
+      "phonetic": "/ˈvɑːlibɔːl/",
+      "partOfSpeech": "名詞",
+      "example": "We play volleyball at school.",
+      "exampleJapanese": "私たちは学校でバレーボールをします。"
+    },
+    {
+      "japanese": "答え",
+      "english": "answer",
+      "phonetic": "/ˈænsər/",
+      "partOfSpeech": "名詞",
+      "example": "What is the answer?",
+      "exampleJapanese": "答えは何ですか？"
+    },
+    {
+      "japanese": "停留所",
+      "english": "stop",
+      "phonetic": "/stɑːp/",
+      "partOfSpeech": "名詞",
+      "example": "The bus stop is near here.",
+      "exampleJapanese": "バス停はここの近くです。"
+    },
+    {
+      "japanese": "勇気",
+      "english": "courage",
+      "phonetic": "/ˈkɜːrɪdʒ/",
+      "partOfSpeech": "名詞",
+      "example": "It takes courage to speak up.",
+      "exampleJapanese": "発言するには勇気がいります。"
+    },
+    {
+      "japanese": "鉄",
+      "english": "iron",
+      "phonetic": "/ˈaɪərn/",
+      "partOfSpeech": "名詞",
+      "example": "Iron is a strong metal.",
+      "exampleJapanese": "鉄は強い金属です。"
+    },
+    {
+      "japanese": "宇宙(全体)",
+      "english": "universe",
+      "phonetic": "/ˈjuːnɪvɜːrs/",
+      "partOfSpeech": "名詞",
+      "example": "The universe is vast.",
+      "exampleJapanese": "宇宙は広大です。"
+    },
+    {
+      "japanese": "絹",
+      "english": "silk",
+      "phonetic": "/sɪlk/",
+      "partOfSpeech": "名詞",
+      "example": "Silk is very soft.",
+      "exampleJapanese": "絹はとても柔らかいです。"
+    },
+    {
+      "japanese": "波",
+      "english": "wave",
+      "phonetic": "/weɪv/",
+      "partOfSpeech": "名詞",
+      "example": "The waves are high today.",
+      "exampleJapanese": "今日は波が高いです。"
+    },
+    {
+      "japanese": "根",
+      "english": "root",
+      "phonetic": "/ruːt/",
+      "partOfSpeech": "名詞",
+      "example": "The roots go deep.",
+      "exampleJapanese": "根は深く伸びています。"
+    },
+    {
+      "japanese": "煙",
+      "english": "smoke",
+      "phonetic": "/smoʊk/",
+      "partOfSpeech": "名詞",
+      "example": "Smoke rose from the fire.",
+      "exampleJapanese": "煙が火から上がりました。"
+    },
+    {
+      "japanese": "進路",
+      "english": "course",
+      "phonetic": "/kɔːrs/",
+      "partOfSpeech": "名詞",
+      "example": "Stay on course.",
+      "exampleJapanese": "進路を維持してください。"
+    },
+    {
+      "japanese": "陰",
+      "english": "shade",
+      "phonetic": "/ʃeɪd/",
+      "partOfSpeech": "名詞",
+      "example": "Let's sit in the shade.",
+      "exampleJapanese": "日陰に座りましょう。"
+    },
+    {
+      "japanese": "賞",
+      "english": "prize",
+      "phonetic": "/praɪz/",
+      "partOfSpeech": "名詞",
+      "example": "She won first prize.",
+      "exampleJapanese": "彼女は1等賞を取りました。"
+    },
+    {
+      "japanese": "リスト",
+      "english": "list",
+      "phonetic": "/lɪst/",
+      "partOfSpeech": "名詞",
+      "example": "Make a shopping list.",
+      "exampleJapanese": "買い物リストを作ってください。"
+    },
+    {
+      "japanese": "ページ",
+      "english": "page",
+      "phonetic": "/peɪdʒ/",
+      "partOfSpeech": "名詞",
+      "example": "Turn to page 10.",
+      "exampleJapanese": "10ページを開いてください。"
+    },
+    {
+      "japanese": "報告",
+      "english": "report",
+      "phonetic": "/rɪˈpɔːrt/",
+      "partOfSpeech": "名詞",
+      "example": "I wrote a report.",
+      "exampleJapanese": "私は報告書を書きました。"
+    },
+    {
+      "japanese": "足元、階段",
+      "english": "step",
+      "phonetic": "/step/",
+      "partOfSpeech": "名詞",
+      "example": "Watch your step.",
+      "exampleJapanese": "足元に気をつけて。"
+    },
+    {
+      "japanese": "秘密",
+      "english": "secret",
+      "phonetic": "/ˈsiːkrɪt/",
+      "partOfSpeech": "名詞",
+      "example": "Keep it a secret.",
+      "exampleJapanese": "秘密にしておいてね。"
+    },
+    {
+      "japanese": "クイズ",
+      "english": "quiz",
+      "phonetic": "/kwɪz/",
+      "partOfSpeech": "名詞",
+      "example": "We have a quiz tomorrow.",
+      "exampleJapanese": "明日クイズがあります。"
+    },
+    {
+      "japanese": "世話、管理",
+      "english": "care",
+      "phonetic": "/ker/",
+      "partOfSpeech": "名詞",
+      "example": "Take care of yourself.",
+      "exampleJapanese": "自分を大事にしてね。"
+    },
+    {
+      "japanese": "殺到",
+      "english": "rush",
+      "phonetic": "/rʌʃ/",
+      "partOfSpeech": "名詞",
+      "example": "There was a rush for tickets.",
+      "exampleJapanese": "チケットへの殺到がありました。"
+    },
+    {
+      "japanese": "植物",
+      "english": "plant",
+      "phonetic": "/plænt/",
+      "partOfSpeech": "名詞",
+      "example": "Water the plant daily.",
+      "exampleJapanese": "毎日植物に水をやってください。"
+    },
+    {
+      "japanese": "ガス",
+      "english": "gas",
+      "phonetic": "/ɡæs/",
+      "partOfSpeech": "名詞",
+      "example": "We need more gas.",
+      "exampleJapanese": "ガスがもっと必要です。"
+    },
+    {
+      "japanese": "気候",
+      "english": "climate",
+      "phonetic": "/ˈklaɪmɪt/",
+      "partOfSpeech": "名詞",
+      "example": "The climate is changing.",
+      "exampleJapanese": "気候が変化しています。"
+    },
+    {
+      "japanese": "宝石",
+      "english": "jewel",
+      "phonetic": "/ˈdʒuːəl/",
+      "partOfSpeech": "名詞",
+      "example": "The jewel sparkled.",
+      "exampleJapanese": "宝石が輝きました。"
+    },
+    {
+      "japanese": "虹",
+      "english": "rainbow",
+      "phonetic": "/ˈreɪnboʊ/",
+      "partOfSpeech": "名詞",
+      "example": "A rainbow appeared after the rain.",
+      "exampleJapanese": "雨の後に虹が現れました。"
+    },
+    {
+      "japanese": "天気",
+      "english": "weather",
+      "phonetic": "/ˈweðər/",
+      "partOfSpeech": "名詞",
+      "example": "The weather is nice today.",
+      "exampleJapanese": "今日は天気が良いです。"
+    },
+    {
+      "japanese": "模型",
+      "english": "model",
+      "phonetic": "/ˈmɑːdl/",
+      "partOfSpeech": "名詞",
+      "example": "He built a model plane.",
+      "exampleJapanese": "彼は模型飛行機を作りました。"
+    },
+    {
+      "japanese": "点",
+      "english": "point",
+      "phonetic": "/pɔɪnt/",
+      "partOfSpeech": "名詞",
+      "example": "You have a good point.",
+      "exampleJapanese": "良い点を突いていますね。"
+    },
+    {
+      "japanese": "鉄道",
+      "english": "railway",
+      "phonetic": "/ˈreɪlweɪ/",
+      "partOfSpeech": "名詞",
+      "example": "The railway goes to Tokyo.",
+      "exampleJapanese": "その鉄道は東京まで行きます。"
+    },
+    {
+      "japanese": "印",
+      "english": "mark",
+      "phonetic": "/mɑːrk/",
+      "partOfSpeech": "名詞",
+      "example": "There is a mark on the wall.",
+      "exampleJapanese": "壁に印があります。"
+    },
+    {
+      "japanese": "鉢",
+      "english": "bowl",
+      "phonetic": "/boʊl/",
+      "partOfSpeech": "名詞",
+      "example": "Put the rice in a bowl.",
+      "exampleJapanese": "ご飯を鉢に入れてください。"
+    },
+    {
+      "japanese": "くちびる",
+      "english": "lip",
+      "phonetic": "/lɪp/",
+      "partOfSpeech": "名詞",
+      "example": "She bit her lip.",
+      "exampleJapanese": "彼女は唇を噛みました。"
+    },
+    {
+      "japanese": "網",
+      "english": "net",
+      "phonetic": "/net/",
+      "partOfSpeech": "名詞",
+      "example": "The ball hit the net.",
+      "exampleJapanese": "ボールがネットに当たりました。"
+    },
+    {
+      "japanese": "メロン",
+      "english": "melon",
+      "phonetic": "/ˈmelən/",
+      "partOfSpeech": "名詞",
+      "example": "This melon is very sweet.",
+      "exampleJapanese": "このメロンはとても甘いです。"
+    },
+    {
+      "japanese": "詩",
+      "english": "poem",
+      "phonetic": "/ˈpoʊəm/",
+      "partOfSpeech": "名詞",
+      "example": "She wrote a beautiful poem.",
+      "exampleJapanese": "彼女は美しい詩を書きました。"
+    },
+    {
+      "japanese": "メニュー",
+      "english": "menu",
+      "phonetic": "/ˈmenjuː/",
+      "partOfSpeech": "名詞",
+      "example": "May I see the menu?",
+      "exampleJapanese": "メニューを見せてください。"
+    },
+    {
+      "japanese": "グラム",
+      "english": "gram",
+      "phonetic": "/ɡræm/",
+      "partOfSpeech": "名詞",
+      "example": "Add 100 grams of sugar.",
+      "exampleJapanese": "砂糖を100グラム加えてください。"
+    },
+    {
+      "japanese": "セント",
+      "english": "cent",
+      "phonetic": "/sent/",
+      "partOfSpeech": "名詞",
+      "example": "It costs 50 cents.",
+      "exampleJapanese": "50セントです。"
+    },
+    {
+      "japanese": "住所",
+      "english": "address",
+      "phonetic": "/əˈdres/",
+      "partOfSpeech": "名詞",
+      "example": "What is your address?",
+      "exampleJapanese": "あなたの住所は何ですか？"
+    },
+    {
+      "japanese": "被害",
+      "english": "damage",
+      "phonetic": "/ˈdæmɪdʒ/",
+      "partOfSpeech": "名詞",
+      "example": "The storm caused damage.",
+      "exampleJapanese": "嵐が被害をもたらしました。"
+    },
+    {
+      "japanese": "種類(分類)",
+      "english": "sort",
+      "phonetic": "/sɔːrt/",
+      "partOfSpeech": "名詞",
+      "example": "What sort of music do you like?",
+      "exampleJapanese": "どんな種類の音楽が好きですか？"
+    },
+    {
+      "japanese": "理由、原因",
+      "english": "reason",
+      "phonetic": "/ˈriːzn/",
+      "partOfSpeech": "名詞",
+      "example": "What is the reason?",
+      "exampleJapanese": "理由は何ですか？"
+    },
+    {
+      "japanese": "キロメートル",
+      "english": "kilometer",
+      "phonetic": "/kɪˈlɑːmɪtər/",
+      "partOfSpeech": "名詞",
+      "example": "It is five kilometers away.",
+      "exampleJapanese": "5キロメートル離れています。"
+    },
+    {
+      "japanese": "真ん中",
+      "english": "middle",
+      "phonetic": "/ˈmɪdl/",
+      "partOfSpeech": "名詞",
+      "example": "Stand in the middle.",
+      "exampleJapanese": "中央に立ってください。"
+    },
+    {
+      "japanese": "ショック",
+      "english": "shock",
+      "phonetic": "/ʃɑːk/",
+      "partOfSpeech": "名詞",
+      "example": "It was a big shock.",
+      "exampleJapanese": "それは大きなショックでした。"
+    },
+    {
+      "japanese": "センチメートル",
+      "english": "centimeter",
+      "phonetic": "/ˈsentɪmiːtər/",
+      "partOfSpeech": "名詞",
+      "example": "It is 10 centimeters long.",
+      "exampleJapanese": "長さは10センチメートルです。"
+    },
+    {
+      "japanese": "地帯",
+      "english": "zone",
+      "phonetic": "/zoʊn/",
+      "partOfSpeech": "名詞",
+      "example": "This is a no-parking zone.",
+      "exampleJapanese": "ここは駐車禁止地帯です。"
+    },
+    {
+      "japanese": "トースト",
+      "english": "toast",
+      "phonetic": "/toʊst/",
+      "partOfSpeech": "名詞",
+      "example": "I had toast for breakfast.",
+      "exampleJapanese": "朝食にトーストを食べました。"
+    },
+    {
+      "japanese": "カーテン",
+      "english": "curtain",
+      "phonetic": "/ˈkɜːrtn/",
+      "partOfSpeech": "名詞",
+      "example": "Close the curtains.",
+      "exampleJapanese": "カーテンを閉めてください。"
+    },
+    {
+      "japanese": "ジュース",
+      "english": "juice",
+      "phonetic": "/dʒuːs/",
+      "partOfSpeech": "名詞",
+      "example": "I like orange juice.",
+      "exampleJapanese": "私はオレンジジュースが好きです。"
+    },
+    {
+      "japanese": "蜂蜜",
+      "english": "honey",
+      "phonetic": "/ˈhʌni/",
+      "partOfSpeech": "名詞",
+      "example": "Honey is sweet.",
+      "exampleJapanese": "蜂蜜は甘いです。"
+    },
+    {
+      "japanese": "商品",
+      "english": "goods",
+      "phonetic": "/ɡʊdz/",
+      "partOfSpeech": "名詞",
+      "example": "The goods arrived today.",
+      "exampleJapanese": "商品が今日届きました。"
+    },
+    {
+      "japanese": "感じ",
+      "english": "sense",
+      "phonetic": "/sens/",
+      "partOfSpeech": "名詞",
+      "example": "Use your common sense.",
+      "exampleJapanese": "常識を使いなさい。"
+    },
+    {
+      "japanese": "型",
+      "english": "type",
+      "phonetic": "/taɪp/",
+      "partOfSpeech": "名詞",
+      "example": "What type do you want?",
+      "exampleJapanese": "どの型が欲しいですか？"
+    },
+    {
+      "japanese": "象徴",
+      "english": "symbol",
+      "phonetic": "/ˈsɪmbl/",
+      "partOfSpeech": "名詞",
+      "example": "The dove is a symbol of peace.",
+      "exampleJapanese": "鳩は平和の象徴です。"
+    },
+    {
+      "japanese": "エネルギー",
+      "english": "energy",
+      "phonetic": "/ˈenərdʒi/",
+      "partOfSpeech": "名詞",
+      "example": "Save energy.",
+      "exampleJapanese": "エネルギーを節約しましょう。"
+    },
+    {
+      "japanese": "位置、地位",
+      "english": "position",
+      "phonetic": "/pəˈzɪʃn/",
+      "partOfSpeech": "名詞",
+      "example": "Stay in position.",
+      "exampleJapanese": "位置についていてください。"
+    },
+    {
+      "japanese": "灰色",
+      "english": "gray",
+      "phonetic": "/ɡreɪ/",
+      "partOfSpeech": "名詞",
+      "example": "The sky is gray today.",
+      "exampleJapanese": "今日の空は灰色です。"
+    },
+    {
+      "japanese": "少し",
+      "english": "bit",
+      "phonetic": "/bɪt/",
+      "partOfSpeech": "名詞",
+      "example": "Wait a bit.",
+      "exampleJapanese": "少し待ってください。"
+    },
+    {
+      "japanese": "問題、困ったこと",
+      "english": "matter",
+      "phonetic": "/ˈmætər/",
+      "partOfSpeech": "名詞",
+      "example": "What's the matter?",
+      "exampleJapanese": "どうしたの？"
+    },
+    {
+      "japanese": "力",
+      "english": "power",
+      "phonetic": "/ˈpaʊər/",
+      "partOfSpeech": "名詞",
+      "example": "Knowledge is power.",
+      "exampleJapanese": "知識は力です。"
+    },
+    {
+      "japanese": "文",
+      "english": "sentence",
+      "phonetic": "/ˈsentəns/",
+      "partOfSpeech": "名詞",
+      "example": "Write a sentence.",
+      "exampleJapanese": "文を書いてください。"
+    },
+    {
+      "japanese": "円(通貨)",
+      "english": "yen",
+      "phonetic": "/jen/",
+      "partOfSpeech": "名詞",
+      "example": "It costs 100 yen.",
+      "exampleJapanese": "100円です。"
+    },
+    {
+      "japanese": "評点、等級",
+      "english": "grade",
+      "phonetic": "/ɡreɪd/",
+      "partOfSpeech": "名詞",
+      "example": "I got a good grade.",
+      "exampleJapanese": "良い成績を取りました。"
+    },
+    {
+      "japanese": "皿(食器)",
+      "english": "plate",
+      "phonetic": "/pleɪt/",
+      "partOfSpeech": "名詞",
+      "example": "Put food on the plate.",
+      "exampleJapanese": "食べ物を皿に置いてください。"
+    },
+    {
+      "japanese": "チーズ",
+      "english": "cheese",
+      "phonetic": "/tʃiːz/",
+      "partOfSpeech": "名詞",
+      "example": "I love cheese.",
+      "exampleJapanese": "私はチーズが大好きです。"
+    },
+    {
+      "japanese": "カン",
+      "english": "can",
+      "phonetic": "/kæn/",
+      "partOfSpeech": "名詞",
+      "example": "Open the can.",
+      "exampleJapanese": "缶を開けてください。"
+    },
+    {
+      "japanese": "宝物",
+      "english": "treasure",
+      "phonetic": "/ˈtreʒər/",
+      "partOfSpeech": "名詞",
+      "example": "They found treasure.",
+      "exampleJapanese": "彼らは宝物を見つけました。"
+    },
+    {
+      "japanese": "穴",
+      "english": "hole",
+      "phonetic": "/hoʊl/",
+      "partOfSpeech": "名詞",
+      "example": "There is a hole in my sock.",
+      "exampleJapanese": "靴下に穴があいています。"
+    },
+    {
+      "japanese": "価格",
+      "english": "price",
+      "phonetic": "/praɪs/",
+      "partOfSpeech": "名詞",
+      "example": "What is the price?",
+      "exampleJapanese": "価格はいくらですか？"
+    },
+    {
+      "japanese": "問題",
+      "english": "problem",
+      "phonetic": "/ˈprɑːbləm/",
+      "partOfSpeech": "名詞",
+      "example": "No problem!",
+      "exampleJapanese": "問題ありません！"
+    },
+    {
+      "japanese": "事実",
+      "english": "fact",
+      "phonetic": "/fækt/",
+      "partOfSpeech": "名詞",
+      "example": "That is a fact.",
+      "exampleJapanese": "それは事実です。"
+    },
+    {
+      "japanese": "美",
+      "english": "beauty",
+      "phonetic": "/ˈbjuːti/",
+      "partOfSpeech": "名詞",
+      "example": "Beauty is in the eye of the beholder.",
+      "exampleJapanese": "美しさは見る人の目の中にある。"
+    },
+    {
+      "japanese": "一組",
+      "english": "pair",
+      "phonetic": "/per/",
+      "partOfSpeech": "名詞",
+      "example": "I need a pair of shoes.",
+      "exampleJapanese": "靴が一足必要です。"
+    },
+    {
+      "japanese": "パーセント",
+      "english": "percent",
+      "phonetic": "/pərˈsent/",
+      "partOfSpeech": "名詞",
+      "example": "Fifty percent of students passed.",
+      "exampleJapanese": "50パーセントの生徒が合格しました。"
+    },
+    {
+      "japanese": "場合、容器",
+      "english": "case",
+      "phonetic": "/keɪs/",
+      "partOfSpeech": "名詞",
+      "example": "In that case, let's go.",
+      "exampleJapanese": "その場合は、行きましょう。"
+    },
+    {
+      "japanese": "綴り",
+      "english": "spelling",
+      "phonetic": "/ˈspelɪŋ/",
+      "partOfSpeech": "名詞",
+      "example": "Check your spelling.",
+      "exampleJapanese": "スペルを確認してください。"
+    },
+    {
+      "japanese": "意味",
+      "english": "meaning",
+      "phonetic": "/ˈmiːnɪŋ/",
+      "partOfSpeech": "名詞",
+      "example": "What is the meaning of this word?",
+      "exampleJapanese": "この単語の意味は何ですか？"
+    },
+    {
+      "japanese": "正方形",
+      "english": "square",
+      "phonetic": "/skwer/",
+      "partOfSpeech": "名詞",
+      "example": "Draw a square.",
+      "exampleJapanese": "正方形を描いてください。"
+    },
+    {
+      "japanese": "若さ",
+      "english": "youth",
+      "phonetic": "/juːθ/",
+      "partOfSpeech": "名詞",
+      "example": "Youth is a treasure.",
+      "exampleJapanese": "若さは宝物です。"
+    },
+    {
+      "japanese": "注文する",
+      "english": "order",
+      "phonetic": "/ˈɔːrdər/",
+      "partOfSpeech": "動詞",
+      "example": "Can I order now?",
+      "exampleJapanese": "今注文してもいいですか？"
+    },
+    {
+      "japanese": "不思議に思う",
+      "english": "wonder",
+      "phonetic": "/ˈwʌndər/",
+      "partOfSpeech": "動詞",
+      "example": "I wonder why he left.",
+      "exampleJapanese": "なぜ彼が去ったのか不思議に思います。"
+    },
+    {
+      "japanese": "においがする",
+      "english": "smell",
+      "phonetic": "/smel/",
+      "partOfSpeech": "動詞",
+      "example": "It smells good.",
+      "exampleJapanese": "いい匂いがします。"
+    },
+    {
+      "japanese": "キスをする",
+      "english": "kiss",
+      "phonetic": "/kɪs/",
+      "partOfSpeech": "動詞",
+      "example": "She kissed her baby.",
+      "exampleJapanese": "彼女は赤ちゃんにキスをしました。"
+    },
+    {
+      "japanese": "横切る",
+      "english": "cross",
+      "phonetic": "/krɔːs/",
+      "partOfSpeech": "動詞",
+      "example": "Cross the street carefully.",
+      "exampleJapanese": "注意して道を横切ってください。"
+    },
+    {
+      "japanese": "選択する、選び出す",
+      "english": "select",
+      "phonetic": "/sɪˈlekt/",
+      "partOfSpeech": "動詞",
+      "example": "Please select one item.",
+      "exampleJapanese": "1つ選んでください。"
+    },
+    {
+      "japanese": "目が覚める(起きている)",
+      "english": "awake",
+      "phonetic": "/əˈweɪk/",
+      "partOfSpeech": "動詞",
+      "example": "I awoke at 6 AM.",
+      "exampleJapanese": "私は朝6時に目が覚めました。"
+    },
+    {
+      "japanese": "いっぱいにする",
+      "english": "fill",
+      "phonetic": "/fɪl/",
+      "partOfSpeech": "動詞",
+      "example": "Fill the glass with water.",
+      "exampleJapanese": "グラスに水をいっぱいにしてください。"
+    },
+    {
+      "japanese": "印刷する",
+      "english": "print",
+      "phonetic": "/prɪnt/",
+      "partOfSpeech": "動詞",
+      "example": "Please print this document.",
+      "exampleJapanese": "この書類を印刷してください。"
+    },
+    {
+      "japanese": "成功する",
+      "english": "succeed",
+      "phonetic": "/səkˈsiːd/",
+      "partOfSpeech": "動詞",
+      "example": "He succeeded in passing the exam.",
+      "exampleJapanese": "彼は試験に合格することに成功しました。"
+    },
+    {
+      "japanese": "受け取る",
+      "english": "receive",
+      "phonetic": "/rɪˈsiːv/",
+      "partOfSpeech": "動詞",
+      "example": "I received a letter.",
+      "exampleJapanese": "私は手紙を受け取りました。"
+    },
+    {
+      "japanese": "デートする",
+      "english": "date",
+      "phonetic": "/deɪt/",
+      "partOfSpeech": "動詞",
+      "example": "They have been dating for a year.",
+      "exampleJapanese": "彼らは1年間付き合っています。"
+    },
+    {
+      "japanese": "(高く)持ち上げる、高める",
+      "english": "raise",
+      "phonetic": "/reɪz/",
+      "partOfSpeech": "動詞",
+      "example": "Raise your hand.",
+      "exampleJapanese": "手を上げてください。"
+    },
+    {
+      "japanese": "練習する(運動)",
+      "english": "exercise",
+      "phonetic": "/ˈeksərsaɪz/",
+      "partOfSpeech": "動詞",
+      "example": "I exercise every day.",
+      "exampleJapanese": "私は毎日運動します。"
+    },
+    {
+      "japanese": "帰る、返す",
+      "english": "return",
+      "phonetic": "/rɪˈtɜːrn/",
+      "partOfSpeech": "動詞",
+      "example": "Please return the book.",
+      "exampleJapanese": "本を返してください。"
+    },
+    {
+      "japanese": "破壊する",
+      "english": "destroy",
+      "phonetic": "/dɪˈstrɔɪ/",
+      "partOfSpeech": "動詞",
+      "example": "The fire destroyed the house.",
+      "exampleJapanese": "火事が家を破壊しました。"
+    },
+    {
+      "japanese": "～のものである",
+      "english": "belong",
+      "phonetic": "/bɪˈlɔːŋ/",
+      "partOfSpeech": "動詞",
+      "example": "This book belongs to me.",
+      "exampleJapanese": "この本は私のものです。"
+    },
+    {
+      "japanese": "気づく、実現する",
+      "english": "realize",
+      "phonetic": "/ˈriːəlaɪz/",
+      "partOfSpeech": "動詞",
+      "example": "I realized my mistake.",
+      "exampleJapanese": "私は間違いに気づきました。"
+    },
+    {
+      "japanese": "聞こえる",
+      "english": "sound",
+      "phonetic": "/saʊnd/",
+      "partOfSpeech": "動詞",
+      "example": "That sounds interesting.",
+      "exampleJapanese": "それは面白そうですね。"
+    },
+    {
+      "japanese": "発明する",
+      "english": "invent",
+      "phonetic": "/ɪnˈvent/",
+      "partOfSpeech": "動詞",
+      "example": "Edison invented the light bulb.",
+      "exampleJapanese": "エジソンは電球を発明しました。"
+    },
+    {
+      "japanese": "解決する",
+      "english": "solve",
+      "phonetic": "/sɑːlv/",
+      "partOfSpeech": "動詞",
+      "example": "Can you solve this problem?",
+      "exampleJapanese": "この問題を解けますか？"
+    },
+    {
+      "japanese": "傷つける",
+      "english": "hurt",
+      "phonetic": "/hɜːrt/",
+      "partOfSpeech": "動詞",
+      "example": "I hurt my leg.",
+      "exampleJapanese": "私は足を傷つけました。",
+      "pastTense": "hurt",
+      "pastParticiple": "hurt"
+    },
+    {
+      "japanese": "ノックする",
+      "english": "knock",
+      "phonetic": "/nɑːk/",
+      "partOfSpeech": "動詞",
+      "example": "Someone is knocking on the door.",
+      "exampleJapanese": "誰かがドアをノックしています。"
+    },
+    {
+      "japanese": "触れる、感動する",
+      "english": "touch",
+      "phonetic": "/tʌtʃ/",
+      "partOfSpeech": "動詞",
+      "example": "Don't touch that!",
+      "exampleJapanese": "それに触らないで！"
+    },
+    {
+      "japanese": "間違う、いなくてさみしく思う",
+      "english": "miss",
+      "phonetic": "/mɪs/",
+      "partOfSpeech": "動詞",
+      "example": "I miss you.",
+      "exampleJapanese": "あなたがいなくてさみしいです。"
+    },
+    {
+      "japanese": "着く、届く",
+      "english": "reach",
+      "phonetic": "/riːtʃ/",
+      "partOfSpeech": "動詞",
+      "example": "We reached the station.",
+      "exampleJapanese": "私たちは駅に着きました。"
+    },
+    {
+      "japanese": "手渡す",
+      "english": "hand",
+      "phonetic": "/hænd/",
+      "partOfSpeech": "動詞",
+      "example": "Hand me the book.",
+      "exampleJapanese": "本を手渡してください。"
+    },
+    {
+      "japanese": "選ぶ",
+      "english": "choose",
+      "phonetic": "/tʃuːz/",
+      "partOfSpeech": "動詞",
+      "example": "Choose one.",
+      "exampleJapanese": "1つ選んでください。",
+      "pastTense": "chose",
+      "pastParticiple": "chosen"
+    },
+    {
+      "japanese": "分け合う",
+      "english": "share",
+      "phonetic": "/ʃer/",
+      "partOfSpeech": "動詞",
+      "example": "Let's share the pizza.",
+      "exampleJapanese": "ピザを分け合いましょう。"
+    },
+    {
+      "japanese": "模写する",
+      "english": "copy",
+      "phonetic": "/ˈkɑːpi/",
+      "partOfSpeech": "動詞",
+      "example": "Copy this sentence.",
+      "exampleJapanese": "この文を写してください。"
+    },
+    {
+      "japanese": "ゆでる、煮る",
+      "english": "boil",
+      "phonetic": "/bɔɪl/",
+      "partOfSpeech": "動詞",
+      "example": "Boil the water.",
+      "exampleJapanese": "お湯を沸かしてください。"
+    },
+    {
+      "japanese": "訓練する",
+      "english": "train",
+      "phonetic": "/treɪn/",
+      "partOfSpeech": "動詞",
+      "example": "We train every day.",
+      "exampleJapanese": "私たちは毎日訓練します。"
+    },
+    {
+      "japanese": "おおう",
+      "english": "cover",
+      "phonetic": "/ˈkʌvər/",
+      "partOfSpeech": "動詞",
+      "example": "Cover the pot with a lid.",
+      "exampleJapanese": "鍋にふたをかぶせてください。"
+    },
+    {
+      "japanese": "壊れる、破る",
+      "english": "break",
+      "phonetic": "/breɪk/",
+      "partOfSpeech": "動詞",
+      "example": "Don't break the glass.",
+      "exampleJapanese": "ガラスを割らないでください。",
+      "pastTense": "broke",
+      "pastParticiple": "broken"
+    },
+    {
+      "japanese": "気に入る、喜ばせる",
+      "english": "please",
+      "phonetic": "/pliːz/",
+      "partOfSpeech": "動詞",
+      "example": "I want to please my parents.",
+      "exampleJapanese": "両親を喜ばせたいです。"
+    },
+    {
+      "japanese": "説明する",
+      "english": "explain",
+      "phonetic": "/ɪkˈspleɪn/",
+      "partOfSpeech": "動詞",
+      "example": "Please explain the rule.",
+      "exampleJapanese": "ルールを説明してください。"
+    },
+    {
+      "japanese": "オーブンで焼く",
+      "english": "bake",
+      "phonetic": "/beɪk/",
+      "partOfSpeech": "動詞",
+      "example": "She baked a cake.",
+      "exampleJapanese": "彼女はケーキを焼きました。"
+    },
+    {
+      "japanese": "話し合う",
+      "english": "discuss",
+      "phonetic": "/dɪˈskʌs/",
+      "partOfSpeech": "動詞",
+      "example": "Let's discuss this topic.",
+      "exampleJapanese": "このトピックについて話し合いましょう。"
+    },
+    {
+      "japanese": "横たわる、ある",
+      "english": "lie",
+      "phonetic": "/laɪ/",
+      "partOfSpeech": "動詞",
+      "example": "He lies on the bed.",
+      "exampleJapanese": "彼はベッドに横たわっています。",
+      "pastTense": "lay",
+      "pastParticiple": "lain"
+    },
+    {
+      "japanese": "震える",
+      "english": "shake",
+      "phonetic": "/ʃeɪk/",
+      "partOfSpeech": "動詞",
+      "example": "She shook with cold.",
+      "exampleJapanese": "彼女は寒さで震えました。",
+      "pastTense": "shook",
+      "pastParticiple": "shaken"
+    },
+    {
+      "japanese": "救う、節約する",
+      "english": "save",
+      "phonetic": "/seɪv/",
+      "partOfSpeech": "動詞",
+      "example": "Save money for the future.",
+      "exampleJapanese": "将来のためにお金を貯めなさい。"
+    },
+    {
+      "japanese": "打つ",
+      "english": "hit",
+      "phonetic": "/hɪt/",
+      "partOfSpeech": "動詞",
+      "example": "He hit the ball.",
+      "exampleJapanese": "彼はボールを打ちました。",
+      "pastTense": "hit",
+      "pastParticiple": "hit"
+    },
+    {
+      "japanese": "混ぜる",
+      "english": "mix",
+      "phonetic": "/mɪks/",
+      "partOfSpeech": "動詞",
+      "example": "Mix the ingredients well.",
+      "exampleJapanese": "材料をよく混ぜてください。"
+    },
+    {
+      "japanese": "吹く",
+      "english": "blow",
+      "phonetic": "/bloʊ/",
+      "partOfSpeech": "動詞",
+      "example": "The wind blows hard.",
+      "exampleJapanese": "風が強く吹いています。",
+      "pastTense": "blew",
+      "pastParticiple": "blown"
+    },
+    {
+      "japanese": "撃つ",
+      "english": "shoot",
+      "phonetic": "/ʃuːt/",
+      "partOfSpeech": "動詞",
+      "example": "He shot the arrow.",
+      "exampleJapanese": "彼は矢を射ました。",
+      "pastTense": "shot",
+      "pastParticiple": "shot"
+    },
+    {
+      "japanese": "戦う",
+      "english": "fight",
+      "phonetic": "/faɪt/",
+      "partOfSpeech": "動詞",
+      "example": "Don't fight with your brother.",
+      "exampleJapanese": "お兄さんと喧嘩しないでください。",
+      "pastTense": "fought",
+      "pastParticiple": "fought"
+    },
+    {
+      "japanese": "紹介する",
+      "english": "introduce",
+      "phonetic": "/ˌɪntrəˈduːs/",
+      "partOfSpeech": "動詞",
+      "example": "Let me introduce myself.",
+      "exampleJapanese": "自己紹介させてください。"
+    },
+    {
+      "japanese": "こぐ",
+      "english": "row",
+      "phonetic": "/roʊ/",
+      "partOfSpeech": "動詞",
+      "example": "Row the boat.",
+      "exampleJapanese": "ボートを漕いでください。"
+    },
+    {
+      "japanese": "落とす",
+      "english": "drop",
+      "phonetic": "/drɑːp/",
+      "partOfSpeech": "動詞",
+      "example": "Don't drop the glass.",
+      "exampleJapanese": "グラスを落とさないでください。"
+    },
+    {
+      "japanese": "結婚する",
+      "english": "marry",
+      "phonetic": "/ˈmæri/",
+      "partOfSpeech": "動詞",
+      "example": "They will marry next month.",
+      "exampleJapanese": "彼らは来月結婚します。"
+    },
+    {
+      "japanese": "興味のある",
+      "english": "interested",
+      "phonetic": "/ˈɪntrəstɪd/",
+      "partOfSpeech": "形容詞",
+      "example": "I am interested in music.",
+      "exampleJapanese": "私は音楽に興味があります。"
+    },
+    {
+      "japanese": "恥じて",
+      "english": "ashamed",
+      "phonetic": "/əˈʃeɪmd/",
+      "partOfSpeech": "形容詞",
+      "example": "He was ashamed of his behavior.",
+      "exampleJapanese": "彼は自分の行動を恥じていました。"
+    },
+    {
+      "japanese": "目の見えない",
+      "english": "blind",
+      "phonetic": "/blaɪnd/",
+      "partOfSpeech": "形容詞",
+      "example": "The blind man crossed the street.",
+      "exampleJapanese": "目の見えない男性が道を渡りました。"
+    },
+    {
+      "japanese": "やさしい",
+      "english": "gentle",
+      "phonetic": "/ˈdʒentl/",
+      "partOfSpeech": "形容詞",
+      "example": "She has a gentle voice.",
+      "exampleJapanese": "彼女はやさしい声をしています。"
+    },
+    {
+      "japanese": "喜んで",
+      "english": "pleased",
+      "phonetic": "/pliːzd/",
+      "partOfSpeech": "形容詞",
+      "example": "I'm pleased to meet you.",
+      "exampleJapanese": "お会いできて嬉しいです。"
+    },
+    {
+      "japanese": "月刊の",
+      "english": "monthly",
+      "phonetic": "/ˈmʌnθli/",
+      "partOfSpeech": "形容詞",
+      "example": "This is a monthly magazine.",
+      "exampleJapanese": "これは月刊誌です。"
+    },
+    {
+      "japanese": "開いている",
+      "english": "open",
+      "phonetic": "/ˈoʊpən/",
+      "partOfSpeech": "形容詞",
+      "example": "The store is open.",
+      "exampleJapanese": "お店は開いています。"
+    },
+    {
+      "japanese": "平らな",
+      "english": "flat",
+      "phonetic": "/flæt/",
+      "partOfSpeech": "形容詞",
+      "example": "The road is flat.",
+      "exampleJapanese": "道は平らです。"
+    },
+    {
+      "japanese": "音楽の",
+      "english": "musical",
+      "phonetic": "/ˈmjuːzɪkl/",
+      "partOfSpeech": "形容詞",
+      "example": "She has musical talent.",
+      "exampleJapanese": "彼女は音楽の才能があります。"
+    },
+    {
+      "japanese": "騒がしい",
+      "english": "noisy",
+      "phonetic": "/ˈnɔɪzi/",
+      "partOfSpeech": "形容詞",
+      "example": "The classroom is noisy.",
+      "exampleJapanese": "教室は騒がしいです。"
+    },
+    {
+      "japanese": "神聖な",
+      "english": "holy",
+      "phonetic": "/ˈhoʊli/",
+      "partOfSpeech": "形容詞",
+      "example": "This is a holy place.",
+      "exampleJapanese": "ここは神聖な場所です。"
+    },
+    {
+      "japanese": "淋しい、ひとりの",
+      "english": "lonely",
+      "phonetic": "/ˈloʊnli/",
+      "partOfSpeech": "形容詞",
+      "example": "I feel lonely sometimes.",
+      "exampleJapanese": "時々寂しく感じます。"
+    },
+    {
+      "japanese": "陽気な",
+      "english": "merry",
+      "phonetic": "/ˈmeri/",
+      "partOfSpeech": "形容詞",
+      "example": "Merry Christmas!",
+      "exampleJapanese": "メリークリスマス！"
+    },
+    {
+      "japanese": "生きている",
+      "english": "living",
+      "phonetic": "/ˈlɪvɪŋ/",
+      "partOfSpeech": "形容詞",
+      "example": "All living things need water.",
+      "exampleJapanese": "すべての生き物は水を必要とします。"
+    },
+    {
+      "japanese": "個人の",
+      "english": "personal",
+      "phonetic": "/ˈpɜːrsənl/",
+      "partOfSpeech": "形容詞",
+      "example": "This is my personal opinion.",
+      "exampleJapanese": "これは私の個人的な意見です。"
+    },
+    {
+      "japanese": "必要な",
+      "english": "necessary",
+      "phonetic": "/ˈnesəseri/",
+      "partOfSpeech": "形容詞",
+      "example": "Water is necessary for life.",
+      "exampleJapanese": "水は生命に必要です。"
+    },
+    {
+      "japanese": "荒々しい、野生の",
+      "english": "wild",
+      "phonetic": "/waɪld/",
+      "partOfSpeech": "形容詞",
+      "example": "Wild animals live in the forest.",
+      "exampleJapanese": "野生動物は森に住んでいます。"
+    },
+    {
+      "japanese": "外側の",
+      "english": "outside",
+      "phonetic": "/ˌaʊtˈsaɪd/",
+      "partOfSpeech": "形容詞",
+      "example": "The outside wall is white.",
+      "exampleJapanese": "外側の壁は白いです。"
+    },
+    {
+      "japanese": "新鮮な",
+      "english": "fresh",
+      "phonetic": "/freʃ/",
+      "partOfSpeech": "形容詞",
+      "example": "These vegetables are fresh.",
+      "exampleJapanese": "これらの野菜は新鮮です。"
+    },
+    {
+      "japanese": "健康な",
+      "english": "healthy",
+      "phonetic": "/ˈhelθi/",
+      "partOfSpeech": "形容詞",
+      "example": "He is very healthy.",
+      "exampleJapanese": "彼はとても健康です。"
+    },
+    {
+      "japanese": "素敵な、かわいい",
+      "english": "lovely",
+      "phonetic": "/ˈlʌvli/",
+      "partOfSpeech": "形容詞",
+      "example": "What a lovely day!",
+      "exampleJapanese": "なんて素敵な日でしょう！"
+    },
+    {
+      "japanese": "口のきけない",
+      "english": "dumb",
+      "phonetic": "/dʌm/",
+      "partOfSpeech": "形容詞",
+      "example": "He was struck dumb with surprise.",
+      "exampleJapanese": "彼は驚きで声が出なくなりました。"
+    },
+    {
+      "japanese": "現代的な",
+      "english": "modern",
+      "phonetic": "/ˈmɑːdərn/",
+      "partOfSpeech": "形容詞",
+      "example": "This is a modern building.",
+      "exampleJapanese": "これは現代的な建物です。"
+    },
+    {
+      "japanese": "平和な",
+      "english": "peaceful",
+      "phonetic": "/ˈpiːsfl/",
+      "partOfSpeech": "形容詞",
+      "example": "It's a peaceful village.",
+      "exampleJapanese": "平和な村です。"
+    },
+    {
+      "japanese": "生の",
+      "english": "raw",
+      "phonetic": "/rɔː/",
+      "partOfSpeech": "形容詞",
+      "example": "Sushi uses raw fish.",
+      "exampleJapanese": "寿司は生の魚を使います。"
+    },
+    {
+      "japanese": "国際的な",
+      "english": "international",
+      "phonetic": "/ˌɪntərˈnæʃənl/",
+      "partOfSpeech": "形容詞",
+      "example": "It's an international meeting.",
+      "exampleJapanese": "それは国際会議です。"
+    },
+    {
+      "japanese": "裏の、後ろの",
+      "english": "back",
+      "phonetic": "/bæk/",
+      "partOfSpeech": "形容詞",
+      "example": "Use the back door.",
+      "exampleJapanese": "裏口を使ってください。"
+    },
+    {
+      "japanese": "自然の",
+      "english": "natural",
+      "phonetic": "/ˈnætʃərəl/",
+      "partOfSpeech": "形容詞",
+      "example": "It's completely natural.",
+      "exampleJapanese": "それは完全に自然なことです。"
+    },
+    {
+      "japanese": "道に迷った",
+      "english": "lost",
+      "phonetic": "/lɔːst/",
+      "partOfSpeech": "形容詞",
+      "example": "I'm lost. Can you help me?",
+      "exampleJapanese": "道に迷いました。助けてもらえますか？"
+    },
+    {
+      "japanese": "速い(素早い)",
+      "english": "quick",
+      "phonetic": "/kwɪk/",
+      "partOfSpeech": "形容詞",
+      "example": "She gave a quick answer.",
+      "exampleJapanese": "彼女は素早く答えました。"
+    },
+    {
+      "japanese": "1番目の",
+      "english": "first",
+      "phonetic": "/fɜːrst/",
+      "partOfSpeech": "序数詞",
+      "example": "This is my first time here.",
+      "exampleJapanese": "ここに来るのは初めてです。"
+    },
+    {
+      "japanese": "2番目の",
+      "english": "second",
+      "phonetic": "/ˈsekənd/",
+      "partOfSpeech": "序数詞",
+      "example": "I came in second place.",
+      "exampleJapanese": "私は2位になりました。"
+    },
+    {
+      "japanese": "3番目の",
+      "english": "third",
+      "phonetic": "/θɜːrd/",
+      "partOfSpeech": "序数詞",
+      "example": "He finished third in the race.",
+      "exampleJapanese": "彼はレースで3位でした。"
+    },
+    {
+      "japanese": "4番目の",
+      "english": "fourth",
+      "phonetic": "/fɔːrθ/",
+      "partOfSpeech": "序数詞",
+      "example": "She lives on the fourth floor.",
+      "exampleJapanese": "彼女は4階に住んでいます。"
+    },
+    {
+      "japanese": "5番目の",
+      "english": "fifth",
+      "phonetic": "/fɪfθ/",
+      "partOfSpeech": "序数詞",
+      "example": "Today is the fifth of May.",
+      "exampleJapanese": "今日は5月5日です。"
+    },
+    {
+      "japanese": "6番目の",
+      "english": "sixth",
+      "phonetic": "/sɪksθ/",
+      "partOfSpeech": "序数詞",
+      "example": "He is in the sixth grade.",
+      "exampleJapanese": "彼は6年生です。"
+    },
+    {
+      "japanese": "7番目の",
+      "english": "seventh",
+      "phonetic": "/ˈsevnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "It's the seventh month of the year.",
+      "exampleJapanese": "1年の7番目の月です。"
+    },
+    {
+      "japanese": "8番目の",
+      "english": "eighth",
+      "phonetic": "/eɪtθ/",
+      "partOfSpeech": "序数詞",
+      "example": "My birthday is on the eighth.",
+      "exampleJapanese": "私の誕生日は8日です。"
+    },
+    {
+      "japanese": "9番目の",
+      "english": "ninth",
+      "phonetic": "/naɪnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "It's the ninth time I've tried.",
+      "exampleJapanese": "9回目の挑戦です。"
+    },
+    {
+      "japanese": "10番目の",
+      "english": "tenth",
+      "phonetic": "/tenθ/",
+      "partOfSpeech": "序数詞",
+      "example": "Today is our tenth anniversary.",
+      "exampleJapanese": "今日は10周年記念日です。"
+    },
+    {
+      "japanese": "11番目の",
+      "english": "eleventh",
+      "phonetic": "/ɪˈlevnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "He arrived at the eleventh hour.",
+      "exampleJapanese": "彼はぎりぎりに到着しました。"
+    },
+    {
+      "japanese": "12番目の",
+      "english": "twelfth",
+      "phonetic": "/twelfθ/",
+      "partOfSpeech": "序数詞",
+      "example": "December is the twelfth month.",
+      "exampleJapanese": "12月は12番目の月です。"
+    },
+    {
+      "japanese": "13番目の",
+      "english": "thirteenth",
+      "phonetic": "/ˌθɜːrˈtiːnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "Friday the thirteenth is unlucky.",
+      "exampleJapanese": "13日の金曜日は不吉です。"
+    },
+    {
+      "japanese": "14番目の",
+      "english": "fourteenth",
+      "phonetic": "/ˌfɔːrˈtiːnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "Valentine's Day is the fourteenth.",
+      "exampleJapanese": "バレンタインデーは14日です。"
+    },
+    {
+      "japanese": "15番目の",
+      "english": "fifteenth",
+      "phonetic": "/ˌfɪfˈtiːnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "Her birthday is on the fifteenth.",
+      "exampleJapanese": "彼女の誕生日は15日です。"
+    },
+    {
+      "japanese": "16番目の",
+      "english": "sixteenth",
+      "phonetic": "/ˌsɪksˈtiːnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "It was built in the sixteenth century.",
+      "exampleJapanese": "それは16世紀に建てられました。"
+    },
+    {
+      "japanese": "17番目の",
+      "english": "seventeenth",
+      "phonetic": "/ˌsevnˈtiːnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "The festival is on the seventeenth.",
+      "exampleJapanese": "祭りは17日です。"
+    },
+    {
+      "japanese": "18番目の",
+      "english": "eighteenth",
+      "phonetic": "/ˌeɪˈtiːnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "She turned eighteen last week.",
+      "exampleJapanese": "彼女は先週18歳になりました。"
+    },
+    {
+      "japanese": "19番目の",
+      "english": "nineteenth",
+      "phonetic": "/ˌnaɪnˈtiːnθ/",
+      "partOfSpeech": "序数詞",
+      "example": "This novel was written in the nineteenth century.",
+      "exampleJapanese": "この小説は19世紀に書かれました。"
+    },
+    {
+      "japanese": "20番目の",
+      "english": "twentieth",
+      "phonetic": "/ˈtwentiəθ/",
+      "partOfSpeech": "序数詞",
+      "example": "We live in the twentieth century.",
+      "exampleJapanese": "私たちは20世紀に生きています。"
+    },
+    {
+      "japanese": "30番目の",
+      "english": "thirtieth",
+      "phonetic": "/ˈθɜːrtiəθ/",
+      "partOfSpeech": "序数詞",
+      "example": "Today is her thirtieth birthday.",
+      "exampleJapanese": "今日は彼女の30歳の誕生日です。"
+    },
+    {
+      "japanese": "不幸な",
+      "english": "unhappy",
+      "phonetic": "/ʌnˈhæpi/",
+      "partOfSpeech": "形容詞",
+      "example": "He looks unhappy today.",
+      "exampleJapanese": "彼は今日不幸せそうに見えます。"
+    },
+    {
+      "japanese": "怠け者の",
+      "english": "lazy",
+      "phonetic": "/ˈleɪzi/",
+      "partOfSpeech": "形容詞",
+      "example": "Don't be lazy.",
+      "exampleJapanese": "怠けないでください。"
+    },
+    {
+      "japanese": "勇敢な",
+      "english": "brave",
+      "phonetic": "/breɪv/",
+      "partOfSpeech": "形容詞",
+      "example": "He is very brave.",
+      "exampleJapanese": "彼はとても勇敢です。"
+    },
+    {
+      "japanese": "青ざめた",
+      "english": "pale",
+      "phonetic": "/peɪl/",
+      "partOfSpeech": "形容詞",
+      "example": "You look pale. Are you OK?",
+      "exampleJapanese": "顔色が悪いけど、大丈夫？"
+    },
+    {
+      "japanese": "簡単な、質素な",
+      "english": "simple",
+      "phonetic": "/ˈsɪmpl/",
+      "partOfSpeech": "形容詞",
+      "example": "It's a simple question.",
+      "exampleJapanese": "簡単な質問です。"
+    },
+    {
+      "japanese": "毎日の",
+      "english": "daily",
+      "phonetic": "/ˈdeɪli/",
+      "partOfSpeech": "形容詞",
+      "example": "Exercise is my daily routine.",
+      "exampleJapanese": "運動は私の日課です。"
+    },
+    {
+      "japanese": "興奮させる",
+      "english": "exciting",
+      "phonetic": "/ɪkˈsaɪtɪŋ/",
+      "partOfSpeech": "形容詞",
+      "example": "The game was exciting.",
+      "exampleJapanese": "その試合はワクワクしました。"
+    },
+    {
+      "japanese": "年上の、上級の",
+      "english": "senior",
+      "phonetic": "/ˈsiːniər/",
+      "partOfSpeech": "形容詞",
+      "example": "He is a senior student.",
+      "exampleJapanese": "彼は上級生です。"
+    },
+    {
+      "japanese": "安全な",
+      "english": "safe",
+      "phonetic": "/seɪf/",
+      "partOfSpeech": "形容詞",
+      "example": "It's safe to cross now.",
+      "exampleJapanese": "今渡っても安全です。"
+    },
+    {
+      "japanese": "国家の、国民の",
+      "english": "national",
+      "phonetic": "/ˈnæʃənl/",
+      "partOfSpeech": "形容詞",
+      "example": "It's a national holiday.",
+      "exampleJapanese": "今日は祝日です。"
+    },
+    {
+      "japanese": "中国の、中国人の",
+      "english": "Chinese",
+      "phonetic": "/ˌtʃaɪˈniːz/",
+      "partOfSpeech": "形容詞",
+      "example": "I like Chinese food.",
+      "exampleJapanese": "私は中華料理が好きです。"
+    },
+    {
+      "japanese": "ほかの、もうひとつの",
+      "english": "another",
+      "phonetic": "/əˈnʌðər/",
+      "partOfSpeech": "形容詞",
+      "example": "Can I have another cup of tea?",
+      "exampleJapanese": "お茶をもう一杯いただけますか？"
+    },
+    {
+      "japanese": "興奮した",
+      "english": "excited",
+      "phonetic": "/ɪkˈsaɪtɪd/",
+      "partOfSpeech": "形容詞",
+      "example": "I'm so excited about the trip.",
+      "exampleJapanese": "旅行がとても楽しみです。"
+    },
+    {
+      "japanese": "太った",
+      "english": "fat",
+      "phonetic": "/fæt/",
+      "partOfSpeech": "形容詞",
+      "example": "The cat is fat.",
+      "exampleJapanese": "その猫は太っています。"
+    },
+    {
+      "japanese": "おかしな",
+      "english": "funny",
+      "phonetic": "/ˈfʌni/",
+      "partOfSpeech": "形容詞",
+      "example": "That's a funny joke.",
+      "exampleJapanese": "おかしなジョークですね。"
+    },
+    {
+      "japanese": "可愛い",
+      "english": "cute",
+      "phonetic": "/kjuːt/",
+      "partOfSpeech": "形容詞",
+      "example": "Your baby is so cute!",
+      "exampleJapanese": "あなたの赤ちゃんはとても可愛いですね！"
+    },
+    {
+      "japanese": "眠い",
+      "english": "sleepy",
+      "phonetic": "/ˈsliːpi/",
+      "partOfSpeech": "形容詞",
+      "example": "I'm feeling sleepy.",
+      "exampleJapanese": "眠くなってきました。"
+    },
+    {
+      "japanese": "おいしい",
+      "english": "delicious",
+      "phonetic": "/dɪˈlɪʃəs/",
+      "partOfSpeech": "形容詞",
+      "example": "This cake is delicious.",
+      "exampleJapanese": "このケーキはおいしいです。"
+    },
+    {
+      "japanese": "落ちついた",
+      "english": "calm",
+      "phonetic": "/kɑːm/",
+      "partOfSpeech": "形容詞",
+      "example": "Stay calm.",
+      "exampleJapanese": "落ち着いてください。"
+    },
+    {
+      "japanese": "とても小さな、ちっちゃな",
+      "english": "tiny",
+      "phonetic": "/ˈtaɪni/",
+      "partOfSpeech": "形容詞",
+      "example": "A tiny ant walked by.",
+      "exampleJapanese": "小さなアリが歩いていました。"
+    },
+    {
+      "japanese": "最後の",
+      "english": "final",
+      "phonetic": "/ˈfaɪnl/",
+      "partOfSpeech": "形容詞",
+      "example": "This is your final chance.",
+      "exampleJapanese": "これが最後のチャンスです。"
+    },
+    {
+      "japanese": "中心の",
+      "english": "central",
+      "phonetic": "/ˈsentrəl/",
+      "partOfSpeech": "形容詞",
+      "example": "The station is in the central area.",
+      "exampleJapanese": "駅は中心部にあります。"
+    },
+    {
+      "japanese": "濡れている",
+      "english": "wet",
+      "phonetic": "/wet/",
+      "partOfSpeech": "形容詞",
+      "example": "My clothes are wet.",
+      "exampleJapanese": "服が濡れています。"
+    },
+    {
+      "japanese": "共通の",
+      "english": "common",
+      "phonetic": "/ˈkɑːmən/",
+      "partOfSpeech": "形容詞",
+      "example": "It's a common mistake.",
+      "exampleJapanese": "よくある間違いです。"
+    },
+    {
+      "japanese": "気の狂った",
+      "english": "crazy",
+      "phonetic": "/ˈkreɪzi/",
+      "partOfSpeech": "形容詞",
+      "example": "That's a crazy idea!",
+      "exampleJapanese": "それはとんでもない考えだ！"
+    },
+    {
+      "japanese": "好きで",
+      "english": "fond",
+      "phonetic": "/fɑːnd/",
+      "partOfSpeech": "形容詞",
+      "example": "I'm fond of music.",
+      "exampleJapanese": "私は音楽が好きです。"
+    },
+    {
+      "japanese": "好意的な",
+      "english": "friendly",
+      "phonetic": "/ˈfrendli/",
+      "partOfSpeech": "形容詞",
+      "example": "She is very friendly.",
+      "exampleJapanese": "彼女はとてもフレンドリーです。"
+    },
+    {
+      "japanese": "静かな(無音)",
+      "english": "silent",
+      "phonetic": "/ˈsaɪlənt/",
+      "partOfSpeech": "形容詞",
+      "example": "The room was silent.",
+      "exampleJapanese": "部屋は静かでした。"
+    },
+    {
+      "japanese": "接近した",
+      "english": "close",
+      "phonetic": "/kloʊs/",
+      "partOfSpeech": "形容詞",
+      "example": "We are close friends.",
+      "exampleJapanese": "私たちは親しい友人です。"
+    },
+    {
+      "japanese": "ほんとうの",
+      "english": "real",
+      "phonetic": "/riːəl/",
+      "partOfSpeech": "形容詞",
+      "example": "Is this a real diamond?",
+      "exampleJapanese": "これは本物のダイヤモンドですか？"
+    },
+    {
+      "japanese": "ある、確かな",
+      "english": "certain",
+      "phonetic": "/ˈsɜːrtn/",
+      "partOfSpeech": "形容詞",
+      "example": "I'm certain about it.",
+      "exampleJapanese": "私はそれを確信しています。"
+    },
+    {
+      "japanese": "間違った、ぐあいが悪い",
+      "english": "wrong",
+      "phonetic": "/rɔːŋ/",
+      "partOfSpeech": "形容詞",
+      "example": "This answer is wrong.",
+      "exampleJapanese": "この答えは間違っています。"
+    },
+    {
+      "japanese": "週刊の",
+      "english": "weekly",
+      "phonetic": "/ˈwiːkli/",
+      "partOfSpeech": "形容詞",
+      "example": "I read a weekly magazine.",
+      "exampleJapanese": "私は週刊誌を読んでいます。"
+    },
+    {
+      "japanese": "雪の降る",
+      "english": "snowy",
+      "phonetic": "/ˈsnoʊi/",
+      "partOfSpeech": "形容詞",
+      "example": "It's a snowy day.",
+      "exampleJapanese": "雪の日です。"
+    },
+    {
+      "japanese": "すべての",
+      "english": "whole",
+      "phonetic": "/hoʊl/",
+      "partOfSpeech": "形容詞",
+      "example": "I ate the whole cake.",
+      "exampleJapanese": "私はケーキを全部食べました。"
+    },
+    {
+      "japanese": "よりも",
+      "english": "than",
+      "phonetic": "/ðæn/",
+      "partOfSpeech": "接続詞",
+      "example": "She is taller than me.",
+      "exampleJapanese": "彼女は私より背が高いです。"
+    },
+    {
+      "japanese": "～する間",
+      "english": "while",
+      "phonetic": "/waɪl/",
+      "partOfSpeech": "接続詞",
+      "example": "I read while eating.",
+      "exampleJapanese": "私は食べながら読書します。"
+    },
+    {
+      "japanese": "しかし、でも",
+      "english": "but",
+      "phonetic": "/bʌt/",
+      "partOfSpeech": "接続詞",
+      "example": "I tried, but I failed.",
+      "exampleJapanese": "試しましたが、失敗しました。"
+    },
+    {
+      "japanese": "～するとき",
+      "english": "when",
+      "phonetic": "/wen/",
+      "partOfSpeech": "接続詞",
+      "example": "Call me when you arrive.",
+      "exampleJapanese": "着いたら電話してください。"
+    },
+    {
+      "japanese": "～の間、～を通じて",
+      "english": "during",
+      "phonetic": "/ˈdʊrɪŋ/",
+      "partOfSpeech": "前置詞",
+      "example": "I slept during the movie.",
+      "exampleJapanese": "映画の間、寝ていました。"
+    },
+    {
+      "japanese": "なぜなら",
+      "english": "because",
+      "phonetic": "/bɪˈkɔːz/",
+      "partOfSpeech": "接続詞",
+      "example": "I stayed home because it was raining.",
+      "exampleJapanese": "雨が降っていたので家にいました。"
+    },
+    {
+      "japanese": "～と",
+      "english": "and",
+      "phonetic": "/ænd/",
+      "partOfSpeech": "接続詞",
+      "example": "I have a pen and a book.",
+      "exampleJapanese": "私はペンと本を持っています。"
+    },
+    {
+      "japanese": "しかしながら",
+      "english": "however",
+      "phonetic": "/haʊˈevər/",
+      "partOfSpeech": "副詞",
+      "example": "It was hard. However, I succeeded.",
+      "exampleJapanese": "難しかったです。しかし、成功しました。"
+    },
+    {
+      "japanese": "こんにちは",
+      "english": "hello",
+      "phonetic": "/həˈloʊ/",
+      "partOfSpeech": "間投詞",
+      "example": "Hello! How are you?",
+      "exampleJapanese": "こんにちは！お元気ですか？"
+    },
+    {
+      "japanese": "～の後で",
+      "english": "after",
+      "phonetic": "/ˈæftər/",
+      "partOfSpeech": "前置詞",
+      "example": "I'll call you after dinner.",
+      "exampleJapanese": "夕食後に電話します。"
+    },
+    {
+      "japanese": "もし",
+      "english": "if",
+      "phonetic": "/ɪf/",
+      "partOfSpeech": "接続詞",
+      "example": "If it rains, stay home.",
+      "exampleJapanese": "雨が降ったら、家にいてね。"
+    },
+    {
+      "japanese": "であるけれど",
+      "english": "although",
+      "phonetic": "/ɔːlˈðoʊ/",
+      "partOfSpeech": "接続詞",
+      "example": "Although it was cold, I went out.",
+      "exampleJapanese": "寒かったけれど、外出しました。"
+    },
+    {
+      "japanese": "だけれども",
+      "english": "though",
+      "phonetic": "/ðoʊ/",
+      "partOfSpeech": "接続詞",
+      "example": "I like it, though it's expensive.",
+      "exampleJapanese": "高いけど、好きです。"
+    },
+    {
+      "japanese": "それとも",
+      "english": "or",
+      "phonetic": "/ɔːr/",
+      "partOfSpeech": "接続詞",
+      "example": "Tea or coffee?",
+      "exampleJapanese": "お茶、それともコーヒー？"
+    },
+    {
+      "japanese": "～と～の間",
+      "english": "between",
+      "phonetic": "/bɪˈtwiːn/",
+      "partOfSpeech": "前置詞",
+      "example": "Sit between Tom and Mary.",
+      "exampleJapanese": "トムとメアリーの間に座ってください。"
+    },
+    {
+      "japanese": "今夜は",
+      "english": "tonight",
+      "phonetic": "/təˈnaɪt/",
+      "partOfSpeech": "副詞",
+      "example": "I'll see you tonight.",
+      "exampleJapanese": "今夜会いましょう。"
+    },
+    {
+      "japanese": "今まで",
+      "english": "ever",
+      "phonetic": "/ˈevər/",
+      "partOfSpeech": "副詞",
+      "example": "Have you ever been to Japan?",
+      "exampleJapanese": "日本に行ったことはありますか？"
+    },
+    {
+      "japanese": "かつて、1度",
+      "english": "once",
+      "phonetic": "/wʌns/",
+      "partOfSpeech": "副詞",
+      "example": "I've been there once.",
+      "exampleJapanese": "そこに一度行ったことがあります。"
+    },
+    {
+      "japanese": "ついに",
+      "english": "finally",
+      "phonetic": "/ˈfaɪnəli/",
+      "partOfSpeech": "副詞",
+      "example": "We finally arrived.",
+      "exampleJapanese": "ついに到着しました。"
+    },
+    {
+      "japanese": "まっすぐに",
+      "english": "straight",
+      "phonetic": "/streɪt/",
+      "partOfSpeech": "副詞",
+      "example": "Go straight ahead.",
+      "exampleJapanese": "まっすぐ進んでください。"
+    },
+    {
+      "japanese": "どこでも",
+      "english": "everywhere",
+      "phonetic": "/ˈevriwer/",
+      "partOfSpeech": "副詞",
+      "example": "I looked everywhere.",
+      "exampleJapanese": "どこでも探しました。"
+    },
+    {
+      "japanese": "下に",
+      "english": "down",
+      "phonetic": "/daʊn/",
+      "partOfSpeech": "副詞",
+      "example": "Sit down, please.",
+      "exampleJapanese": "座ってください。"
+    },
+    {
+      "japanese": "かなり",
+      "english": "pretty",
+      "phonetic": "/ˈprɪti/",
+      "partOfSpeech": "副詞",
+      "example": "It's pretty good.",
+      "exampleJapanese": "かなり良いです。"
+    },
+    {
+      "japanese": "その上",
+      "english": "besides",
+      "phonetic": "/bɪˈsaɪdz/",
+      "partOfSpeech": "副詞",
+      "example": "I'm busy. Besides, I'm tired.",
+      "exampleJapanese": "忙しいです。その上、疲れています。"
+    },
+    {
+      "japanese": "おそらく",
+      "english": "maybe",
+      "phonetic": "/ˈmeɪbi/",
+      "partOfSpeech": "副詞",
+      "example": "Maybe he'll come.",
+      "exampleJapanese": "おそらく彼は来るでしょう。"
+    },
+    {
+      "japanese": "確かに(強調)",
+      "english": "surely",
+      "phonetic": "/ˈʃʊrli/",
+      "partOfSpeech": "副詞",
+      "example": "Surely you know the answer.",
+      "exampleJapanese": "確かに答えを知っていますよね。"
+    },
+    {
+      "japanese": "確かに(確信)",
+      "english": "certainly",
+      "phonetic": "/ˈsɜːrtnli/",
+      "partOfSpeech": "副詞",
+      "example": "Certainly, I'll help you.",
+      "exampleJapanese": "もちろん、お手伝いします。"
+    },
+    {
+      "japanese": "かんたんに",
+      "english": "easily",
+      "phonetic": "/ˈiːzɪli/",
+      "partOfSpeech": "副詞",
+      "example": "I can do it easily.",
+      "exampleJapanese": "簡単にできます。"
+    },
+    {
+      "japanese": "～も～も（ない）",
+      "english": "neither",
+      "phonetic": "/ˈniːðər/",
+      "partOfSpeech": "副詞",
+      "example": "Neither of them came.",
+      "exampleJapanese": "二人とも来ませんでした。"
+    },
+    {
+      "japanese": "ひとりきりで",
+      "english": "alone",
+      "phonetic": "/əˈloʊn/",
+      "partOfSpeech": "副詞",
+      "example": "I live alone.",
+      "exampleJapanese": "私は一人で住んでいます。"
+    },
+    {
+      "japanese": "いっしょうけんめい",
+      "english": "hard",
+      "phonetic": "/hɑːrd/",
+      "partOfSpeech": "副詞",
+      "example": "Study hard.",
+      "exampleJapanese": "一生懸命勉強しなさい。"
+    },
+    {
+      "japanese": "永久に",
+      "english": "forever",
+      "phonetic": "/fərˈevər/",
+      "partOfSpeech": "副詞",
+      "example": "I'll love you forever.",
+      "exampleJapanese": "永遠にあなたを愛します。"
+    },
+    {
+      "japanese": "突然",
+      "english": "suddenly",
+      "phonetic": "/ˈsʌdnli/",
+      "partOfSpeech": "副詞",
+      "example": "Suddenly, it started raining.",
+      "exampleJapanese": "突然、雨が降り始めました。"
+    },
+    {
+      "japanese": "特に",
+      "english": "especially",
+      "phonetic": "/ɪˈspeʃəli/",
+      "partOfSpeech": "副詞",
+      "example": "I like fruits, especially apples.",
+      "exampleJapanese": "果物、特にりんごが好きです。"
+    },
+    {
+      "japanese": "すばやく",
+      "english": "quickly",
+      "phonetic": "/ˈkwɪkli/",
+      "partOfSpeech": "副詞",
+      "example": "Come quickly!",
+      "exampleJapanese": "早く来て！"
+    },
+    {
+      "japanese": "長く",
+      "english": "long",
+      "phonetic": "/lɔːŋ/",
+      "partOfSpeech": "副詞",
+      "example": "How long will you stay?",
+      "exampleJapanese": "どのくらい滞在しますか？"
+    },
+    {
+      "japanese": "離れて(移動)",
+      "english": "away",
+      "phonetic": "/əˈweɪ/",
+      "partOfSpeech": "副詞",
+      "example": "Go away!",
+      "exampleJapanese": "あっちへ行って！"
+    },
+    {
+      "japanese": "外国へ",
+      "english": "abroad",
+      "phonetic": "/əˈbrɔːd/",
+      "partOfSpeech": "副詞",
+      "example": "I want to study abroad.",
+      "exampleJapanese": "私は留学したいです。"
+    },
+    {
+      "japanese": "前方に",
+      "english": "ahead",
+      "phonetic": "/əˈhed/",
+      "partOfSpeech": "副詞",
+      "example": "Go ahead.",
+      "exampleJapanese": "どうぞお先に。"
+    },
+    {
+      "japanese": "まったく、完全に",
+      "english": "all",
+      "phonetic": "/ɔːl/",
+      "partOfSpeech": "副詞",
+      "example": "I'm all alone.",
+      "exampleJapanese": "私は全く一人です。"
+    },
+    {
+      "japanese": "ほとんど",
+      "english": "almost",
+      "phonetic": "/ˈɔːlmoʊst/",
+      "partOfSpeech": "副詞",
+      "example": "I'm almost finished.",
+      "exampleJapanese": "ほとんど終わりました。"
+    },
+    {
+      "japanese": "実に",
+      "english": "indeed",
+      "phonetic": "/ɪnˈdiːd/",
+      "partOfSpeech": "副詞",
+      "example": "Thank you very much indeed.",
+      "exampleJapanese": "本当にありがとうございます。"
+    },
+    {
+      "japanese": "そのほかに",
+      "english": "else",
+      "phonetic": "/els/",
+      "partOfSpeech": "副詞",
+      "example": "What else do you want?",
+      "exampleJapanese": "他に何が欲しいですか？"
+    },
+    {
+      "japanese": "ともかく",
+      "english": "anyway",
+      "phonetic": "/ˈeniweɪ/",
+      "partOfSpeech": "副詞",
+      "example": "Thanks anyway.",
+      "exampleJapanese": "とにかくありがとう。"
+    },
+    {
+      "japanese": "（もまた）～でない",
+      "english": "either",
+      "phonetic": "/ˈiːðər/",
+      "partOfSpeech": "副詞",
+      "example": "I don't like it either.",
+      "exampleJapanese": "私もそれは好きではありません。"
+    },
+    {
+      "japanese": "やさしく",
+      "english": "gently",
+      "phonetic": "/ˈdʒentli/",
+      "partOfSpeech": "副詞",
+      "example": "Handle it gently.",
+      "exampleJapanese": "やさしく扱ってください。"
+    },
+    {
+      "japanese": "多分(高確率)",
+      "english": "probably",
+      "phonetic": "/ˈprɑːbəbli/",
+      "partOfSpeech": "副詞",
+      "example": "It will probably rain tomorrow.",
+      "exampleJapanese": "明日はおそらく雨でしょう。"
+    },
+    {
+      "japanese": "幸せに、楽しく",
+      "english": "happily",
+      "phonetic": "/ˈhæpɪli/",
+      "partOfSpeech": "副詞",
+      "example": "They lived happily ever after.",
+      "exampleJapanese": "彼らはその後ずっと幸せに暮らしました。"
+    },
+    {
+      "japanese": "それから、そのとき",
+      "english": "then",
+      "phonetic": "/ðen/",
+      "partOfSpeech": "副詞",
+      "example": "First eat, then study.",
+      "exampleJapanese": "まず食べて、それから勉強しなさい。"
+    },
+    {
+      "japanese": "2回",
+      "english": "twice",
+      "phonetic": "/twaɪs/",
+      "partOfSpeech": "副詞",
+      "example": "I've seen this movie twice.",
+      "exampleJapanese": "この映画を2回見ました。"
+    },
+    {
+      "japanese": "まだ",
+      "english": "still",
+      "phonetic": "/stɪl/",
+      "partOfSpeech": "副詞",
+      "example": "I still love you.",
+      "exampleJapanese": "まだあなたを愛しています。"
+    },
+    {
+      "japanese": "最近",
+      "english": "recently",
+      "phonetic": "/ˈriːsntli/",
+      "partOfSpeech": "副詞",
+      "example": "I moved here recently.",
+      "exampleJapanese": "最近ここに引っ越してきました。"
+    },
+    {
+      "japanese": "離れて(分離)、オフ",
+      "english": "off",
+      "phonetic": "/ɔːf/",
+      "partOfSpeech": "副詞",
+      "example": "Turn off the lights.",
+      "exampleJapanese": "電気を消してください。"
+    },
+    {
+      "japanese": "横切って",
+      "english": "across",
+      "phonetic": "/əˈkrɔːs/",
+      "partOfSpeech": "副詞",
+      "example": "Walk across the street.",
+      "exampleJapanese": "通りを横切ってください。"
+    },
+    {
+      "japanese": "まわりに",
+      "english": "round",
+      "phonetic": "/raʊnd/",
+      "partOfSpeech": "副詞",
+      "example": "Look round.",
+      "exampleJapanese": "まわりを見てください。"
+    },
+    {
+      "japanese": "ちょうど、ただ単に",
+      "english": "just",
+      "phonetic": "/dʒʌst/",
+      "partOfSpeech": "副詞",
+      "example": "I just arrived.",
+      "exampleJapanese": "ちょうど着いたところです。"
+    },
+    {
+      "japanese": "まったく、かなり",
+      "english": "quite",
+      "phonetic": "/kwaɪt/",
+      "partOfSpeech": "副詞",
+      "example": "I'm quite sure.",
+      "exampleJapanese": "まったく確かです。"
+    },
+    {
+      "japanese": "多分(可能性)",
+      "english": "perhaps",
+      "phonetic": "/pərˈhæps/",
+      "partOfSpeech": "副詞",
+      "example": "Perhaps it will rain.",
+      "exampleJapanese": "多分雨が降るでしょう。"
+    },
+    {
+      "japanese": "～さえ",
+      "english": "even",
+      "phonetic": "/ˈiːvn/",
+      "partOfSpeech": "副詞",
+      "example": "Even I can do it.",
+      "exampleJapanese": "私でさえできます。"
+    },
+    {
+      "japanese": "静かに",
+      "english": "quietly",
+      "phonetic": "/ˈkwaɪətli/",
+      "partOfSpeech": "副詞",
+      "example": "Speak quietly.",
+      "exampleJapanese": "静かに話してください。"
+    },
+    {
+      "japanese": "うまく",
+      "english": "fine",
+      "phonetic": "/faɪn/",
+      "partOfSpeech": "副詞",
+      "example": "Everything is going fine.",
+      "exampleJapanese": "全てうまくいっています。"
+    },
+    {
+      "japanese": "注意深く",
+      "english": "carefully",
+      "phonetic": "/ˈkerfəli/",
+      "partOfSpeech": "副詞",
+      "example": "Listen carefully.",
+      "exampleJapanese": "注意深く聞いてください。"
+    },
+    {
+      "japanese": "1度も～ない",
+      "english": "never",
+      "phonetic": "/ˈnevər/",
+      "partOfSpeech": "副詞",
+      "example": "I've never been there.",
+      "exampleJapanese": "そこに行ったことがありません。"
+    },
+    {
+      "japanese": "本当に",
+      "english": "really",
+      "phonetic": "/ˈriːəli/",
+      "partOfSpeech": "副詞",
+      "example": "I really like it.",
+      "exampleJapanese": "本当に気に入っています。"
+    }
+  ]
+}

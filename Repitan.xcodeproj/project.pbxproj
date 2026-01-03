@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001 /* RepitanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001 /* RepitanApp.swift */; };
+		002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002 /* ContentView.swift */; };
+		010 /* CardStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010 /* CardStatus.swift */; };
+		011 /* DeckCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011 /* DeckCategoryManager.swift */; };
+		012 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012 /* Deck.swift */; };
+		013 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F013 /* Card.swift */; };
+		014 /* ReviewHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F014 /* ReviewHistory.swift */; };
+		015 /* StudySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015 /* StudySession.swift */; };
+		016 /* DailyStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016 /* DailyStats.swift */; };
+		017 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017 /* UserSettings.swift */; };
+		018 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018 /* Achievement.swift */; };
+		019 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019 /* AppError.swift */; };
+		020 /* SM2Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020 /* SM2Algorithm.swift */; };
+		021 /* StreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F021 /* StreakCalculator.swift */; };
+		022 /* DailyStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022 /* DailyStatsManager.swift */; };
+		023 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F023 /* TTSManager.swift */; };
+		024 /* BuiltInDeckLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024 /* BuiltInDeckLoader.swift */; };
+		025 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F025 /* SpeechRecognizer.swift */; };
+		026 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F026 /* CSVImporter.swift */; };
+		027 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027 /* HapticManager.swift */; };
+		030 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F030 /* Color+Extensions.swift */; };
+		031 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031 /* Font+Extensions.swift */; };
+		032 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032 /* ButtonStyles.swift */; };
+		040 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040 /* HomeView.swift */; };
+		041 /* StudySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041 /* StudySessionView.swift */; };
+		042 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042 /* TestView.swift */; };
+		043 /* SessionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043 /* SessionCompleteView.swift */; };
+		044 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044 /* CardsView.swift */; };
+		045 /* DeckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F045 /* DeckDetailView.swift */; };
+		046 /* CreateDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F046 /* CreateDeckView.swift */; };
+		047 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047 /* AddCardView.swift */; };
+		048 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F048 /* SettingsView.swift */; };
+		049 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F049 /* OnboardingView.swift */; };
+		050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F050 /* Assets.xcassets */; };
+		051 /* new_horizon_1.json in Resources */ = {isa = PBXBuildFile; fileRef = F051 /* new_horizon_1.json */; };
+		052 /* CSVImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F052 /* CSVImportView.swift */; };
+		30A6E7322F064AA200397874 /* junior_high_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A6E72F2F064AA200397874 /* junior_high_2.json */; };
+		30A6E7342F064B0B00397874 /* junior_high_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A6E7332F064B0B00397874 /* junior_high_1.json */; };
+		30A6E7372F0700000397874 /* junior_high_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A6E7382F0700000397874 /* junior_high_3.json */; };
+		30A6E7392F0800000397874 /* irregular_verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A6E73A2F0800000397874 /* irregular_verbs.json */; };
+		30A6E7362F0693B700397874 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A6E7352F0693B700397874 /* NotificationManager.swift */; };
+		30CA54DA2F06A0AD00B426F2 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA54D92F06A0AD00B426F2 /* HelpView.swift */; };
+		30CA54DE2F06A0EF00B426F2 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 30CA54DC2F06A0EF00B426F2 /* help.html */; };
+		30CA54E02F06B00000B426F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CA54DF2F06B00000B426F2 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		30A6E72F2F064AA200397874 /* junior_high_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = junior_high_2.json; sourceTree = "<group>"; };
+		30A6E7332F064B0B00397874 /* junior_high_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = junior_high_1.json; sourceTree = "<group>"; };
+		30A6E7382F0700000397874 /* junior_high_3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = junior_high_3.json; sourceTree = "<group>"; };
+		30A6E73A2F0800000397874 /* irregular_verbs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = irregular_verbs.json; sourceTree = "<group>"; };
+		30A6E7352F0693B700397874 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		30CA54D92F06A0AD00B426F2 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		30CA54DC2F06A0EF00B426F2 /* help.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
+		30CA54DF2F06B00000B426F2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F001 /* RepitanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepitanApp.swift; sourceTree = "<group>"; };
+		F002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F010 /* CardStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStatus.swift; sourceTree = "<group>"; };
+		F011 /* DeckCategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCategoryManager.swift; sourceTree = "<group>"; };
+		F012 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		F013 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F014 /* ReviewHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHistory.swift; sourceTree = "<group>"; };
+		F015 /* StudySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySession.swift; sourceTree = "<group>"; };
+		F016 /* DailyStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStats.swift; sourceTree = "<group>"; };
+		F017 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		F018 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		F019 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		F020 /* SM2Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM2Algorithm.swift; sourceTree = "<group>"; };
+		F021 /* StreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculator.swift; sourceTree = "<group>"; };
+		F022 /* DailyStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatsManager.swift; sourceTree = "<group>"; };
+		F023 /* TTSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
+		F024 /* BuiltInDeckLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltInDeckLoader.swift; sourceTree = "<group>"; };
+		F025 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		F026 /* CSVImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVImporter.swift; sourceTree = "<group>"; };
+		F027 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		F030 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		F031 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		F032 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		F040 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F041 /* StudySessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySessionView.swift; sourceTree = "<group>"; };
+		F042 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		F043 /* SessionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCompleteView.swift; sourceTree = "<group>"; };
+		F044 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		F045 /* DeckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailView.swift; sourceTree = "<group>"; };
+		F046 /* CreateDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckView.swift; sourceTree = "<group>"; };
+		F047 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		F048 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F049 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F051 /* new_horizon_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = new_horizon_1.json; sourceTree = "<group>"; };
+		F052 /* CSVImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVImportView.swift; sourceTree = "<group>"; };
+		PROD /* Repitan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repitan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FRMWK /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30CA54DB2F06A0EF00B426F2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		30CA54DD2F06A0EF00B426F2 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				30CA54DB2F06A0EF00B426F2 /* images */,
+				30CA54DC2F06A0EF00B426F2 /* help.html */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		GAPP /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F001 /* RepitanApp.swift */,
+				F002 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		GDECKS /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				F051 /* new_horizon_1.json */,
+				30A6E7332F064B0B00397874 /* junior_high_1.json */,
+				30A6E72F2F064AA200397874 /* junior_high_2.json */,
+				30A6E7382F0700000397874 /* junior_high_3.json */,
+				30A6E73A2F0800000397874 /* irregular_verbs.json */,
+			);
+			path = Decks;
+			sourceTree = "<group>";
+		};
+		GEXTENSIONS /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F030 /* Color+Extensions.swift */,
+				F031 /* Font+Extensions.swift */,
+				F032 /* ButtonStyles.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		GMODELS /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F010 /* CardStatus.swift */,
+				F011 /* DeckCategoryManager.swift */,
+				F012 /* Deck.swift */,
+				F013 /* Card.swift */,
+				F014 /* ReviewHistory.swift */,
+				F015 /* StudySession.swift */,
+				F016 /* DailyStats.swift */,
+				F017 /* UserSettings.swift */,
+				F018 /* Achievement.swift */,
+				F019 /* AppError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GRESOURCES /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F050 /* Assets.xcassets */,
+				GDECKS /* Decks */,
+				30CA54DD2F06A0EF00B426F2 /* Help */,
+				30CA54DF2F06B00000B426F2 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		GSERVICES /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				30A6E7352F0693B700397874 /* NotificationManager.swift */,
+				F020 /* SM2Algorithm.swift */,
+				F021 /* StreakCalculator.swift */,
+				F022 /* DailyStatsManager.swift */,
+				F023 /* TTSManager.swift */,
+				F024 /* BuiltInDeckLoader.swift */,
+				F025 /* SpeechRecognizer.swift */,
+				F026 /* CSVImporter.swift */,
+				F027 /* HapticManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		GVCARDS /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				F044 /* CardsView.swift */,
+				F045 /* DeckDetailView.swift */,
+				F046 /* CreateDeckView.swift */,
+				F047 /* AddCardView.swift */,
+				F052 /* CSVImportView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		GVHOME /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F040 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		GVIEWS /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				GVHOME /* Home */,
+				GVSTUDY /* Study */,
+				GVCARDS /* Cards */,
+				GVSETTINGS /* Settings */,
+				GVONBOARDING /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GVONBOARDING /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F049 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		GVSETTINGS /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				30CA54D92F06A0AD00B426F2 /* HelpView.swift */,
+				F048 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		GVSTUDY /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				F041 /* StudySessionView.swift */,
+				F042 /* TestView.swift */,
+				F043 /* SessionCompleteView.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		MAIN = {
+			isa = PBXGroup;
+			children = (
+				REPITAN /* Repitan */,
+				PRODUCTS /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		PRODUCTS /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PROD /* Repitan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		REPITAN /* Repitan */ = {
+			isa = PBXGroup;
+			children = (
+				GAPP /* App */,
+				GMODELS /* Models */,
+				GSERVICES /* Services */,
+				GEXTENSIONS /* Extensions */,
+				GVIEWS /* Views */,
+				GRESOURCES /* Resources */,
+			);
+			path = Repitan;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TARGET /* Repitan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TGTCFGLST /* Build configuration list for PBXNativeTarget "Repitan" */;
+			buildPhases = (
+				SRCS /* Sources */,
+				FRMWK /* Frameworks */,
+				RSRCS /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Repitan;
+			productName = Repitan;
+			productReference = PROD /* Repitan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PROJECT /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					TARGET = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = PRJCFGLST /* Build configuration list for PBXProject "Repitan" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ja;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ja,
+				Base,
+			);
+			mainGroup = MAIN;
+			productRefGroup = PRODUCTS /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TARGET /* Repitan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		RSRCS /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050 /* Assets.xcassets in Resources */,
+				30CA54DE2F06A0EF00B426F2 /* help.html in Resources */,
+				30CA54E02F06B00000B426F2 /* LaunchScreen.storyboard in Resources */,
+				30A6E7342F064B0B00397874 /* junior_high_1.json in Resources */,
+				30A6E7322F064AA200397874 /* junior_high_2.json in Resources */,
+				30A6E7372F0700000397874 /* junior_high_3.json in Resources */,
+				30A6E7392F0800000397874 /* irregular_verbs.json in Resources */,
+				051 /* new_horizon_1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SRCS /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001 /* RepitanApp.swift in Sources */,
+				002 /* ContentView.swift in Sources */,
+				010 /* CardStatus.swift in Sources */,
+				011 /* DeckCategoryManager.swift in Sources */,
+				012 /* Deck.swift in Sources */,
+				013 /* Card.swift in Sources */,
+				014 /* ReviewHistory.swift in Sources */,
+				015 /* StudySession.swift in Sources */,
+				016 /* DailyStats.swift in Sources */,
+				017 /* UserSettings.swift in Sources */,
+				018 /* Achievement.swift in Sources */,
+				019 /* AppError.swift in Sources */,
+				020 /* SM2Algorithm.swift in Sources */,
+				30CA54DA2F06A0AD00B426F2 /* HelpView.swift in Sources */,
+				021 /* StreakCalculator.swift in Sources */,
+				022 /* DailyStatsManager.swift in Sources */,
+				023 /* TTSManager.swift in Sources */,
+				024 /* BuiltInDeckLoader.swift in Sources */,
+				025 /* SpeechRecognizer.swift in Sources */,
+				026 /* CSVImporter.swift in Sources */,
+				027 /* HapticManager.swift in Sources */,
+				030 /* Color+Extensions.swift in Sources */,
+				031 /* Font+Extensions.swift in Sources */,
+				032 /* ButtonStyles.swift in Sources */,
+				040 /* HomeView.swift in Sources */,
+				041 /* StudySessionView.swift in Sources */,
+				042 /* TestView.swift in Sources */,
+				043 /* SessionCompleteView.swift in Sources */,
+				044 /* CardsView.swift in Sources */,
+				045 /* DeckDetailView.swift in Sources */,
+				046 /* CreateDeckView.swift in Sources */,
+				047 /* AddCardView.swift in Sources */,
+				048 /* SettingsView.swift in Sources */,
+				30A6E7362F0693B700397874 /* NotificationManager.swift in Sources */,
+				049 /* OnboardingView.swift in Sources */,
+				052 /* CSVImportView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DBGPRJ /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBGTGT /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KR66X3Z6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "リピたん";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "英単語の発音を認識するためにマイクを使用します";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "英単語の発音をチェックするために音声認識を使用します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = biz.mojosoft.repitan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		RELPRJ /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		RELTGT /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KR66X3Z6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "リピたん";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "英単語の発音を認識するためにマイクを使用します";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "英単語の発音をチェックするために音声認識を使用します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = biz.mojosoft.repitan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		PRJCFGLST /* Build configuration list for PBXProject "Repitan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBGPRJ /* Debug */,
+				RELPRJ /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		TGTCFGLST /* Build configuration list for PBXNativeTarget "Repitan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBGTGT /* Debug */,
+				RELTGT /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PROJECT /* Project object */;
+}

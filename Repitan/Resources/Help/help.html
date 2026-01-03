@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リピたん ヘルプ</title>
+    <style>
+        :root {
+            --primary: #6366F1;
+            --primary-light: #818CF8;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --streak: #FF9500;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --border: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 20px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: white;
+            opacity: 1;
+        }
+
+        .app-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+
+        /* キャラクター画像 */
+        .mascot-image {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        nav {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        nav h2 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 8px 0;
+        }
+
+        nav ul li a {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+
+        nav ul li a:hover {
+            background: var(--bg);
+        }
+
+        nav ul li a .icon {
+            margin-right: 12px;
+            font-size: 1.3em;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            font-size: 1.5em;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+
+        section h2 .icon {
+            margin-right: 12px;
+            font-size: 1.2em;
+        }
+
+        section h3 {
+            font-size: 1.2em;
+            color: var(--text-primary);
+            margin: 25px 0 15px 0;
+        }
+
+        section h4 {
+            font-size: 1.05em;
+            color: var(--text-secondary);
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin: 12px 0;
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(129, 140, 248, 0.1));
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        .tip-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 15px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 15px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        table th {
+            background: var(--primary);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        table th:first-child {
+            border-radius: 10px 0 0 0;
+        }
+
+        table th:last-child {
+            border-radius: 0 10px 0 0;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        table tr:last-child td:first-child {
+            border-radius: 0 0 0 10px;
+        }
+
+        table tr:last-child td:last-child {
+            border-radius: 0 0 10px 0;
+        }
+
+        table tr:nth-child(even) {
+            background: var(--bg);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .status-new { background: #DBEAFE; color: #1D4ED8; }
+        .status-learning { background: #FEF3C7; color: #D97706; }
+        .status-review { background: #E0E7FF; color: #4F46E5; }
+        .status-relearning { background: #FFE4E6; color: #DC2626; }
+        .status-mastered { background: #D1FAE5; color: #059669; }
+
+        .rating-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 12px;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        .rating-again { background: #FEE2E2; color: #DC2626; }
+        .rating-hard { background: #FEF3C7; color: #D97706; }
+        .rating-easy { background: #D1FAE5; color: #059669; }
+
+        .flow-diagram {
+            background: var(--bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .flow-step {
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 10px;
+            margin: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .flow-arrow {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary);
+            font-size: 1.5em;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .achievement-card {
+            background: var(--bg);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .achievement-card .emoji {
+            font-size: 2em;
+            margin-bottom: 8px;
+        }
+
+        .achievement-card .name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .achievement-card .desc {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: var(--bg);
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .setting-item .label {
+            font-weight: 500;
+        }
+
+        .setting-item .value {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--primary);
+        }
+
+        .image-placeholder .icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .image-placeholder p {
+            color: var(--primary);
+            font-size: 0.9em;
+        }
+
+        ul.feature-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        ul.feature-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        ul.feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .formula {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 15px 20px;
+            font-family: 'Menlo', 'Monaco', monospace;
+            font-size: 0.9em;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .mascot-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/repitan_maru.png" alt="リピたん" class="mascot-image">
+        <h1>リピたん ヘルプ</h1>
+        <p>科学的な間隔反復学習で効率的に英単語を習得</p>
+    </header>
+
+    <nav>
+        <h2>📖 目次</h2>
+        <ul>
+            <li><a href="#overview"><span class="icon">🎯</span>アプリ概要</a></li>
+            <li><a href="#learning-flow"><span class="icon">📈</span>学習の流れ</a></li>
+            <li><a href="#card-status"><span class="icon">🏷️</span>カードのステータス</a></li>
+            <li><a href="#study-modes"><span class="icon">📝</span>学習モード</a></li>
+            <li><a href="#answer-methods"><span class="icon">💬</span>回答方法</a></li>
+            <li><a href="#rating-system"><span class="icon">⭐</span>評価システム</a></li>
+            <li><a href="#interval-algorithm"><span class="icon">🧮</span>復習間隔のしくみ</a></li>
+            <li><a href="#mastery"><span class="icon">🏆</span>完了（習得）の条件</a></li>
+            <li><a href="#notifications"><span class="icon">🔔</span>通知機能</a></li>
+            <li><a href="#statistics"><span class="icon">📊</span>統計・分析</a></li>
+            <li><a href="#achievements"><span class="icon">🎖️</span>実績システム</a></li>
+            <li><a href="#settings"><span class="icon">⚙️</span>設定項目</a></li>
+            <li><a href="#deck-management"><span class="icon">📦</span>単語帳管理</a></li>
+            <li><a href="#tips"><span class="icon">💡</span>学習のコツ</a></li>
+            <li><a href="#faq"><span class="icon">❓</span>よくある質問</a></li>
+        </ul>
+    </nav>
+
+    <!-- アプリ概要 -->
+    <section id="overview">
+        <h2><span class="icon">🎯</span>アプリ概要</h2>
+
+        <p><strong>リピたん</strong>は、科学的に証明された「間隔反復学習（Spaced Repetition）」を使って、効率的に英単語を覚えるためのアプリです。</p>
+
+        <div class="highlight-box">
+            <strong>間隔反復学習とは？</strong><br>
+            覚えた単語を忘れかける絶妙なタイミングで復習することで、記憶を長期間保持する学習法です。心理学者エビングハウスの「忘却曲線」に基づいています。
+        </div>
+
+        <h3>主な特徴</h3>
+        <ul class="feature-list">
+            <li>SM-2アルゴリズムによる最適な復習タイミングの自動計算</li>
+            <li>3つの回答方法（タイピング・音声・自己申告）に対応</li>
+            <li>中学英語に対応したビルトイン単語帳</li>
+            <li>詳細な学習統計と実績システム</li>
+            <li>復習時間を知らせるプッシュ通知</li>
+            <li>ストリーク機能でモチベーション維持</li>
+        </ul>
+
+        <div class="image-placeholder">
+            <div class="icon">📱</div>
+            <p>images/home_screen.png<br>ホーム画面のスクリーンショット</p>
+        </div>
+    </section>
+
+    <!-- 学習の流れ -->
+    <section id="learning-flow">
+        <h2><span class="icon">📈</span>学習の流れ</h2>
+
+        <p>リピたんでの単語学習は、以下の流れで進みます。</p>
+
+        <div class="flow-diagram">
+            <div class="flow-step">🆕 新規カード</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-step">📖 学習中</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-step">🔄 復習</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-step">✅ 完了</div>
+        </div>
+
+        <h3>Step 1: 新規学習</h3>
+        <p>新しい単語を初めて学習します。正解すると「学習中」ステータスになり、学習ステップが始まります。</p>
+
+        <h3>Step 2: 学習ステップ</h3>
+        <p>短い間隔（デフォルト: 3分→20分）で復習を繰り返し、記憶を定着させます。</p>
+
+        <div class="tip-box">
+            <strong>💡 ポイント</strong><br>
+            学習中の単語を正解すると次のステップへ進み、すべてのステップを完了すると「卒業」して復習フェーズへ移行します。
+        </div>
+
+        <h3>Step 3: 復習フェーズ</h3>
+        <p>卒業後は日単位での復習になります。正解するたびに復習間隔が延びていきます。</p>
+
+        <h3>Step 4: 完了（習得）</h3>
+        <p>復習間隔が21日以上になると「完了」ステータスになります。ただし、復習自体は続きます。</p>
+
+        <!-- 学習フロー図（SVG） -->
+        <div class="flow-svg-container" style="background: var(--bg); border-radius: 12px; padding: 20px; margin: 20px 0; overflow-x: auto;">
+            <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; min-width: 600px;">
+                <!-- 背景 -->
+                <defs>
+                    <!-- グラデーション定義 -->
+                    <linearGradient id="newGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#DBEAFE"/>
+                        <stop offset="100%" style="stop-color:#BFDBFE"/>
+                    </linearGradient>
+                    <linearGradient id="learningGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FEF3C7"/>
+                        <stop offset="100%" style="stop-color:#FDE68A"/>
+                    </linearGradient>
+                    <linearGradient id="reviewGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#E0E7FF"/>
+                        <stop offset="100%" style="stop-color:#C7D2FE"/>
+                    </linearGradient>
+                    <linearGradient id="masteredGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#D1FAE5"/>
+                        <stop offset="100%" style="stop-color:#A7F3D0"/>
+                    </linearGradient>
+                    <linearGradient id="relearningGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFE4E6"/>
+                        <stop offset="100%" style="stop-color:#FECDD3"/>
+                    </linearGradient>
+                    <!-- 矢印マーカー -->
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#6366F1"/>
+                    </marker>
+                    <marker id="arrowheadRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#EF4444"/>
+                    </marker>
+                </defs>
+
+                <!-- メインフロー（上部） -->
+                <!-- 新規カード -->
+                <g transform="translate(50, 80)">
+                    <rect width="120" height="70" rx="12" fill="url(#newGrad)" stroke="#1D4ED8" stroke-width="2"/>
+                    <text x="60" y="30" text-anchor="middle" font-size="24">🆕</text>
+                    <text x="60" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#1D4ED8">新規カード</text>
+                </g>
+
+                <!-- 矢印1: 新規 → 学習中 -->
+                <line x1="175" y1="115" x2="215" y2="115" stroke="#6366F1" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+                <!-- 学習中 -->
+                <g transform="translate(220, 80)">
+                    <rect width="160" height="70" rx="12" fill="url(#learningGrad)" stroke="#D97706" stroke-width="2"/>
+                    <text x="80" y="30" text-anchor="middle" font-size="24">📖</text>
+                    <text x="80" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#D97706">学習中</text>
+                    <text x="80" y="66" text-anchor="middle" font-size="10" fill="#92400E">(3分→20分)</text>
+                </g>
+
+                <!-- 矢印2: 学習中 → 復習 -->
+                <line x1="385" y1="115" x2="425" y2="115" stroke="#6366F1" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="405" y="100" text-anchor="middle" font-size="10" fill="#6366F1">卒業</text>
+
+                <!-- 復習 -->
+                <g transform="translate(430, 80)">
+                    <rect width="160" height="70" rx="12" fill="url(#reviewGrad)" stroke="#4F46E5" stroke-width="2"/>
+                    <text x="80" y="30" text-anchor="middle" font-size="24">🔄</text>
+                    <text x="80" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#4F46E5">復習</text>
+                    <text x="80" y="66" text-anchor="middle" font-size="10" fill="#4338CA">(1日→3日→8日→...)</text>
+                </g>
+
+                <!-- 矢印3: 復習 → 完了 -->
+                <line x1="595" y1="115" x2="635" y2="115" stroke="#6366F1" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="615" y="100" text-anchor="middle" font-size="10" fill="#6366F1">21日+</text>
+
+                <!-- 完了 -->
+                <g transform="translate(640, 80)">
+                    <rect width="120" height="70" rx="12" fill="url(#masteredGrad)" stroke="#059669" stroke-width="2"/>
+                    <text x="60" y="30" text-anchor="middle" font-size="24">✅</text>
+                    <text x="60" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#059669">完了</text>
+                </g>
+
+                <!-- 再学習フロー（下部） -->
+                <!-- 再学習中ボックス -->
+                <g transform="translate(320, 260)">
+                    <rect width="160" height="70" rx="12" fill="url(#relearningGrad)" stroke="#DC2626" stroke-width="2"/>
+                    <text x="80" y="30" text-anchor="middle" font-size="24">🔃</text>
+                    <text x="80" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#DC2626">再学習中</text>
+                    <text x="80" y="66" text-anchor="middle" font-size="10" fill="#991B1B">(20分後に再テスト)</text>
+                </g>
+
+                <!-- 矢印: 復習 → 再学習（間違えた場合） -->
+                <path d="M 510 155 L 510 200 L 430 200 L 430 255" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowheadRed)"/>
+                <text x="510" y="180" text-anchor="start" font-size="10" fill="#EF4444">間違えた</text>
+
+                <!-- 矢印: 再学習 → 復習（正解した場合） -->
+                <path d="M 400 260 L 400 210 L 510 210 L 510 155" fill="none" stroke="#6366F1" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <text x="400" y="230" text-anchor="end" font-size="10" fill="#6366F1">正解</text>
+
+                <!-- 矢印: 学習中 → 学習中（繰り返し） -->
+                <path d="M 300 155 Q 300 180 300 155" fill="none" stroke="#D97706" stroke-width="2"/>
+                <ellipse cx="300" cy="175" rx="30" ry="18" fill="none" stroke="#D97706" stroke-width="2"/>
+                <text x="300" y="180" text-anchor="middle" font-size="9" fill="#D97706">繰り返し</text>
+
+                <!-- 凡例 -->
+                <g transform="translate(50, 350)">
+                    <text x="0" y="15" font-size="12" fill="#64748B">💡 間違えると再学習へ → 正解すると復習フェーズに戻る</text>
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <!-- カードのステータス -->
+    <section id="card-status">
+        <h2><span class="icon">🏷️</span>カードのステータス</h2>
+
+        <p>各単語カードには5つのステータスがあり、学習の進捗状況を表します。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ステータス</th>
+                    <th>表示</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="status-badge status-new">未学習</span></td>
+                    <td>🆕</td>
+                    <td>まだ一度も学習していない新しい単語</td>
+                </tr>
+                <tr>
+                    <td><span class="status-badge status-learning">学習中</span></td>
+                    <td>📖</td>
+                    <td>学習ステップ（3分→20分）の途中にある単語</td>
+                </tr>
+                <tr>
+                    <td><span class="status-badge status-review">復習待ち</span></td>
+                    <td>🔄</td>
+                    <td>学習ステップを卒業し、日単位で復習する段階</td>
+                </tr>
+                <tr>
+                    <td><span class="status-badge status-relearning">再学習中</span></td>
+                    <td>🔃</td>
+                    <td>復習で間違えたため、再び学習ステップに戻った単語</td>
+                </tr>
+                <tr>
+                    <td><span class="status-badge status-mastered">完了</span></td>
+                    <td>✅</td>
+                    <td>復習間隔が21日以上に達した習得済みの単語</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <strong>⚠️ 注意</strong><br>
+            「完了」になっても復習が終わるわけではありません。忘れないように定期的な復習は続きます。
+        </div>
+    </section>
+
+    <!-- 学習モード -->
+    <section id="study-modes">
+        <h2><span class="icon">📝</span>学習モード</h2>
+
+        <p>3つの学習モードから、その時の目的に合わせて選べます。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>モード</th>
+                    <th>アイコン</th>
+                    <th>内容</th>
+                    <th>おすすめの場面</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>復習</strong></td>
+                    <td>🔄</td>
+                    <td>復習が必要な単語のみ学習</td>
+                    <td>毎日のルーティンとして</td>
+                </tr>
+                <tr>
+                    <td><strong>新規学習</strong></td>
+                    <td>📚</td>
+                    <td>新しい単語を覚える</td>
+                    <td>新しい単語を追加したい時</td>
+                </tr>
+                <tr>
+                    <td><strong>おまかせ</strong></td>
+                    <td>⚡</td>
+                    <td>復習と新規を自動でミックス</td>
+                    <td>何も考えずに学習したい時</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <strong>💡 おすすめの使い方</strong><br>
+            まずは「復習」モードで溜まっている復習をこなし、余裕があれば「新規学習」で新しい単語を追加しましょう。
+        </div>
+
+        <div class="image-placeholder">
+            <div class="icon">📱</div>
+            <p>images/study_modes.png<br>学習モード選択画面</p>
+        </div>
+    </section>
+
+    <!-- 回答方法 -->
+    <section id="answer-methods">
+        <h2><span class="icon">💬</span>回答方法</h2>
+
+        <p>単語の回答方法は3種類あり、設定から変更できます。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>方法</th>
+                    <th>アイコン</th>
+                    <th>説明</th>
+                    <th>評価方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>頭で考えて</strong></td>
+                    <td>🧠</td>
+                    <td>頭の中で答えを考え、自分で正誤を判断</td>
+                    <td>3段階（全然ダメ・少し考えた・完璧）</td>
+                </tr>
+                <tr>
+                    <td><strong>入力して</strong></td>
+                    <td>⌨️</td>
+                    <td>キーボードでスペルを入力</td>
+                    <td>自動判定（正解・不正解）</td>
+                </tr>
+                <tr>
+                    <td><strong>声で</strong></td>
+                    <td>🎤</td>
+                    <td>マイクに向かって発音</td>
+                    <td>自動判定（正解・不正解）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <strong>⌨️ 入力モードの自動評価（2026-01-03更新）</strong><br>
+            「入力して」モードでは、回答時間に基づいて自動的に評価されます。
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li><strong>3秒未満で正解</strong> → 「完璧！😊」（4日後に復習・即卒業）</li>
+                <li><strong>3秒以上で正解</strong> → 「少し考えた🤔」（20分後に復習・ステップ2へ）</li>
+                <li><strong>不正解</strong> → 「全然ダメ😰」（3分後に復習）</li>
+            </ul>
+            <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-secondary);">
+                <strong>科学的根拠:</strong> Desirable Difficulty理論に基づき、想起の努力度を測定します。即答できた単語は完全定着と判断し、少し考えた単語は早期に再復習することで記憶を強化します。
+            </p>
+        </div>
+
+        <div class="highlight-box" style="margin-top: 15px;">
+            <strong>🎤 音声モードの自動評価</strong><br>
+            「声で」モードでは、正誤のみで評価されます。
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li><strong>正解</strong> → 「完璧！😊」（4日後に復習・即卒業）</li>
+                <li><strong>不正解</strong> → 「全然ダメ😰」（3分後に復習）</li>
+            </ul>
+            <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-secondary);">
+                音声認識は即答性を重視するため、時間判定は行いません。
+            </p>
+        </div>
+    </section>
+
+    <!-- 評価システム -->
+    <section id="rating-system">
+        <h2><span class="icon">⭐</span>評価システム</h2>
+
+        <p>「頭で考えて」モードでは、自分で評価を選択します。</p>
+
+        <div style="margin: 20px 0;">
+            <span class="rating-btn rating-again">😰 全然ダメ</span>
+            <span class="rating-btn rating-hard">🤔 少し考えた</span>
+            <span class="rating-btn rating-easy">😊 完璧！</span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>評価</th>
+                    <th>選ぶ場面</th>
+                    <th>次回の復習</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>全然ダメ 😰</strong></td>
+                    <td>まったく思い出せなかった</td>
+                    <td>学習ステップの最初から再スタート</td>
+                </tr>
+                <tr>
+                    <td><strong>少し考えた 🤔</strong></td>
+                    <td>時間はかかったが思い出せた</td>
+                    <td>次のステップ or 少し間隔を延ばす</td>
+                </tr>
+                <tr>
+                    <td><strong>完璧！ 😊</strong></td>
+                    <td>すぐに思い出せた</td>
+                    <td>大きく間隔を延ばす</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <strong>💡 正直に評価しよう</strong><br>
+            自分に甘い評価をすると、忘れた頃に復習が来てしまいます。少しでも迷ったら「少し考えた」を選びましょう。
+        </div>
+    </section>
+
+    <!-- 復習間隔のしくみ -->
+    <section id="interval-algorithm">
+        <h2><span class="icon">🧮</span>復習間隔のしくみ</h2>
+
+        <p>リピたんは「SM-2アルゴリズム」を採用しています。これはAnkiなど世界中の暗記アプリで使われている、科学的に証明された学習アルゴリズムです。</p>
+
+        <h3>学習ステップ（新規・学習中）</h3>
+        <p>新しい単語は短い間隔で繰り返し復習します。</p>
+
+        <div class="formula">
+            デフォルト: 3分 → 20分 → 卒業（1日後）
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>評価</th>
+                    <th>次の復習</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>全然ダメ</td>
+                    <td>3分後（最初からやり直し）</td>
+                </tr>
+                <tr>
+                    <td>少し考えた</td>
+                    <td>次のステップへ（20分後 or 卒業）</td>
+                </tr>
+                <tr>
+                    <td>完璧！</td>
+                    <td>4日後（即卒業ボーナス）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>復習フェーズ（卒業後）</h3>
+        <p>卒業した単語は日単位で復習間隔が延びていきます。</p>
+
+        <div class="formula">
+            例: 1日 → 3日 → 8日 → 21日 → 50日 → ...
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>評価</th>
+                    <th>間隔の計算</th>
+                    <th>例（現在10日）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>全然ダメ</td>
+                    <td>20分後に再学習</td>
+                    <td>再学習ステップへ</td>
+                </tr>
+                <tr>
+                    <td>少し考えた</td>
+                    <td>間隔 × 1.2</td>
+                    <td>12日後</td>
+                </tr>
+                <tr>
+                    <td>完璧！</td>
+                    <td>間隔 × 難易度係数</td>
+                    <td>25日後（係数2.5の場合）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>難易度係数（EF値）</h3>
+        <p>各単語には「難易度係数」があり、覚えやすさを表します。</p>
+
+        <div class="setting-item">
+            <span class="label">初期値</span>
+            <span class="value">2.5</span>
+        </div>
+        <div class="setting-item">
+            <span class="label">範囲</span>
+            <span class="value">1.3 〜 3.0</span>
+        </div>
+
+        <p>「完璧」を選ぶと上がり、「全然ダメ」を選ぶと下がります。難しい単語は係数が低くなり、復習間隔が短くなります。</p>
+    </section>
+
+    <!-- 完了（習得）の条件 -->
+    <section id="mastery">
+        <h2><span class="icon">🏆</span>完了（習得）の条件</h2>
+
+        <div class="highlight-box">
+            <strong>完了の条件</strong><br>
+            復習間隔が <strong>21日以上</strong> になると「完了」ステータスになります。
+        </div>
+
+        <h3>完了までの目安</h3>
+        <p>「完璧」を選び続けた場合の復習回数の目安：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>回数</th>
+                    <th>間隔</th>
+                    <th>累計日数</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1回目</td>
+                    <td>1日</td>
+                    <td>1日</td>
+                </tr>
+                <tr>
+                    <td>2回目</td>
+                    <td>3日</td>
+                    <td>4日</td>
+                </tr>
+                <tr>
+                    <td>3回目</td>
+                    <td>8日</td>
+                    <td>12日</td>
+                </tr>
+                <tr>
+                    <td>4回目</td>
+                    <td>20日</td>
+                    <td>32日</td>
+                </tr>
+                <tr>
+                    <td><strong>5回目</strong></td>
+                    <td><strong>50日 ✅</strong></td>
+                    <td><strong>完了！</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <strong>⚠️ 完了後も復習は続きます</strong><br>
+            「完了」は「もう復習しない」という意味ではありません。長期間覚えていることを意味しますが、忘れないように復習は継続されます。
+        </div>
+
+        <h3>間違えると？</h3>
+        <p>復習で「全然ダメ」を選ぶと：</p>
+        <ul class="feature-list">
+            <li>「再学習」ステータスに戻る</li>
+            <li>20分後に再度テスト</li>
+            <li>復習間隔が大幅に短縮される（現在の20%）</li>
+            <li>難易度係数が下がる</li>
+        </ul>
+    </section>
+
+    <!-- 通知機能 -->
+    <section id="notifications">
+        <h2><span class="icon">🔔</span>通知機能</h2>
+
+        <p>復習のタイミングを逃さないよう、通知でお知らせします。</p>
+
+        <h3>通知の種類</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>種類</th>
+                    <th>タイミング</th>
+                    <th>内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>復習リマインダー</strong></td>
+                    <td>学習ステップの時間が来たら</td>
+                    <td>「復習の時間です - ○語の復習時間になりました」</td>
+                </tr>
+                <tr>
+                    <td><strong>日次リマインダー</strong></td>
+                    <td>毎晩21時</td>
+                    <td>「今日の復習 - 寝る前に○語の復習をしましょう」</td>
+                </tr>
+                <tr>
+                    <td><strong>毎日のリマインダー</strong></td>
+                    <td>毎晩21時（繰り返し）</td>
+                    <td>「今日の復習 - 寝る前の学習は記憶定着に効果的です」</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <strong>💡 まとめ通知</strong><br>
+            同じ時間帯に復習が必要な単語が複数ある場合、1つの通知にまとめてお知らせします。
+        </div>
+
+        <div class="tip-box">
+            <strong>🌙 なぜ夜9時？</strong><br>
+            就寝前の学習は記憶定着に最も効果的です。睡眠中に脳が情報を整理し、長期記憶に移行させます。寝る前に復習した単語は翌朝もよく覚えています！
+        </div>
+
+        <h3>通知の設定</h3>
+        <p>設定 → 通知設定 から以下の設定ができます：</p>
+        <ul class="feature-list">
+            <li>通知のON/OFF切り替え</li>
+            <li>通知時刻の変更</li>
+        </ul>
+    </section>
+
+    <!-- 統計・分析 -->
+    <section id="statistics">
+        <h2><span class="icon">📊</span>統計・分析</h2>
+
+        <p>学習の成果を詳しく確認できます。</p>
+
+        <h3>今日の統計</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>学習カード数</td>
+                    <td>今日学習した単語の総数</td>
+                </tr>
+                <tr>
+                    <td>新規カード数</td>
+                    <td>今日初めて学習した単語の数</td>
+                </tr>
+                <tr>
+                    <td>復習カード数</td>
+                    <td>今日復習した単語の数</td>
+                </tr>
+                <tr>
+                    <td>正答率</td>
+                    <td>正解した割合</td>
+                </tr>
+                <tr>
+                    <td>学習時間</td>
+                    <td>今日の学習にかけた時間</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>全期間の統計</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>総学習カード数</td>
+                    <td>これまでに学習した単語の累計</td>
+                </tr>
+                <tr>
+                    <td>総学習時間</td>
+                    <td>アプリを使った学習時間の累計</td>
+                </tr>
+                <tr>
+                    <td>学習日数</td>
+                    <td>学習した日の累計</td>
+                </tr>
+                <tr>
+                    <td>最長ストリーク</td>
+                    <td>過去最長の連続学習日数</td>
+                </tr>
+                <tr>
+                    <td>全体正答率</td>
+                    <td>全期間を通した正解率</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="image-placeholder">
+            <div class="icon">📈</div>
+            <p>images/statistics.png<br>統計画面のスクリーンショット</p>
+        </div>
+    </section>
+
+    <!-- 実績システム -->
+    <section id="achievements">
+        <h2><span class="icon">🎖️</span>実績システム</h2>
+
+        <p>学習を続けると様々な実績を獲得できます。</p>
+
+        <h3>ストリーク系 🔥</h3>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="emoji">🔥</div>
+                <div class="name">3日連続</div>
+                <div class="desc">3日連続で学習</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">🔥</div>
+                <div class="name">1週間継続</div>
+                <div class="desc">7日連続で学習</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">🔥</div>
+                <div class="name">2週間継続</div>
+                <div class="desc">14日連続で学習</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">🔥</div>
+                <div class="name">1ヶ月継続</div>
+                <div class="desc">30日連続で学習</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">🔥</div>
+                <div class="name">100日達成</div>
+                <div class="desc">100日連続で学習</div>
+            </div>
+        </div>
+
+        <h3>語彙系 📚</h3>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="emoji">📚</div>
+                <div class="name">10語マスター</div>
+                <div class="desc">10語を習得</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">📚</div>
+                <div class="name">50語マスター</div>
+                <div class="desc">50語を習得</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">📚</div>
+                <div class="name">100語マスター</div>
+                <div class="desc">100語を習得</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">📚</div>
+                <div class="name">500語マスター</div>
+                <div class="desc">500語を習得</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">📚</div>
+                <div class="name">1000語マスター</div>
+                <div class="desc">1000語を習得</div>
+            </div>
+        </div>
+
+        <h3>セッション系 🎯</h3>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="emoji">🎉</div>
+                <div class="name">はじめの一歩</div>
+                <div class="desc">初めての学習を完了</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">💯</div>
+                <div class="name">完璧！</div>
+                <div class="desc">全問正解を達成</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">⚡️</div>
+                <div class="name">スピードスター</div>
+                <div class="desc">10問を1分以内に回答</div>
+            </div>
+        </div>
+
+        <h3>スペシャル系 ✨</h3>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="emoji">🌅</div>
+                <div class="name">早起きは三文の徳</div>
+                <div class="desc">朝6時〜9時に学習</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">🌙</div>
+                <div class="name">夜型学習者</div>
+                <div class="desc">夜21時〜24時に学習</div>
+            </div>
+            <div class="achievement-card">
+                <div class="emoji">💪</div>
+                <div class="name">週末の戦士</div>
+                <div class="desc">週末に学習</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 設定項目 -->
+    <section id="settings">
+        <h2><span class="icon">⚙️</span>設定項目</h2>
+
+        <h3>学習設定</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>デフォルト</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1日の新規カード目標</td>
+                    <td>10語</td>
+                    <td>1日に学習する新規単語の目標数</td>
+                </tr>
+                <tr>
+                    <td>1日の復習上限</td>
+                    <td>50語</td>
+                    <td>1日に復習する単語の上限数</td>
+                </tr>
+                <tr>
+                    <td>優先する回答方法</td>
+                    <td>入力して</td>
+                    <td>デフォルトの回答方法</td>
+                </tr>
+                <tr>
+                    <td>自動発音再生</td>
+                    <td>ON</td>
+                    <td>答えを表示した時に自動で発音</td>
+                </tr>
+                <tr>
+                    <td>音声認識モード</td>
+                    <td>OFF</td>
+                    <td>マイクで発音を確認</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>通知設定</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>デフォルト</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>リマインダー通知</td>
+                    <td>OFF</td>
+                    <td>復習のお知らせ通知</td>
+                </tr>
+                <tr>
+                    <td>通知時刻</td>
+                    <td>9:00</td>
+                    <td>毎日のリマインダー時刻</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>サウンド・触覚</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>デフォルト</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>サウンド効果</td>
+                    <td>ON</td>
+                    <td>正解/不正解時の効果音</td>
+                </tr>
+                <tr>
+                    <td>触覚フィードバック</td>
+                    <td>ON</td>
+                    <td>ボタン操作時の振動</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>SM-2アルゴリズム設定（上級者向け）</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>デフォルト</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>学習ステップ</td>
+                    <td>3分, 20分</td>
+                    <td>新規学習時の復習間隔</td>
+                </tr>
+                <tr>
+                    <td>再学習ステップ</td>
+                    <td>20分</td>
+                    <td>間違えた時の復習間隔</td>
+                </tr>
+                <tr>
+                    <td>卒業時の初回間隔</td>
+                    <td>1日</td>
+                    <td>学習ステップ完了後の初回間隔</td>
+                </tr>
+                <tr>
+                    <td>Easy時の初回間隔</td>
+                    <td>4日</td>
+                    <td>「完璧」で即卒業した時の間隔</td>
+                </tr>
+                <tr>
+                    <td>最大間隔</td>
+                    <td>365日</td>
+                    <td>復習間隔の上限</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 単語帳管理 -->
+    <section id="deck-management">
+        <h2><span class="icon">📦</span>単語帳管理</h2>
+
+        <p>単語帳は単語カードをまとめたものです。教科書別、テーマ別などで管理できます。</p>
+
+        <h3>ビルトイン単語帳</h3>
+        <p>アプリには中学英語の単語帳が内蔵されています。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>単語帳</th>
+                    <th>アイコン</th>
+                    <th>内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>中1レベル</td>
+                    <td>📘</td>
+                    <td>中学1年生で学ぶ基本単語</td>
+                </tr>
+                <tr>
+                    <td>中2レベル</td>
+                    <td>📗</td>
+                    <td>中学2年生で学ぶ単語（不規則動詞含む）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>単語帳の選択</h3>
+        <p>「カード」タブで単語帳のアイコンをタップすると、学習する単語帳を切り替えられます。選択中の単語帳にはチェックマークが表示されます。</p>
+
+        <h3>単語帳の統計</h3>
+        <p>各単語帳には以下の情報が表示されます：</p>
+        <ul class="feature-list">
+            <li>総カード数</li>
+            <li>未学習 / 学習中 / 復習待ち / 完了の内訳</li>
+            <li>進捗率（完了カード ÷ 総カード数）</li>
+        </ul>
+
+        <h3>活用形出題モード</h3>
+        <p>不規則動詞の過去形・過去分詞も一緒に覚えたい場合、単語帳ごとに「活用形出題モード」を設定できます。</p>
+
+        <div class="tip-box">
+            <strong>💡 設定方法</strong><br>
+            単語帳詳細画面 → 右上のメニュー（…）→「単語帳設定」から変更できます。
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>モード</th>
+                    <th>出題内容</th>
+                    <th>おすすめの場面</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>現在形のみ</strong></td>
+                    <td>原形（基本形）のみを回答</td>
+                    <td>通常の単語学習（デフォルト）</td>
+                </tr>
+                <tr>
+                    <td><strong>現在形＋過去形</strong></td>
+                    <td>原形と過去形を両方回答</td>
+                    <td>不規則動詞の過去形を覚えたい時</td>
+                </tr>
+                <tr>
+                    <td><strong>全活用形</strong></td>
+                    <td>原形・過去形・過去分詞すべてを回答</td>
+                    <td>完璧な動詞活用を身につけたい時</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <strong>活用形モードのポイント</strong><br>
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>すべての活用形を正解しないと復習済みになりません</li>
+                <li>自動発音再生がONの場合、全ての活用形を順番に発音します</li>
+                <li>過去形・過去分詞を持たないカードは原形のみの出題になります</li>
+            </ul>
+        </div>
+
+        <h3>単語帳の削除</h3>
+        <p>自分で作成した単語帳（カスタム単語帳）は削除できます。</p>
+
+        <div class="warning-box">
+            <strong>⚠️ 注意</strong><br>
+            単語帳を削除すると、含まれているすべてのカードも削除されます。この操作は取り消せません。
+        </div>
+
+        <p>削除方法：単語帳詳細画面 → 右上のメニュー（…）→「単語帳を削除」</p>
+
+        <p>※ ビルトイン単語帳（学年別など）は削除できません。</p>
+
+        <div class="image-placeholder">
+            <div class="icon">📁</div>
+            <p>images/deck_management.png<br>単語帳管理画面</p>
+        </div>
+    </section>
+
+    <!-- 学習のコツ -->
+    <section id="tips">
+        <h2><span class="icon">💡</span>学習のコツ</h2>
+
+        <h3>1. 毎日少しずつ</h3>
+        <p>1日に何時間もまとめて勉強するより、毎日10〜15分続ける方が効果的です。ストリーク機能を活用してモチベーションを保ちましょう。</p>
+
+        <h3>2. 復習を優先</h3>
+        <p>新しい単語を追加する前に、まず溜まっている復習をこなしましょう。復習を後回しにすると、忘れた単語がどんどん増えてしまいます。</p>
+
+        <h3>3. 正直に評価</h3>
+        <p>「少し考えた」を選ぶべき時に「完璧」を選ぶと、その単語をすぐ忘れてしまいます。自分に正直な評価を心がけましょう。</p>
+
+        <h3>4. 発音も一緒に</h3>
+        <p>音声機能をONにして、発音を聞きながら覚えましょう。目と耳を使うことで記憶に残りやすくなります。</p>
+
+        <h3>5. 例文を活用</h3>
+        <p>単語だけでなく、例文も一緒に覚えると使い方が身につきます。テスト画面で例文を確認する習慣をつけましょう。</p>
+
+        <div class="tip-box">
+            <strong>💡 おすすめの学習ルーティン</strong><br>
+            <ol style="margin-top: 10px; margin-left: 20px;">
+                <li>まず「復習」モードで復習カードをすべてこなす</li>
+                <li>余裕があれば「新規学習」で5〜10語追加</li>
+                <li>学習ステップ中のカードがあれば、時間が来たら復習</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section id="faq">
+        <h2><span class="icon">❓</span>よくある質問</h2>
+
+        <h3>Q. 「○語が待機中」とは？</h3>
+        <p>学習ステップ（3分→20分）の途中で、まだ復習時間が来ていないカードの数です。時間が来ると自動的に復習対象になります。</p>
+
+        <h3>Q. 完了した単語はもう出てこない？</h3>
+        <p>いいえ、完了後も復習は続きます。ただし、復習間隔が非常に長くなる（例：50日後、100日後）ため、出現頻度は大幅に下がります。</p>
+
+        <h3>Q. 間違えると復習間隔はどうなる？</h3>
+        <p>「全然ダメ」を選ぶと、そのカードは「再学習」ステータスになり、20分後に再テストされます。また、復習間隔は現在の20%まで短縮されます。</p>
+
+        <h3>Q. ストリークが途切れたら？</h3>
+        <p>1日でも学習しないとストリークはリセットされます。ただし、過去の最長ストリーク記録は残ります。</p>
+
+        <h3>Q. 単語帳を切り替えるには？</h3>
+        <p>「カード」タブで、単語帳のアイコン部分をタップすると学習単語帳を切り替えられます。</p>
+
+        <h3>Q. 通知が来ない</h3>
+        <p>以下を確認してください：</p>
+        <ul class="feature-list">
+            <li>設定アプリ → リピたん → 通知が許可されているか</li>
+            <li>アプリ内の設定 → 通知設定 がONになっているか</li>
+            <li>おやすみモードやフォーカスモードがOFFになっているか</li>
+        </ul>
+
+        <h3>Q. データをリセットしたい</h3>
+        <p>アプリを削除して再インストールすると、すべてのデータがリセットされます。（現在、アプリ内からのリセット機能はありません）</p>
+    </section>
+
+    <footer>
+        <p>リピたん v1.0.0</p>
+        <p>© 2026 MojoSoft</p>
+        <p style="margin-top: 15px;">
+            <a href="https://example.com/privacy" style="color: var(--primary);">プライバシーポリシー</a> ｜
+            <a href="https://example.com/terms" style="color: var(--primary);">利用規約</a>
+        </p>
+    </footer>
+</body>
+</html>

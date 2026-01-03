@@ -1,0 +1,358 @@
+{
+  "deckId": "irregular_verbs",
+  "name": "不規則動詞",
+  "categoryId": "irregular_verbs",
+  "version": "1.0.0",
+  "cards": [
+    {
+      "japanese": "始める、始まる",
+      "english": "begin",
+      "partOfSpeech": "動詞",
+      "pastTense": "began",
+      "pastParticiple": "begun"
+    },
+    {
+      "japanese": "吹く",
+      "english": "blow",
+      "partOfSpeech": "動詞",
+      "pastTense": "blew",
+      "pastParticiple": "blown"
+    },
+    {
+      "japanese": "持ってくる",
+      "english": "bring",
+      "partOfSpeech": "動詞",
+      "pastTense": "brought",
+      "pastParticiple": "brought"
+    },
+    {
+      "japanese": "建てる",
+      "english": "build",
+      "partOfSpeech": "動詞",
+      "pastTense": "built",
+      "pastParticiple": "built"
+    },
+    {
+      "japanese": "買う",
+      "english": "buy",
+      "partOfSpeech": "動詞",
+      "pastTense": "bought",
+      "pastParticiple": "bought"
+    },
+    {
+      "japanese": "つかむ",
+      "english": "catch",
+      "partOfSpeech": "動詞",
+      "pastTense": "caught",
+      "pastParticiple": "caught"
+    },
+    {
+      "japanese": "来る",
+      "english": "come",
+      "partOfSpeech": "動詞",
+      "pastTense": "came",
+      "pastParticiple": "come"
+    },
+    {
+      "japanese": "する",
+      "english": "do",
+      "partOfSpeech": "動詞",
+      "pastTense": "did",
+      "pastParticiple": "done"
+    },
+    {
+      "japanese": "描く",
+      "english": "draw",
+      "partOfSpeech": "動詞",
+      "pastTense": "drew",
+      "pastParticiple": "drawn"
+    },
+    {
+      "japanese": "飲む",
+      "english": "drink",
+      "partOfSpeech": "動詞",
+      "pastTense": "drank",
+      "pastParticiple": "drunk"
+    },
+    {
+      "japanese": "食べる",
+      "english": "eat",
+      "partOfSpeech": "動詞",
+      "pastTense": "ate",
+      "pastParticiple": "eaten"
+    },
+    {
+      "japanese": "感じる",
+      "english": "feel",
+      "partOfSpeech": "動詞",
+      "pastTense": "felt",
+      "pastParticiple": "felt"
+    },
+    {
+      "japanese": "見つける",
+      "english": "find",
+      "partOfSpeech": "動詞",
+      "pastTense": "found",
+      "pastParticiple": "found"
+    },
+    {
+      "japanese": "飛ぶ",
+      "english": "fly",
+      "partOfSpeech": "動詞",
+      "pastTense": "flew",
+      "pastParticiple": "flown"
+    },
+    {
+      "japanese": "忘れる",
+      "english": "forget",
+      "partOfSpeech": "動詞",
+      "pastTense": "forgot",
+      "pastParticiple": "forgotten"
+    },
+    {
+      "japanese": "得る",
+      "english": "get",
+      "partOfSpeech": "動詞",
+      "pastTense": "got",
+      "pastParticiple": "gotten"
+    },
+    {
+      "japanese": "与える、あげる",
+      "english": "give",
+      "partOfSpeech": "動詞",
+      "pastTense": "gave",
+      "pastParticiple": "given"
+    },
+    {
+      "japanese": "行く",
+      "english": "go",
+      "partOfSpeech": "動詞",
+      "pastTense": "went",
+      "pastParticiple": "gone"
+    },
+    {
+      "japanese": "成長する、育つ",
+      "english": "grow",
+      "partOfSpeech": "動詞",
+      "pastTense": "grew",
+      "pastParticiple": "grown"
+    },
+    {
+      "japanese": "持つ",
+      "english": "have",
+      "partOfSpeech": "動詞",
+      "pastTense": "had",
+      "pastParticiple": "had"
+    },
+    {
+      "japanese": "聞く、聞こえる",
+      "english": "hear",
+      "partOfSpeech": "動詞",
+      "pastTense": "heard",
+      "pastParticiple": "heard"
+    },
+    {
+      "japanese": "保つ、保持する",
+      "english": "keep",
+      "partOfSpeech": "動詞",
+      "pastTense": "kept",
+      "pastParticiple": "kept"
+    },
+    {
+      "japanese": "知る",
+      "english": "know",
+      "partOfSpeech": "動詞",
+      "pastTense": "knew",
+      "pastParticiple": "known"
+    },
+    {
+      "japanese": "去る、残す、放っておく",
+      "english": "leave",
+      "partOfSpeech": "動詞",
+      "pastTense": "left",
+      "pastParticiple": "left"
+    },
+    {
+      "japanese": "失う、負ける",
+      "english": "lose",
+      "partOfSpeech": "動詞",
+      "pastTense": "lost",
+      "pastParticiple": "lost"
+    },
+    {
+      "japanese": "作る",
+      "english": "make",
+      "partOfSpeech": "動詞",
+      "pastTense": "made",
+      "pastParticiple": "made"
+    },
+    {
+      "japanese": "意味する",
+      "english": "mean",
+      "partOfSpeech": "動詞",
+      "pastTense": "meant",
+      "pastParticiple": "meant"
+    },
+    {
+      "japanese": "会う",
+      "english": "meet",
+      "partOfSpeech": "動詞",
+      "pastTense": "met",
+      "pastParticiple": "met"
+    },
+    {
+      "japanese": "間違える",
+      "english": "mistake",
+      "partOfSpeech": "動詞",
+      "pastTense": "mistook",
+      "pastParticiple": "mistaken"
+    },
+    {
+      "japanese": "読む",
+      "english": "read",
+      "partOfSpeech": "動詞",
+      "pastTense": "read",
+      "pastParticiple": "read"
+    },
+    {
+      "japanese": "乗る",
+      "english": "ride",
+      "partOfSpeech": "動詞",
+      "pastTense": "rode",
+      "pastParticiple": "ridden"
+    },
+    {
+      "japanese": "走る",
+      "english": "run",
+      "partOfSpeech": "動詞",
+      "pastTense": "ran",
+      "pastParticiple": "run"
+    },
+    {
+      "japanese": "言う",
+      "english": "say",
+      "partOfSpeech": "動詞",
+      "pastTense": "said",
+      "pastParticiple": "said"
+    },
+    {
+      "japanese": "見る",
+      "english": "see",
+      "partOfSpeech": "動詞",
+      "pastTense": "saw",
+      "pastParticiple": "seen"
+    },
+    {
+      "japanese": "売る",
+      "english": "sell",
+      "partOfSpeech": "動詞",
+      "pastTense": "sold",
+      "pastParticiple": "sold"
+    },
+    {
+      "japanese": "送る",
+      "english": "send",
+      "partOfSpeech": "動詞",
+      "pastTense": "sent",
+      "pastParticiple": "sent"
+    },
+    {
+      "japanese": "歌う",
+      "english": "sing",
+      "partOfSpeech": "動詞",
+      "pastTense": "sang",
+      "pastParticiple": "sung"
+    },
+    {
+      "japanese": "座る",
+      "english": "sit",
+      "partOfSpeech": "動詞",
+      "pastTense": "sat",
+      "pastParticiple": "sat"
+    },
+    {
+      "japanese": "眠る",
+      "english": "sleep",
+      "partOfSpeech": "動詞",
+      "pastTense": "slept",
+      "pastParticiple": "slept"
+    },
+    {
+      "japanese": "話す",
+      "english": "speak",
+      "partOfSpeech": "動詞",
+      "pastTense": "spoke",
+      "pastParticiple": "spoken"
+    },
+    {
+      "japanese": "過ごす、費やす",
+      "english": "spend",
+      "partOfSpeech": "動詞",
+      "pastTense": "spent",
+      "pastParticiple": "spent"
+    },
+    {
+      "japanese": "立つ",
+      "english": "stand",
+      "partOfSpeech": "動詞",
+      "pastTense": "stood",
+      "pastParticiple": "stood"
+    },
+    {
+      "japanese": "取る",
+      "english": "take",
+      "partOfSpeech": "動詞",
+      "pastTense": "took",
+      "pastParticiple": "taken"
+    },
+    {
+      "japanese": "教える",
+      "english": "teach",
+      "partOfSpeech": "動詞",
+      "pastTense": "taught",
+      "pastParticiple": "taught"
+    },
+    {
+      "japanese": "伝える、告げる",
+      "english": "tell",
+      "partOfSpeech": "動詞",
+      "pastTense": "told",
+      "pastParticiple": "told"
+    },
+    {
+      "japanese": "思う、考える",
+      "english": "think",
+      "partOfSpeech": "動詞",
+      "pastTense": "thought",
+      "pastParticiple": "thought"
+    },
+    {
+      "japanese": "理解する、わかる",
+      "english": "understand",
+      "partOfSpeech": "動詞",
+      "pastTense": "understood",
+      "pastParticiple": "understood"
+    },
+    {
+      "japanese": "着る、身につける",
+      "english": "wear",
+      "partOfSpeech": "動詞",
+      "pastTense": "wore",
+      "pastParticiple": "worn"
+    },
+    {
+      "japanese": "勝つ",
+      "english": "win",
+      "partOfSpeech": "動詞",
+      "pastTense": "won",
+      "pastParticiple": "won"
+    },
+    {
+      "japanese": "書く",
+      "english": "write",
+      "partOfSpeech": "動詞",
+      "pastTense": "wrote",
+      "pastParticiple": "written"
+    }
+  ]
+}

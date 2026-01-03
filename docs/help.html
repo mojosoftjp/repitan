@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヘルプ - リピたん</title>
+    <meta name="description" content="リピたんの詳しい使い方ガイド。間隔反復学習の仕組み、効果的な学習方法を解説します。">
+    <link rel="icon" type="image/png" href="images/app_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-light: #FF8B5E;
+            --secondary: #4ECDC4;
+            --accent: #FFE66D;
+            --success: #2ECC71;
+            --warning: #F39C12;
+            --dark: #1A1A2E;
+            --darker: #0F0F1A;
+            --light: #FFFFFF;
+            --gray: #94A3B8;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #1A1A2E 0%, #16213E 100%);
+            color: var(--light);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Page Content */
+        .page-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--light), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .toc h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: var(--light);
+            background: rgba(255, 107, 53, 0.1);
+        }
+
+        .toc-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h2 .icon {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-left: 4px solid var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box.tip {
+            border-left-color: var(--success);
+        }
+
+        .info-box.warning {
+            border-left-color: var(--warning);
+        }
+
+        .info-box h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Card Styles */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Status Table */
+        .status-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .status-table th,
+        .status-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .status-table th {
+            color: var(--primary);
+            font-weight: 600;
+            background: var(--glass);
+        }
+
+        .status-table td {
+            color: var(--gray);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .status-new {
+            background: rgba(78, 205, 196, 0.2);
+            color: var(--secondary);
+        }
+
+        .status-learning {
+            background: rgba(255, 107, 53, 0.2);
+            color: var(--primary);
+        }
+
+        .status-review {
+            background: rgba(255, 230, 109, 0.2);
+            color: var(--accent);
+        }
+
+        .status-mastered {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success);
+        }
+
+        /* Rating Section */
+        .rating-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .rating-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .rating-button {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .rating-again {
+            background: #FF6B6B;
+            color: var(--light);
+        }
+
+        .rating-hard {
+            background: #FFB347;
+            color: var(--dark);
+        }
+
+        .rating-good {
+            background: #77DD77;
+            color: var(--dark);
+        }
+
+        .rating-easy {
+            background: #4ECDC4;
+            color: var(--dark);
+        }
+
+        .rating-desc {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            background: var(--darker);
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-content {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .page-content h1 {
+                font-size: 2rem;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .status-table {
+                font-size: 0.9rem;
+            }
+
+            .status-table th,
+            .status-table td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/app_icon.png" alt="リピたん">
+                <span class="logo-text">リピたん</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">機能</a></li>
+                <li><a href="index.html#download">ダウンロード</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="support.html">サポート</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <h1>ヘルプ</h1>
+        <p class="subtitle">リピたんの使い方と効果的な学習方法</p>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>📖 目次</h2>
+            <div class="toc-grid">
+                <a href="#overview"><span class="toc-icon">🎯</span>アプリ概要</a>
+                <a href="#spaced-repetition"><span class="toc-icon">🧠</span>間隔反復学習とは</a>
+                <a href="#card-status"><span class="toc-icon">📊</span>カードの状態</a>
+                <a href="#rating"><span class="toc-icon">✅</span>評価と回答方法</a>
+                <a href="#deck-management"><span class="toc-icon">📚</span>単語帳の管理</a>
+                <a href="#tips"><span class="toc-icon">💡</span>効果的な学習のコツ</a>
+            </div>
+        </div>
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <h2><span class="icon">🎯</span>アプリ概要</h2>
+            <p>
+                リピたんは、科学的な「間隔反復学習」に基づいて英単語を効率的に暗記できるアプリです。
+                脳科学の研究成果を活用し、記憶が薄れる直前に復習することで、最小限の努力で長期記憶への定着を実現します。
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h4>学年別単語帳</h4>
+                    <p>中1〜中3レベルの単語帳を収録。学習進度に合わせて選択できます。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h4>自動復習スケジュール</h4>
+                    <p>SM-2アルゴリズムが最適な復習タイミングを自動計算します。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h4>学習進捗管理</h4>
+                    <p>学習状況をひと目で確認。モチベーションを維持できます。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spaced Repetition Section -->
+        <section id="spaced-repetition">
+            <h2><span class="icon">🧠</span>間隔反復学習とは</h2>
+            <p>
+                間隔反復学習（Spaced Repetition）は、記憶の仕組みを活用した効率的な学習法です。
+                1885年にエビングハウスが発見した「忘却曲線」の研究に基づいています。
+            </p>
+
+            <h3>なぜ効果的なのか？</h3>
+            <p>
+                人間の記憶は時間とともに薄れていきます。しかし、忘れる直前に復習すると、
+                記憶が強化され、次に忘れるまでの時間が長くなります。
+                これを繰り返すことで、少ない労力で長期記憶に定着させることができます。
+            </p>
+
+            <div class="info-box tip">
+                <h4>💡 ポイント</h4>
+                <p>
+                    「簡単」と評価した単語は復習間隔が長くなり、「もう一度」と評価した単語は
+                    短い間隔で何度も復習されます。これにより、苦手な単語に集中的に取り組めます。
+                </p>
+            </div>
+
+            <h3>SM-2アルゴリズム</h3>
+            <p>
+                リピたんは、世界中の学習アプリで採用されている「SM-2アルゴリズム」を使用しています。
+                あなたの回答に基づいて、最適な復習タイミングを自動で計算します。
+            </p>
+        </section>
+
+        <!-- Card Status Section -->
+        <section id="card-status">
+            <h2><span class="icon">📊</span>カードの状態</h2>
+            <p>
+                各カード（単語）は、学習の進み具合に応じて4つの状態を持っています。
+            </p>
+
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>状態</th>
+                        <th>説明</th>
+                        <th>次の復習</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="status-badge status-new">未学習</span></td>
+                        <td>まだ一度も学習していないカード</td>
+                        <td>いつでも開始可能</td>
+                    </tr>
+                    <tr>
+                        <td><span class="status-badge status-learning">学習中</span></td>
+                        <td>現在学習中で、短い間隔で復習が必要</td>
+                        <td>数分〜1日以内</td>
+                    </tr>
+                    <tr>
+                        <td><span class="status-badge status-review">復習</span></td>
+                        <td>基本を覚え、定期的な復習段階にある</td>
+                        <td>1日〜数週間</td>
+                    </tr>
+                    <tr>
+                        <td><span class="status-badge status-mastered">習得済</span></td>
+                        <td>しっかり記憶に定着している</td>
+                        <td>数週間〜数ヶ月</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <h4>状態の遷移</h4>
+                <p>
+                    未学習 → 学習中 → 復習 → 習得済 の順に進みます。
+                    「もう一度」を選ぶと、状態が後戻りすることもあります。
+                </p>
+            </div>
+        </section>
+
+        <!-- Rating Section -->
+        <section id="rating">
+            <h2><span class="icon">✅</span>評価ボタンの使い方</h2>
+            <p>
+                カードを見た後、自分の記憶度合いに応じて4つのボタンから選択します。
+                正直に評価することが、効率的な学習の鍵です。
+            </p>
+
+            <div class="rating-grid">
+                <div class="rating-card">
+                    <span class="rating-button rating-again">もう一度</span>
+                    <p class="rating-desc">全く思い出せなかった。すぐに復習が必要。</p>
+                </div>
+                <div class="rating-card">
+                    <span class="rating-button rating-hard">難しい</span>
+                    <p class="rating-desc">思い出すのに時間がかかった。もう少し復習が必要。</p>
+                </div>
+                <div class="rating-card">
+                    <span class="rating-button rating-good">普通</span>
+                    <p class="rating-desc">少し考えて思い出せた。標準的な間隔で復習。</p>
+                </div>
+                <div class="rating-card">
+                    <span class="rating-button rating-easy">簡単</span>
+                    <p class="rating-desc">すぐに思い出せた！復習間隔を大きく延長。</p>
+                </div>
+            </div>
+
+            <div class="info-box warning">
+                <h4>⚠️ 注意</h4>
+                <p>
+                    見栄を張って「簡単」を選んでしまうと、復習間隔が長くなりすぎて忘れてしまいます。
+                    正直に評価することが、効率的な学習につながります。
+                </p>
+            </div>
+
+            <h3>回答方法別の自動評価（2026-01-03更新）</h3>
+            <p>
+                リピたんでは、回答方法に応じて異なる評価システムを採用しています。
+            </p>
+
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>回答方法</th>
+                        <th>入力方式</th>
+                        <th>評価方法</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>💭 頭で考えて</td>
+                        <td>思い浮かべるのみ</td>
+                        <td>手動選択（4段階：もう一度・難しい・普通・簡単）</td>
+                    </tr>
+                    <tr>
+                        <td>⌨️ 入力して</td>
+                        <td>キーボード入力</td>
+                        <td><strong>回答時間で自動判定</strong></td>
+                    </tr>
+                    <tr>
+                        <td>🎤 声で</td>
+                        <td>マイクに向かって発音</td>
+                        <td>自動判定（正解・不正解）</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box tip">
+                <h4>⌨️ 入力モードの時間判定（推奨）</h4>
+                <p>
+                    「入力して」モードでは、回答時間に基づいて自動的に評価されます。
+                </p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>3秒未満で正解</strong> → 「簡単」評価（😊 完璧！）→ 4日後に復習・即卒業</li>
+                    <li><strong>3秒以上で正解</strong> → 「難しい」評価（🤔 少し考えた）→ 20分後に復習・ステップ2へ</li>
+                    <li><strong>不正解</strong> → 「もう一度」評価（😰 全然ダメ）→ 3分後に復習</li>
+                </ul>
+                <p style="margin-top: 10px; font-size: 0.9em;">
+                    <strong>科学的根拠:</strong> Desirable Difficulty理論（Bjork & Bjork, 2011）に基づき、
+                    想起の努力度を測定します。即答できた単語は完全定着と判断し、
+                    少し考えた単語は早期に再復習することで記憶を強化します。
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h4>🎤 音声モードの評価</h4>
+                <p>
+                    「声で」モードでは、正誤のみで評価されます。
+                </p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>正解</strong> → 「簡単」評価（😊 完璧！）→ 4日後に復習・即卒業</li>
+                    <li><strong>不正解</strong> → 「もう一度」評価（😰 全然ダメ）→ 3分後に復習</li>
+                </ul>
+                <p style="margin-top: 10px; font-size: 0.9em;">
+                    音声認識は即答性を重視するため、時間判定は行いません。
+                </p>
+            </div>
+        </section>
+
+        <!-- Deck Management Section -->
+        <section id="deck-management">
+            <h2><span class="icon">📚</span>単語帳の管理</h2>
+
+            <h3>単語帳の選択</h3>
+            <p>
+                「カード」タブから学習したい単語帳を選択します。
+                複数の単語帳を同時に選択することも可能です。
+            </p>
+
+            <h3>オリジナル単語帳の作成</h3>
+            <ol>
+                <li>「カード」タブで「＋」ボタンをタップ</li>
+                <li>「単語帳を作成」を選択</li>
+                <li>単語帳の名前を入力</li>
+                <li>カードを追加（日本語、英語、例文など）</li>
+            </ol>
+
+            <h3>活用形出題モード</h3>
+            <p>
+                不規則動詞の過去形・過去分詞を一緒に覚えたい場合、
+                単語帳の設定から「活用形出題モード」を変更できます。
+            </p>
+
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>モード</th>
+                        <th>出題内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>現在形のみ</td>
+                        <td>原形（基本形）のみを回答</td>
+                    </tr>
+                    <tr>
+                        <td>現在形＋過去形</td>
+                        <td>原形と過去形を両方回答</td>
+                    </tr>
+                    <tr>
+                        <td>全活用形</td>
+                        <td>原形・過去形・過去分詞すべてを回答</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips">
+            <h2><span class="icon">💡</span>効果的な学習のコツ</h2>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">⏰</div>
+                    <h4>毎日少しずつ</h4>
+                    <p>1日10〜15分の学習を毎日続けることが、長期記憶への定着に効果的です。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔔</div>
+                    <h4>通知を活用</h4>
+                    <p>復習通知をオンにして、忘れる前に復習する習慣をつけましょう。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔊</div>
+                    <h4>発音を聴く</h4>
+                    <p>発音を聴きながら学習することで、リスニング力も同時に向上します。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <h4>例文を活用</h4>
+                    <p>単語だけでなく例文も読むことで、実際の使い方が身につきます。</p>
+                </div>
+            </div>
+
+            <div class="info-box tip">
+                <h4>💡 ストリークを活用しよう</h4>
+                <p>
+                    連続学習日数（ストリーク）を維持することを目標にすると、
+                    毎日の学習習慣が自然と身につきます。
+                    ホーム画面でストリークを確認して、記録更新を目指しましょう！
+                </p>
+            </div>
+        </section>
+
+        <div class="info-box">
+            <h4>さらにサポートが必要ですか？</h4>
+            <p>
+                ご質問やお困りのことがあれば、<a href="support.html">サポートページ</a>からお気軽にお問い合わせください。
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MojoSoft. All rights reserved.</p>
+    </footer>
+</body>
+</html>
