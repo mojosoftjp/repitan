@@ -144,6 +144,45 @@
 - https://mojosoftjp.github.io/repitan/
 - https://mojosoftjp.github.io/repitan/help.html
 
+#### 7. セッション完了後の通知タイミングバグ修正 🐛FIX
+**ファイル:** `Repitan/Views/Study/TestView.swift`
+
+**問題点:**
+- 20分待機中のカードが10語あるのに、3分後に通知が来る
+- 復習可能なカード数が0なのに通知が発火する
+- 通知時刻が常に`learningSteps.first`（3分）で固定されていた
+
+**原因:**
+- `scheduleSessionNotifications()`で通知時刻を計算する際、各カードの実際の`learningDueDate`を無視
+- 常に`learningSteps.first`（3分）後に通知をスケジュール
+- カードの復習可能時刻（20分後など）と通知時刻（3分後）が不一致
+
+**修正内容（458-468行目）:**
+```swift
+// 修正前：常に3分後に通知
+let firstStepMinutes = learningSteps.first ?? 3
+let dueDate = Calendar.current.date(
+    byAdding: .minute,
+    value: firstStepMinutes,
+    to: sessionEndTime
+)
+
+// 修正後：最も早く復習可能になるカードの時刻で通知
+guard let earliestDueDate = learningCards.compactMap({ $0.learningDueDate }).min() else {
+    return
+}
+NotificationManager.shared.scheduleSessionLearningNotification(
+    cardCount: cardCount,
+    dueDate: earliestDueDate
+)
+```
+
+**効果:**
+- ✅ 通知時刻が実際に復習可能になる時刻と一致
+- ✅ 20分待機中のカード10語 → 20分後に通知
+- ✅ 3分待機と20分待機が混在 → 最も早い時刻（3分後）に通知
+- ✅ 復習可能カードが0の時に通知が来る問題を完全解決
+
 ---
 
 ## 過去セッション（2026-01-01 セッション4）の作業内容

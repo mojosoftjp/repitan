@@ -455,19 +455,16 @@ struct TestView: View {
         // 通知が有効な場合のみスケジュール
         guard userSettings?.notificationEnabled ?? false else { return }
 
-        // セッション完了時点から3分後に通知
-        let firstStepMinutes = learningSteps.first ?? 3
-        let dueDate = Calendar.current.date(
-            byAdding: .minute,
-            value: firstStepMinutes,
-            to: sessionEndTime
-        ) ?? sessionEndTime.addingTimeInterval(TimeInterval(firstStepMinutes * 60))
+        // 最も早く復習可能になるカードの時刻を取得
+        guard let earliestDueDate = learningCards.compactMap({ $0.learningDueDate }).min() else {
+            return
+        }
 
-        // まとめて1つの通知をスケジュール
+        // まとめて1つの通知をスケジュール（最も早い復習時刻で）
         let cardCount = learningCards.count
         NotificationManager.shared.scheduleSessionLearningNotification(
             cardCount: cardCount,
-            dueDate: dueDate
+            dueDate: earliestDueDate
         )
     }
 
