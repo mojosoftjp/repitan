@@ -128,21 +128,34 @@
 - ✅ 音声認識：従来通りEasy/Again評価
 - ✅ 頭で考えて：従来通り手動評価
 
-#### 6. GitHub Pages更新
-**ファイル:** `docs/help.html`, `docs/index.html`
+#### 6. GitHub Pages更新とGit初期化
+**ファイル:** `docs/help.html`, `docs/index.html`, `.gitignore`
 
 **問題点:**
 - Webページに回答時間判定機能の説明がなかった
+- プロジェクトがGit管理されていなかった
 
 **修正内容:**
+
+**GitHub Pages更新:**
 - `docs/help.html`: 「回答方法別の自動評価」セクション追加
 - `docs/index.html`: 「時間判定による自動評価」機能カード追加
 - 回答方法の比較表（💭頭で考えて / ⌨️入力して / 🎤声で）
 - 科学的根拠（Desirable Difficulty理論）の説明
+- **評価段階の誤記修正**: "4段階" → "3段階：全然ダメ・少し考えた・完璧！"
+
+**Git初期化:**
+- Gitリポジトリ初期化
+- `.gitignore`作成（Xcode, ビルド成果物, macOS関連を除外）
+- 94ファイル（34,786行）を初回コミット
+- GitHubリポジトリ連携: https://github.com/mojosoftjp/repitan
+- docs/.gitを削除して通常ディレクトリ化
+- GitHub Pagesへpush完了
 
 **公開URL:**
 - https://mojosoftjp.github.io/repitan/
 - https://mojosoftjp.github.io/repitan/help.html
+- https://github.com/mojosoftjp/repitan
 
 #### 7. セッション完了後の通知タイミングと件数バグ修正 🐛FIX
 **ファイル:** `Repitan/Views/Study/TestView.swift`
