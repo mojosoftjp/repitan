@@ -457,6 +457,7 @@
                 <a href="#card-status"><span class="toc-icon">📊</span>カードの状態</a>
                 <a href="#rating"><span class="toc-icon">✅</span>評価と回答方法</a>
                 <a href="#deck-management"><span class="toc-icon">📚</span>単語帳の管理</a>
+                <a href="#csv-creation"><span class="toc-icon">📄</span>CSV単語帳の作り方</a>
                 <a href="#tips"><span class="toc-icon">💡</span>効果的な学習のコツ</a>
             </div>
         </div>
@@ -711,6 +712,255 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <!-- CSV Creation Section -->
+        <section id="csv-creation">
+            <h2><span class="icon">📄</span>CSV単語帳の作り方</h2>
+
+            <p>CSVファイルを使って、オリジナルの単語帳を作成できます。ExcelやGoogleスプレッドシートで編集して、CSVファイルとして保存すれば、アプリに取り込めます。</p>
+
+            <h3>CSVファイルとは？</h3>
+            <p>CSVは「Comma-Separated Values（カンマ区切りの値）」の略で、テキスト形式のデータファイルです。ExcelやGoogleスプレッドシートで開いて編集できます。</p>
+
+            <div class="info-box tip">
+                <h4>📥 CSVファイルの取り込み方法</h4>
+                <ol style="margin-top: 10px; margin-left: 20px;">
+                    <li>「カード」タブで「＋」ボタンをタップ</li>
+                    <li>「CSVから単語帳を作成」を選択</li>
+                    <li>用意したCSVファイルを選択</li>
+                    <li>単語帳名を入力して完了</li>
+                </ol>
+            </div>
+
+            <h3>基本形式（必須項目のみ）</h3>
+            <p>最もシンプルな形式は、英単語と日本語訳の2列だけです。</p>
+
+            <pre style="background: var(--glass); border-radius: 12px; padding: 20px; overflow-x: auto; margin: 20px 0;">
+english,japanese
+apple,りんご
+book,本
+cat,猫</pre>
+
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>列名</th>
+                        <th>必須</th>
+                        <th>説明</th>
+                        <th>例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>english</strong></td>
+                        <td>✅ 必須</td>
+                        <td>英単語（表面に表示）</td>
+                        <td>apple</td>
+                    </tr>
+                    <tr>
+                        <td><strong>japanese</strong></td>
+                        <td>✅ 必須</td>
+                        <td>日本語訳（裏面に表示）</td>
+                        <td>りんご</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>完全形式（すべての項目）</h3>
+            <p>以下のすべての項目を含めると、アプリのビルトイン単語帳と同等の機能を持つ単語帳が作れます。</p>
+
+            <pre style="background: var(--glass); border-radius: 12px; padding: 20px; overflow-x: auto; margin: 20px 0; font-size: 0.85em;">
+english,japanese,phonetic,partOfSpeech,example,exampleJapanese
+beautiful,美しい,/ˈbjuːtɪfl/,形容詞,She has beautiful eyes.,彼女は美しい目をしている。
+run,走る,/rʌn/,動詞,I run every morning.,私は毎朝走る。</pre>
+
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>列名</th>
+                        <th>必須</th>
+                        <th>説明</th>
+                        <th>例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>english</strong></td>
+                        <td>✅ 必須</td>
+                        <td>英単語（表面に表示）</td>
+                        <td>beautiful</td>
+                    </tr>
+                    <tr>
+                        <td><strong>japanese</strong></td>
+                        <td>✅ 必須</td>
+                        <td>日本語訳（裏面に表示）</td>
+                        <td>美しい</td>
+                    </tr>
+                    <tr>
+                        <td><strong>phonetic</strong></td>
+                        <td>任意</td>
+                        <td>発音記号（IPA形式推奨）</td>
+                        <td>/ˈbjuːtɪfl/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>partOfSpeech</strong></td>
+                        <td>任意</td>
+                        <td>品詞</td>
+                        <td>形容詞、動詞、名詞など</td>
+                    </tr>
+                    <tr>
+                        <td><strong>example</strong></td>
+                        <td>任意</td>
+                        <td>英語の例文</td>
+                        <td>She has beautiful eyes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>exampleJapanese</strong></td>
+                        <td>任意</td>
+                        <td>例文の日本語訳</td>
+                        <td>彼女は美しい目をしている。</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>動詞の活用形を含める場合</h3>
+            <p>不規則動詞など、過去形・過去分詞も一緒に覚えたい場合は、以下の列を追加します。</p>
+
+            <pre style="background: var(--glass); border-radius: 12px; padding: 20px; overflow-x: auto; margin: 20px 0; font-size: 0.75em;">
+english,japanese,phonetic,partOfSpeech,pastTense,pastTensePhonetic,pastParticiple,pastParticiplePhonetic
+go,行く,/ɡoʊ/,動詞,went,/went/,gone,/ɡɔːn/
+take,取る,/teɪk/,動詞,took,/tʊk/,taken,/ˈteɪkən/</pre>
+
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>列名</th>
+                        <th>必須</th>
+                        <th>説明</th>
+                        <th>例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>pastTense</strong></td>
+                        <td>任意</td>
+                        <td>過去形</td>
+                        <td>went</td>
+                    </tr>
+                    <tr>
+                        <td><strong>pastTensePhonetic</strong></td>
+                        <td>任意</td>
+                        <td>過去形の発音記号</td>
+                        <td>/went/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>pastParticiple</strong></td>
+                        <td>任意</td>
+                        <td>過去分詞</td>
+                        <td>gone</td>
+                    </tr>
+                    <tr>
+                        <td><strong>pastParticiplePhonetic</strong></td>
+                        <td>任意</td>
+                        <td>過去分詞の発音記号</td>
+                        <td>/ɡɔːn/</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box tip">
+                <h4>💡 活用形モードの設定</h4>
+                <p>活用形を含めた単語帳は、取り込み後に「単語帳設定」から「活用形出題モード」を変更することで、過去形・過去分詞も出題されるようになります。</p>
+            </div>
+
+            <h3>作成時の注意点</h3>
+
+            <div class="info-box warning">
+                <h4>⚠️ 必ず守るべきルール</h4>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li><strong>1行目は列名（ヘッダー）</strong>: 必ず <code>english,japanese</code> などの列名を記載</li>
+                    <li><strong>文字コードはUTF-8</strong>: ExcelでCSV保存時に「CSV UTF-8」を選択</li>
+                    <li><strong>カンマ（,）を含む場合</strong>: ダブルクォートで囲む（例: "Hello, world"）</li>
+                    <li><strong>ダブルクォート（"）を含む場合</strong>: 2つ重ねて記載（例: He said ""Hi""）</li>
+                    <li><strong>改行を含む場合</strong>: ダブルクォートで囲む</li>
+                </ul>
+            </div>
+
+            <h3>Excel・Googleスプレッドシートでの作成手順</h3>
+
+            <h4>📊 Excelの場合</h4>
+            <ol style="margin-left: 20px;">
+                <li>新しいワークブックを開く</li>
+                <li>1行目に列名を入力（english, japanese, phonetic など）</li>
+                <li>2行目以降にデータを入力</li>
+                <li>「ファイル」→「名前を付けて保存」</li>
+                <li>ファイルの種類で「CSV UTF-8（コンマ区切り）(*.csv)」を選択</li>
+                <li>保存</li>
+            </ol>
+
+            <h4>📊 Googleスプレッドシートの場合</h4>
+            <ol style="margin-left: 20px;">
+                <li>新しいスプレッドシートを開く</li>
+                <li>1行目に列名を入力（english, japanese, phonetic など）</li>
+                <li>2行目以降にデータを入力</li>
+                <li>「ファイル」→「ダウンロード」→「カンマ区切り形式（.csv）」を選択</li>
+                <li>ダウンロードされたファイルをアプリに取り込む</li>
+            </ol>
+
+            <div class="info-box tip">
+                <h4>💡 テンプレートファイルの活用</h4>
+                <p>最初は、アプリに付属のサンプルCSVファイルをダウンロードして、それを編集すると間違いがありません。</p>
+            </div>
+
+            <h3>サンプルCSV（完全版）</h3>
+            <p>以下の内容をコピーして、テキストエディタに貼り付け、UTF-8形式で保存すれば、そのまま使えるCSVファイルになります。</p>
+
+            <pre style="background: var(--glass); border-radius: 12px; padding: 20px; overflow-x: auto; margin: 20px 0; font-size: 0.8em;">
+english,japanese,phonetic,partOfSpeech,example,exampleJapanese
+apple,りんご,/ˈæpl/,名詞,I ate an apple.,私はりんごを食べた。
+beautiful,美しい,/ˈbjuːtɪfl/,形容詞,She has beautiful eyes.,彼女は美しい目をしている。
+run,走る,/rʌn/,動詞,I run every morning.,私は毎朝走る。
+quickly,速く,/ˈkwɪkli/,副詞,He runs quickly.,彼は速く走る。</pre>
+
+            <h3>よくあるエラーと対処法</h3>
+
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th>エラー</th>
+                        <th>原因</th>
+                        <th>対処法</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>列名が不正</td>
+                        <td>1行目の列名が間違っている</td>
+                        <td>english, japanese を必ず含める</td>
+                    </tr>
+                    <tr>
+                        <td>文字化け</td>
+                        <td>文字コードがShift_JISなど</td>
+                        <td>UTF-8で保存し直す</td>
+                    </tr>
+                    <tr>
+                        <td>データが欠けている</td>
+                        <td>カンマ区切りが正しくない</td>
+                        <td>カンマを含む値は""で囲む</td>
+                    </tr>
+                    <tr>
+                        <td>行数が合わない</td>
+                        <td>改行が含まれている</td>
+                        <td>改行を含む値は""で囲む</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box tip">
+                <h4>🎓 学習のヒント</h4>
+                <p>CSVファイルを使えば、学校のテスト範囲や教科書の単語リストをそのまま単語帳にできます。クラスメイトと共有すれば、みんなで効率的に学習できます！</p>
+            </div>
         </section>
 
         <!-- Tips Section -->
